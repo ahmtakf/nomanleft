@@ -3,6 +3,8 @@ Cs319 Section 3 Group D Fall 2018
 
 Group name: Null Pointers
 
+Project name: nomanleft
+
 Ahmet Akif Uğurtan
 
 Eren Aytüre
