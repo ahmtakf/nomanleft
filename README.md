@@ -9,7 +9,7 @@ Ahmet Akif Uğurtan 21400526
 
 Eren Aytüre 21200559 
 
-Berkay Karlık
+Berkay Karlık 21501938
 
 Can Kaplan  21402322
 
