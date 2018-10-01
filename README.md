@@ -5,13 +5,13 @@ Group name: Null Pointers
 
 Project name: nomanleft
 
-Ahmet Akif Uğurtan
+Ahmet Akif Uğurtan 21400526
 
 Eren Aytüre
 
 Berkay Karlık
 
-Can Kaplan
+Can Kaplan  21402322
 
 Teymur Bakhishli
 
