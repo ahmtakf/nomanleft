@@ -1,5 +1,7 @@
 # nomanleft
-Cs319 Section 3 Fall 2018
+Cs319 Section 3 Group D Fall 2018
+
+Group name: Null Pointers
 
 Ahmet Akif Uğurtan
 
