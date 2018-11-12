@@ -1,4 +1,4 @@
-package main.img.nullpointers.nomanleft.view;
+package com.nullpointers.nomanleft.view;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

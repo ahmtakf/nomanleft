@@ -1,7 +1,6 @@
-package main.com.nullpointers.nomanleft.controller;
+package com.nullpointers.nomanleft.controller;
 
-import main.com.nullpointers.nomanleft.controller.FileManager;
-import main.img.nullpointers.nomanleft.view.LevelPanel;
+import com.nullpointers.nomanleft.view.LevelPanel;
 
 import javax.swing.*;
 

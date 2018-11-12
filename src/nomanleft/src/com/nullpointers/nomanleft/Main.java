@@ -1,6 +1,6 @@
-package main.com.nullpointers.nomanleft;
+package com.nullpointers.nomanleft;
 
-import main.com.nullpointers.nomanleft.controller.GameManager;
+import com.nullpointers.nomanleft.controller.GameManager;
 
 public class Main {
 
