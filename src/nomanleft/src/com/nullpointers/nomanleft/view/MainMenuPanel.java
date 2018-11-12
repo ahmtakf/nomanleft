@@ -26,7 +26,7 @@ public class MainMenuPanel extends JPanel{
         setBorder(new EmptyBorder(20, 20, 20, 20));
         this.setPreferredSize(new Dimension(1600 ,900));
 
-    //initialize buttons, set action commands, add boarders
+    //initialize buttons, set action commands; add boarders, listeners
 
         EmptyBorder buttonBorder =  new EmptyBorder(10, 20, 10, 20);
 
@@ -71,19 +71,22 @@ public class MainMenuPanel extends JPanel{
         exit.addActionListener(new ButtonListener());
 
     //initialize Label
-        gameName = new JLabel ("<html><h1><strong><i>NoManLeft</i></strong></h1><hr></html>");
+        gameName = new JLabel ("<html><h1><strong><i>NoManLeft</i></strong></h1></html>");
 
+    //initialize GridBagConstraints
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridwidth = GridBagConstraints.REMAINDER;
         gbc.anchor = GridBagConstraints.NORTH;
 
+    //add the label to panel
         add(gameName, gbc);
 
+    //update constraints
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-    //add components to a panel
+    //add the buttons to a subPanel
         buttonContainer = new JPanel(new GridBagLayout());
 
         buttonContainer.add(Box.createRigidArea(buttonSpace));
@@ -102,13 +105,14 @@ public class MainMenuPanel extends JPanel{
         buttonContainer.add(credits,gbc);
         buttonContainer.add(Box.createRigidArea(buttonSpace));
         buttonContainer.add(exit,gbc);
-
+    //add the panel to this panel
         gbc.weighty = 1;
         add(buttonContainer, gbc);
 
 
 
     }
+
 
     public void playGame() {
         System.out.println("PlayGame");
