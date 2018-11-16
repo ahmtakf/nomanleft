@@ -89,7 +89,7 @@ public class PlayGamePanel extends JPanel {
 
             System.out.println("load level"+ i);
 
-            GameManager.getInstance().startLevel(i);
+           // GameManager.getInstance().startLevel(i);
 
         }
 
