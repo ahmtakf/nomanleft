@@ -10,6 +10,7 @@ public class GameManager {
 
     private final static GameManager instance = new GameManager();
     private JFrame frame;
+    private MapModel currentLevel;
 
     private GameManager(){
         frame = new JFrame("NoManLeft");
@@ -19,10 +20,11 @@ public class GameManager {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         System.out.println(FileManager.getInstance().getCustomization());
+
     }
 
     public void startLevel(int levelNumber){
-        MapModel currentLevel = new MapModel(levelNumber);
+        currentLevel = new MapModel(levelNumber);
         frame.setContentPane(new LevelPanel());
         frame.setVisible(true);
     }
@@ -31,5 +33,7 @@ public class GameManager {
         return instance;
     }
 
-
+    public MapModel getMapModel() {
+        return currentLevel;
+    }
 }

@@ -35,7 +35,9 @@ public class LevelPanel extends JPanel{
     private JButton right1;
     private JButton right0;
     private Image image;
+    private GamePanel gp;
     public LevelPanel() {
+        gp = new GamePanel();
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,7 +49,7 @@ public class LevelPanel extends JPanel{
         });
     }
 
-    @Override
+   /* @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
@@ -55,5 +57,5 @@ public class LevelPanel extends JPanel{
 
 
     }
-
+*/
 }
