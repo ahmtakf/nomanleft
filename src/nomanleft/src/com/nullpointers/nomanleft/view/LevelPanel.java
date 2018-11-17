@@ -37,7 +37,6 @@ public class LevelPanel extends JPanel{
     private Image image;
     private GamePanel gp;
     public LevelPanel() {
-        gp = new GamePanel();
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
