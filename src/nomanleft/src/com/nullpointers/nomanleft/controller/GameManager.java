@@ -4,6 +4,7 @@ import com.nullpointers.nomanleft.model.MapModel;
 import com.nullpointers.nomanleft.view.LevelPanel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class GameManager {
 
@@ -12,6 +13,7 @@ public class GameManager {
 
     private GameManager(){
         frame = new JFrame("NoManLeft");
+        frame.setPreferredSize(new Dimension(1600,800));
         frame.setContentPane(new LevelPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

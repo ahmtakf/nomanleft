@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LevelPanel extends JPanel{
-    private JPanel currentLevel;
     private JPanel gamePanel;
     private JPanel boosterPanel;
     private JPanel wallPanel;
@@ -37,6 +36,7 @@ public class LevelPanel extends JPanel{
     private JButton right0;
     private Image image;
     public LevelPanel() {
+        GamePanel gp = new GamePanel();
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,7 +48,7 @@ public class LevelPanel extends JPanel{
         });
     }
 
-    @Override
+   /* @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
@@ -56,5 +56,5 @@ public class LevelPanel extends JPanel{
 
 
     }
-
+*/
 }
