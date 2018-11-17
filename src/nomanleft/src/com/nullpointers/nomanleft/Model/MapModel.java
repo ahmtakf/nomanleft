@@ -23,7 +23,7 @@ public class MapModel {
                 String nodes = br.readLine();
                 int j = 0;
                 for (String nodeName: nodes.split(",")) {
-                    map[i][j] = factory.getObject(nodeName);
+                    map[i][j] = factory.getMapObject(nodeName);
                     j++;
                 }
             } catch (IOException e) {
@@ -45,5 +45,54 @@ public class MapModel {
     public MapObject[][] getMap(){
         return map;
     }
+
+    public ArrayList<Wall> getWalls(){
+        return walls;
+    }
+
+    public MapObject[][] putWall(Wall wall, int x, int y){
+
+        MapObject[][] universe = new MapObject[24][24];
+        int[][] wallShape = wall.getShape();
+        int pivotX = 0;
+        int pivotY = 0;
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                universe[i+8][j+8] = map[i][j];
+                if (wallShape[i][j] == 2){
+                    pivotX = i;
+                    pivotY = j;
+                }
+            }
+        }
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (wallShape[i][j] > 0 && !(universe[i+8+x-pivotX][j+8+y-pivotY] instanceof Ground)){
+                    //raise error
+                    System.out.println("Cannot put this wall there!");
+                    return getMap();
+                }
+            }
+        }
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (wallShape[i][j] > 0 && !(universe[i+8+x-pivotX][j+8+y-pivotY] instanceof Ground)){
+                    universe[i+8+x-pivotX][j+8+y-pivotY] = factory.getMapObject("WallTile");
+                }
+            }
+        }
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                map[i][j] = universe[i+8][j+8];
+            }
+        }
+
+        return getMap();
+    }
+
 
 }

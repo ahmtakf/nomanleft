@@ -6,7 +6,7 @@ public class MapObjectFactory {
 
     private static HashMap<String, MapObject> hm = new HashMap<>();
 
-    public MapObject getObject(String type){
+    public MapObject getMapObject(String type){
         MapObject object = null;
 
         if(hm.containsKey(type)){
