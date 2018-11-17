@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class BattleRam extends Human{
 
-    public BattleRam(Point loc) {
-        super(loc);
+    public BattleRam() {
+        super();
     }
 
     @Override

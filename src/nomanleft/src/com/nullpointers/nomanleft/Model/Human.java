@@ -4,11 +4,11 @@ import java.awt.*;
 
 public abstract class Human implements MapObject {
 
-    protected boolean isEnemy;
-    protected Point loc;
-    public Human(Point loc ){
+    public boolean isEnemy;
+    public Point loc;
+
+    public Human(){
         this.isEnemy = false;
-        setPosition(loc);
     }
 
     public abstract boolean isMovable();

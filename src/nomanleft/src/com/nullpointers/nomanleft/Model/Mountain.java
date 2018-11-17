@@ -3,8 +3,8 @@ package com.nullpointers.nomanleft.model;
 import java.awt.*;
 
 public class Mountain extends Tile {
-    public Mountain(Point x) {
-        super(x);
+    public Mountain() {
+        super();
     }
 
     @Override

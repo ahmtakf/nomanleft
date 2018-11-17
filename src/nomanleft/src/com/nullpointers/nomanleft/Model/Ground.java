@@ -3,8 +3,8 @@ package com.nullpointers.nomanleft.model;
 import java.awt.*;
 
 public class Ground extends Tile {
-    public Ground(Point x) {
-        super(x);
+    public Ground() {
+        super();
     }
 
     @Override

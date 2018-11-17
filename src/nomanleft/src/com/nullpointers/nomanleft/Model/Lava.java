@@ -5,8 +5,8 @@ import java.awt.*;
 public class Lava extends Tile {
 
 
-    public Lava(Point x) {
-        super(x);
+    public Lava() {
+        super();
     }
 
     @Override

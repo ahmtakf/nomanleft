@@ -3,8 +3,8 @@ package com.nullpointers.nomanleft.model;
 import java.awt.*;
 
 public class Bush extends Tile{
-    public Bush(Point x) {
-        super(x);
+    public Bush() {
+        super();
     }
 
     @Override

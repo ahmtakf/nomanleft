@@ -3,8 +3,8 @@ package com.nullpointers.nomanleft.model;
 import java.awt.*;
 
 public class Peasent extends Human {
-    public Peasent(Point loc) {
-        super(loc);
+    public Peasent() {
+        super();
     }
 
     @Override

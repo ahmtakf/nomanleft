@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class Tower extends Tile{
 
-    public Tower(Point x) {
-        super(x);
+    public Tower() {
+        super();
     }
 
     @Override

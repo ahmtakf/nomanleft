@@ -2,11 +2,9 @@ package com.nullpointers.nomanleft.model;
 import java.awt.*;
 
 public abstract class Tile implements MapObject {
-    protected Point x;
+    public Point x;
 
-    public Tile(Point x){
-        setPosition(x);
-    }
+    public Tile(){ }
     public abstract boolean isDiggable();
     public abstract boolean isFilable();
 
