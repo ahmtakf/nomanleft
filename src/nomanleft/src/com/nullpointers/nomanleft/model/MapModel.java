@@ -40,10 +40,25 @@ public class MapModel {
             e.printStackTrace();
         }
 
+
+       /* printMap();
+        putWall(walls.get(0), 4,5 );*/
+        printMap();
+
     }
 
     public MapObject[][] getMap(){
         return map;
+    }
+
+    public void printMap(){
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                System.out.print((map[i][j].getClass().hashCode() - 2005169944) + " ");
+            }
+            System.out.println();
+        }
     }
 
     public ArrayList<Wall> getWalls(){
@@ -79,7 +94,7 @@ public class MapModel {
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                if (wallShape[i][j] > 0 && !(universe[i+8+x-pivotX][j+8+y-pivotY] instanceof Ground)){
+                if (wallShape[i][j] > 0 && (universe[i+8+x-pivotX][j+8+y-pivotY] instanceof Ground)){
                     universe[i+8+x-pivotX][j+8+y-pivotY] = factory.getMapObject("WallTile");
                 }
             }
