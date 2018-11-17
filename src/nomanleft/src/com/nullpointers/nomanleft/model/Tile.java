@@ -1,4 +1,6 @@
 package com.nullpointers.nomanleft.model;
+import com.nullpointers.nomanleft.controller.FileManager;
+
 import java.awt.*;
 
 public abstract class Tile implements MapObject {
@@ -22,4 +24,10 @@ public abstract class Tile implements MapObject {
     public boolean isGround() {
         return false;
     }
+
+    @Override
+    public Image getImage(){
+        return FileManager.getInstance().getBush();
+    }
+
 }

@@ -35,8 +35,9 @@ public class LevelPanel extends JPanel{
     private JButton right1;
     private JButton right0;
     private Image image;
+    private GamePanel gp;
     public LevelPanel() {
-        GamePanel gp = new GamePanel();
+        gp = new GamePanel();
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

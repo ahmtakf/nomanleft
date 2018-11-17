@@ -40,7 +40,10 @@ public class MapModel {
             e.printStackTrace();
         }
 
+    }
 
+    public MapObject[][] getMap(){
+        return map;
     }
 
 }
