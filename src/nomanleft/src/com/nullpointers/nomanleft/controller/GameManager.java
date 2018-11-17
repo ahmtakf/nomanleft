@@ -6,7 +6,9 @@ import javax.swing.*;
 
 public class GameManager {
 
-    public GameManager(){
+    private final static GameManager instance = new GameManager();
+
+    private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
     }
 
@@ -17,4 +19,10 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
     }
+
+    public static GameManager getInstance(){
+        return instance;
+    }
+
+
 }
