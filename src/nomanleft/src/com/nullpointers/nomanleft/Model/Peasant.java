@@ -2,9 +2,9 @@ package com.nullpointers.nomanleft.model;
 
 import java.awt.*;
 
-public class Peasent extends Human {
-    public Peasent() {
-        super();
+public class Peasant extends Human {
+    public Peasant() {
+        super(false);
     }
 
     @Override

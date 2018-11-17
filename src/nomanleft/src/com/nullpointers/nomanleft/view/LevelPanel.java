@@ -4,8 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LevelPanel {
-    public JPanel LevelPanel;
+public class LevelPanel extends JPanel{
     private JPanel gamePanel;
     private JPanel boosterPanel;
     private JPanel wallPanel;
@@ -27,6 +26,7 @@ public class LevelPanel {
 
 
     public LevelPanel() {
+        this.setVisible(true);
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

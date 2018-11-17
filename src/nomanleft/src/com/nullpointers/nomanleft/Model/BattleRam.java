@@ -5,7 +5,7 @@ import java.awt.*;
 public class BattleRam extends Human{
 
     public BattleRam() {
-        super();
+        super(true);
     }
 
     @Override

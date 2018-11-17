@@ -3,8 +3,9 @@ package com.nullpointers.nomanleft.model;
 import java.awt.*;
 
 public class Soldier extends Human {
-    public Soldier() {
-        super();
+
+    public Soldier(boolean enemy) {
+        super(enemy);
     }
 
     @Override

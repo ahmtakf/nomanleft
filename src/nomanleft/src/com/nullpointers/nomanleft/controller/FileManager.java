@@ -1,11 +1,12 @@
 package com.nullpointers.nomanleft.controller;
 
+import com.nullpointers.nomanleft.model.Wall;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class FileManager {
 
@@ -20,8 +21,9 @@ public class FileManager {
     private Image lava;
     private Image mountain;
     private Image tower;
-    private final int WIDTH = 100;
-    private final int HEIGHT = 100;
+    private final static int WIDTH = 100;
+    private final static int HEIGHT = 100;
+    private ArrayList<Wall> walls = new ArrayList<>();
 
     private FileManager(){
         File userFile = new File(USER_INFORMATION);
@@ -46,6 +48,23 @@ public class FileManager {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        File wallFiles = new File("./resources/walls");
+        for (File wallFile: Objects.requireNonNull(wallFiles.listFiles())){
+            try {
+                br = new BufferedReader(new FileReader(wallFile));
+                int[][] wallShape = new int[8][8];
+                for (int i = 0; i < 8; i++) {
+                    for (int j = 0; j < 8; j++) {
+                        wallShape[i][j] = br.read() - '0';
+                    }
+                }
+                walls.add(new Wall(wallShape));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
 
     }
@@ -100,5 +119,20 @@ public class FileManager {
 
     public Image getTower() {
         return tower;
+    }
+
+    public BufferedReader getLevel(int level){
+        File levelFile = new File("./resources/normallevels/level" + level + ".txt");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(levelFile));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return br;
+    }
+
+    public ArrayList<Wall> getWalls() {
+        return walls;
     }
 }

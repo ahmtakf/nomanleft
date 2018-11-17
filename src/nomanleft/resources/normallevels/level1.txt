@@ -1,0 +1,9 @@
+Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
+Ground,Ground,Ground,FriendSoldier,Ground,EnemySoldier,Ground,Ground
+Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
+Ground,EnemySoldier,Ground,Ground,Ground,FriendSoldier,Ground,Ground
+Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
+Ground,FriendSoldier,Tower,Tower,Ground,EnemySoldier,Ground,Ground
+Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
+Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
+1

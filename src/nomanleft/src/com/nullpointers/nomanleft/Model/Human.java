@@ -4,11 +4,11 @@ import java.awt.*;
 
 public abstract class Human implements MapObject {
 
-    public boolean isEnemy;
-    public Point loc;
+    private boolean isEnemy;
+    private Point loc;
 
-    public Human(){
-        this.isEnemy = false;
+    public Human(boolean isEnemy){
+        this.isEnemy = isEnemy;
     }
 
     public abstract boolean isMovable();
@@ -28,6 +28,10 @@ public abstract class Human implements MapObject {
     @Override
     public boolean isGround() {
         return false;
+    }
+
+    public boolean isEnemy() {
+        return isEnemy;
     }
 
 }
