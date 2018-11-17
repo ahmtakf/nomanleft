@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52cb5433-eafc-4947-9abc-850c93e373b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="52cb5433-eafc-4947-9abc-850c93e373b8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +13,7 @@
     <session id="-323449155">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.4" value="1" />
@@ -25,8 +21,8 @@
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.45" value="1" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -160,8 +156,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,16 +317,17 @@
       <workItem from="1542462906539" duration="32000" />
       <workItem from="1542463043741" duration="605000" />
       <workItem from="1542463704377" duration="38000" />
+      <workItem from="1542463905032" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11330000" />
+    <option name="totallyTimeSpent" value="11340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
