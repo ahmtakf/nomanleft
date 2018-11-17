@@ -1,5 +1,7 @@
 package com.nullpointers.nomanleft.model;
 
+import com.nullpointers.nomanleft.controller.FileManager;
+
 import java.awt.*;
 
 public class Soldier extends Human {
@@ -17,4 +19,10 @@ public class Soldier extends Human {
     public boolean isHidable() {
         return false;
     }
+
+    @Override
+    public Image getImage(){
+        return FileManager.getInstance().getBush();
+    }
+
 }

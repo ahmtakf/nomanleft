@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LevelPanel extends JPanel{
-    private JPanel currentLevel;
     private JPanel gamePanel;
     private JPanel boosterPanel;
     private JPanel wallPanel;

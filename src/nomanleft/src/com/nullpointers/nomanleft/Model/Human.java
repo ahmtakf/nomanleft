@@ -1,5 +1,7 @@
 package com.nullpointers.nomanleft.model;
 
+import com.nullpointers.nomanleft.controller.FileManager;
+
 import java.awt.*;
 
 public abstract class Human implements MapObject {
@@ -32,6 +34,11 @@ public abstract class Human implements MapObject {
 
     public boolean isEnemy() {
         return isEnemy;
+    }
+
+    @Override
+    public Image getImage(){
+        return null;
     }
 
 }

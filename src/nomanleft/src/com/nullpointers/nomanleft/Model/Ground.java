@@ -1,5 +1,7 @@
 package com.nullpointers.nomanleft.model;
 
+import com.nullpointers.nomanleft.controller.FileManager;
+
 import java.awt.*;
 
 public class Ground extends Tile {
@@ -16,4 +18,10 @@ public class Ground extends Tile {
     public boolean isFilable() {
         return false;
     }
+
+    @Override
+    public Image getImage(){
+        return FileManager.getInstance().getGround();
+    }
+
 }
