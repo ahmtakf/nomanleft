@@ -13,19 +13,16 @@ public class GameManager {
     private MapModel currentLevel;
 
     private GameManager(){
-        frame = new JFrame("NoManLeft");
-        frame.setPreferredSize(new Dimension(1600,800));
-        frame.setContentPane(new LevelPanel());
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
         System.out.println(FileManager.getInstance().getCustomization());
-
     }
 
     public void startLevel(int levelNumber){
         currentLevel = new MapModel(levelNumber);
-        frame.setContentPane(new LevelPanel());
+        frame = new JFrame("NoManLeft");
+        frame.setPreferredSize(new Dimension(1600,800));
+        frame.setContentPane(new LevelPanel().levelPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
         frame.setVisible(true);
     }
 

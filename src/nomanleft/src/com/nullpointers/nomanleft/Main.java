@@ -5,7 +5,8 @@ import com.nullpointers.nomanleft.controller.GameManager;
 public class Main {
 
     public static void main(String[] args) {
-        GameManager.getInstance().startLevel(1);
+        GameManager gameManager = GameManager.getInstance();
+        gameManager.startLevel(1);
     }
 
 }

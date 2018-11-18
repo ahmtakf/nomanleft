@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LevelPanel extends JPanel{
+    public JPanel levelPanel;
     private JPanel gamePanel;
     private JPanel boosterPanel;
     private JPanel wallPanel;
@@ -34,9 +35,10 @@ public class LevelPanel extends JPanel{
     private JButton right2;
     private JButton right1;
     private JButton right0;
-    private Image image;
-    private GamePanel gp;
+
     public LevelPanel() {
+        super();
+        System.out.println("sadfghfh");
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,13 +50,10 @@ public class LevelPanel extends JPanel{
         });
     }
 
-   /* @Override
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
 
-        g.drawImage(FileManager.getInstance().getBush(),100,100,null);
-
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        gamePanel = new GamePanel();
 
     }
-*/
 }
