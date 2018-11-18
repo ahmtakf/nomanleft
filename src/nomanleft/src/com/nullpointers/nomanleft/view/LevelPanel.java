@@ -28,13 +28,14 @@ public class LevelPanel extends JPanel{
     private JButton left3;
     private JButton left2;
     private JButton left1;
-    private JButton left0;
-    private JButton right5;
     private JButton right4;
     private JButton right3;
     private JButton right2;
     private JButton right1;
-    private JButton right0;
+    private JPanel wallPanel1;
+    private JPanel wallPanel2;
+    private JPanel wallPanel3;
+    private JPanel wallPanel4;
 
     public LevelPanel() {
         super();
