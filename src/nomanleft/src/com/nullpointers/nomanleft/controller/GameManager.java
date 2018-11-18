@@ -36,6 +36,8 @@ public class GameManager {
         frame.setContentPane(new LevelPanel().getLevelPanel());
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static GameManager getInstance(){
@@ -50,24 +52,32 @@ public class GameManager {
         frame.setContentPane(mainMenuPanel.getMainMenuPanel());
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void openPlayGamePanel () {
         frame.setContentPane(playGamePanel.getPlayGamePanel());
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void openShop () {
         frame.setContentPane(shopPanel.getShopPanel());
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void openOptions() {
         frame.setContentPane(optionsPanel.getOptionsPanel());
         frame.pack();
         frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
