@@ -21,6 +21,8 @@ public class FileManager {
     private Image lava;
     private Image mountain;
     private Image tower;
+    private Image friendSoldier;
+    private Image enemySoldier;
     private final static int WIDTH = 100;
     private final static int HEIGHT = 100;
     private ArrayList<Wall> walls = new ArrayList<>();
@@ -45,6 +47,8 @@ public class FileManager {
             lava = ImageIO.read(new File("./resources/img/lava" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             mountain = ImageIO.read(new File("./resources/img/mountain" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             tower = ImageIO.read(new File("./resources/img/tower" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            friendSoldier = ImageIO.read(new File("./resources/img/friendsoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            enemySoldier = ImageIO.read(new File("./resources/img/enemysoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -134,5 +138,21 @@ public class FileManager {
 
     public ArrayList<Wall> getWalls() {
         return walls;
+    }
+
+    public Image getFriendSoldier() {
+        return friendSoldier;
+    }
+
+    public void setFriendSoldier(Image friendSoldier) {
+        this.friendSoldier = friendSoldier;
+    }
+
+    public Image getEnemySoldier() {
+        return enemySoldier;
+    }
+
+    public void setEnemySoldier(Image enemySoldier) {
+        this.enemySoldier = enemySoldier;
     }
 }

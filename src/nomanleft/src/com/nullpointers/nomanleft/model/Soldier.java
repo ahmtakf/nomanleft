@@ -22,7 +22,11 @@ public class Soldier extends Human {
 
     @Override
     public Image getImage(){
-        return FileManager.getInstance().getBush();
+
+        if ( isEnemy())
+            return FileManager.getInstance().getEnemySoldier();
+        else
+            return FileManager.getInstance().getFriendSoldier();
     }
 
 }

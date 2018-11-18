@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LevelPanel extends JPanel{
-    public JPanel levelPanel;
+    private JPanel levelPanel;
     private JPanel gamePanel;
     private JPanel boosterPanel;
     private JPanel wallPanel;
@@ -52,8 +52,11 @@ public class LevelPanel extends JPanel{
 
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         gamePanel = new GamePanel();
 
+    }
+
+    public JPanel getLevelPanel() {
+        return levelPanel;
     }
 }
