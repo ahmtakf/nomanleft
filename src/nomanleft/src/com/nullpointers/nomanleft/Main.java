@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         GameManager gameManager = GameManager.getInstance();
-        gameManager.startLevel(1);
+          gameManager.openMainMenu();
     }
-
 }

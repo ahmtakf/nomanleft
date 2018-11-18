@@ -31,17 +31,19 @@ public class PlayGamePanel {
 
     public PlayGamePanel() {
 
+        // get availableLevelNo from file manager when implemented
+        int availableLevelNo = 5;
+
 
         levelsList = new ArrayList<>();
 
-        //DUMMY LEVELS ADDED UPDATE THIS*********
-        for (int i = 0; i < 35 ; i++  ) {
+
+        for (int i = 0; i < availableLevelNo ; i++  ) {
             JButton tmp = new JButton("level: " + (i+1) );
-            tmp.addActionListener(new ButtonListener());
+            tmp.addActionListener(new PButtonListener());
             tmp.setActionCommand(Integer.toString(i+1));
             levelsList.add(tmp);
         }
-        //***********
 
 
         //calculate the dimensions
@@ -53,9 +55,13 @@ public class PlayGamePanel {
         for (int i = 0; i < levelNumber ; i++  )
             levelPanel.add(levelsList.get(i));
 
-        backButton.setActionCommand("back");
-        backButton.addActionListener(new ButtonListener());
 
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().openMainMenu();
+            }
+        });
     }
 
 
@@ -66,19 +72,16 @@ public class PlayGamePanel {
 
     //implement listeners
 
-    private class ButtonListener implements ActionListener {
+    private class PButtonListener implements ActionListener {
 
         public void actionPerformed (ActionEvent event) {
             String actionCommand = event.getActionCommand();
             int i = Integer.parseInt(actionCommand);
 
-            if (actionCommand.equals("back")) {
-                // call gameManager to return main menu
-            }
-            else if ( i >= 0 && i< levelsList.size()){
 
+            if ( i >= 0 && i< levelsList.size()){
                 System.out.println("load level" + i);
-                // GameManager.getInstance().startLevel(i);
+                GameManager.getInstance().startLevel(i);
             }
         }
 

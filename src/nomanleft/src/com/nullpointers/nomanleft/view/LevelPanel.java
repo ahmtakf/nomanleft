@@ -50,7 +50,8 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 int yesNoOption = JOptionPane.showConfirmDialog(null,"Are you sure to Exit ? ", "Close",JOptionPane.YES_NO_OPTION);
                 if(yesNoOption == JOptionPane.YES_NO_OPTION){
-                    System.exit(0);
+                    //System.exit(0);
+                    GameManager.getInstance().openMainMenu();
                 }
             }
         });

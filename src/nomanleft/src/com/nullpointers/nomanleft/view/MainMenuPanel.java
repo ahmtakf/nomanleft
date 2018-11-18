@@ -1,5 +1,7 @@
 package com.nullpointers.nomanleft.view;
 
+import com.nullpointers.nomanleft.controller.GameManager;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.* ;
@@ -24,58 +26,59 @@ public class MainMenuPanel {
 
     //Constructor
     public MainMenuPanel(){
-        playGame.setActionCommand("TimeTrial");
-        playGame.addActionListener(new ButtonListener());
+        playGame.setActionCommand("PlayGame");
+        playGame.addActionListener(new MenuButtonListener());
 
         timeTrial.setActionCommand("TimeTrial");
-        timeTrial.addActionListener(new ButtonListener());
+        timeTrial.addActionListener(new MenuButtonListener());
 
         sandbox.setActionCommand("SandBox");
-        sandbox.addActionListener(new ButtonListener());
+        sandbox.addActionListener(new MenuButtonListener());
 
         shop.setActionCommand("Shop");
-        shop.addActionListener(new ButtonListener());
+        shop.addActionListener(new MenuButtonListener());
 
         howToPlay.setActionCommand("HowToPlay");
-        howToPlay.addActionListener(new ButtonListener());
+        howToPlay.addActionListener(new MenuButtonListener());
 
         options.setActionCommand("Options");
-        options.addActionListener(new ButtonListener());
+        options.addActionListener(new MenuButtonListener());
 
         credits.setActionCommand("Credits");
-        credits.addActionListener(new ButtonListener());
+        credits.addActionListener(new MenuButtonListener());
 
         exit.setActionCommand("Exit");
-        exit.addActionListener(new ButtonListener());
+        exit.addActionListener(new MenuButtonListener());
     }
 
 
     public void playGame() {
-        System.out.println("PlayGame");
+        System.out.println("open PlayGamePanel");
+        GameManager.getInstance().openPlayGamePanel();
     }
 
     public void openTimeTrial() {
-        System.out.println("openTimeTrial");
+        System.out.println("openTimeTrial not yet");
     }
 
     public void openSandBox() {
-        System.out.println("openSandBox");
+        System.out.println("openSandBox not yet");
     }
 
     public void openShop() {
-        System.out.println("openShop");
+        GameManager.getInstance().openShop();
     }
 
     public void openHowToPlay(){
-        System.out.println("openHowToPlay");
+        System.out.println("openHowToPlay not yet");
     }
 
     public void openCredits(){
-        System.out.println("openCredits");
+        System.out.println("openCredits not yet");
     }
 
     public void openOptions(){
-        System.out.println("openOptions");
+        GameManager.getInstance().openOptions();
     }
 
     public void quitGame(){
@@ -86,7 +89,7 @@ public class MainMenuPanel {
 
     //implement listeners
 
-    private class ButtonListener implements ActionListener {
+    private class MenuButtonListener implements ActionListener {
 
         public void actionPerformed (ActionEvent event) {
              String actionCommand = event.getActionCommand();
