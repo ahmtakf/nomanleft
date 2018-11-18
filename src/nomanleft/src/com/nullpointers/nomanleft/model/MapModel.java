@@ -41,8 +41,8 @@ public class MapModel {
         }
 
 
-        printMap();
-        putWall(walls.get(0), 4,5 );
+       /* printMap();
+        putWall(walls.get(0), 4,5 );*/
         printMap();
 
     }

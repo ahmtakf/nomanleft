@@ -3,6 +3,8 @@ package com.nullpointers.nomanleft.view;
 
 
 import com.nullpointers.nomanleft.controller.FileManager;
+import com.nullpointers.nomanleft.controller.GameManager;
+import com.nullpointers.nomanleft.model.Wall;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -36,10 +38,13 @@ public class LevelPanel extends JPanel{
     private JPanel wallPanel2;
     private JPanel wallPanel3;
     private JPanel wallPanel4;
+    private JPanel wallPanel5;
 
     public LevelPanel() {
         super();
+
         System.out.println("sadfghfh");
+
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -55,6 +60,40 @@ public class LevelPanel extends JPanel{
     private void createUIComponents() {
         gamePanel = new GamePanel();
 
+        ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
+        if (walls.size() > 0){
+            wallPanel1 = new WallPanel(walls.get(0));
+        }
+        else{
+            wallPanel1 = new JPanel();
+        }
+        if (walls.size() > 1){
+            wallPanel2 = new WallPanel(walls.get(1));
+        }
+        else{
+            wallPanel2 = new JPanel();
+        }
+        if (walls.size() > 2){
+            wallPanel3 = new WallPanel(walls.get(2));
+        }
+        else{
+            wallPanel3 = new JPanel();
+        }
+        if (walls.size() > 3){
+            wallPanel4 = new WallPanel(walls.get(3));
+        }
+        else{
+            wallPanel4 = new JPanel();
+        }
+        if (walls.size() > 4){
+            wallPanel5 = new WallPanel(walls.get(4));
+        }
+        else{
+            wallPanel5 = new JPanel();
+        }
+
+        repaint();
+        validate();
     }
 
     public JPanel getLevelPanel() {

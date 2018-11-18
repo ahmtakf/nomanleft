@@ -21,7 +21,7 @@ public class GameManager {
         frame = new JFrame("NoManLeft");
         frame.setPreferredSize(new Dimension(1600,800));
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setContentPane(new LevelPanel().levelPanel);
+        frame.setContentPane(new LevelPanel().getLevelPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
