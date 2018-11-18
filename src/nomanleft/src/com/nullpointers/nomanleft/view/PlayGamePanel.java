@@ -11,71 +11,56 @@ import javax.swing.* ;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.html.HTMLDocument;
 
-public class PlayGamePanel extends JPanel {
+public class PlayGamePanel {
 
     private static final int COL_NUMBER = 10;
 
-
-    private ArrayList<JButton> levels;
-    private JLabel title;
+    private ArrayList<JButton> levelsList;
+    private JPanel playGamePanel;
     private JButton backButton;
-    private JPanel levelButtonPanel;
+    private JLabel title;
+    private JPanel topPanel;
+    private JPanel levelPanel;
+
+
+
+    public JPanel getPlayGamePanel() {
+        return playGamePanel;
+    }
+
 
     public PlayGamePanel() {
-        super();
-        this.setPreferredSize(new Dimension(1600 ,900));
-        setLayout(new GridBagLayout());
 
-        levels = new ArrayList<JButton>();
 
+        levelsList = new ArrayList<>();
 
         //DUMMY LEVELS ADDED UPDATE THIS*********
         for (int i = 0; i < 35 ; i++  ) {
             JButton tmp = new JButton("level: " + (i+1) );
             tmp.addActionListener(new ButtonListener());
-            tmp.setActionCommand(Integer.toString(i));
-            levels.add(tmp);
-            System.out.println("addedTo ArrayList");
+            tmp.setActionCommand(Integer.toString(i+1));
+            levelsList.add(tmp);
         }
         //***********
 
-        int levelNumber = levels.size();
-        int rowNo = levelNumber / COL_NUMBER + 1 ;
 
-        //initialize levelButtonPanel, it will contain the level buttons
-        levelButtonPanel = new JPanel(new GridLayout(rowNo,COL_NUMBER));
+        //calculate the dimensions
+        int levelNumber = levelsList.size();
+        int rowNumber = levelNumber / COL_NUMBER ;
 
-        //add the buttons to the panel
-        for (int i = 0; i < levelNumber ; i++ ){
-            levelButtonPanel.add(levels.get(i));
-            System.out.println("addedTo LevelPanel");
-        }
+        levelPanel.setLayout(new GridLayout(rowNumber,COL_NUMBER,10,10));
 
-        // create the back button and label
-        title = new JLabel ("<html><h><strong><i>Choose Level</i></strong></h></html>");
-        backButton = new JButton("Back");
+        for (int i = 0; i < levelNumber ; i++  )
+            levelPanel.add(levelsList.get(i));
 
-        // add title and backButton to the Top
+        backButton.setActionCommand("back");
+        backButton.addActionListener(new ButtonListener());
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.anchor = GridBagConstraints.WEST ;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.insets = new Insets(0,0,0,300);
-        add(backButton, gbc);
-
-        gbc.anchor = GridBagConstraints.EAST ;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridwidth = GridBagConstraints.REMAINDER;
-        gbc.insets = new Insets(0,0,0,0);
-        add(title, gbc);
-
-        // add the level panel to CENTER
-        gbc.anchor = GridBagConstraints.CENTER ;
-        gbc.gridwidth = GridBagConstraints.REMAINDER;
-
-        add(levelButtonPanel,gbc);
+    }
 
 
+    private void createUIComponents() {
+        levelPanel = new JPanel();
     }
 
 
@@ -87,10 +72,14 @@ public class PlayGamePanel extends JPanel {
             String actionCommand = event.getActionCommand();
             int i = Integer.parseInt(actionCommand);
 
-            System.out.println("load level"+ i);
+            if (actionCommand.equals("back")) {
+                // call gameManager to return main menu
+            }
+            else if ( i >= 0 && i< levelsList.size()){
 
-           // GameManager.getInstance().startLevel(i);
-
+                System.out.println("load level" + i);
+                // GameManager.getInstance().startLevel(i);
+            }
         }
 
     }
