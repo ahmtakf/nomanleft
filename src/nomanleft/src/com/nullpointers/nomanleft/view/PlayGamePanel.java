@@ -32,7 +32,7 @@ public class PlayGamePanel {
     public PlayGamePanel() {
 
         // get availableLevelNo from file manager when implemented
-        int availableLevelNo = 5;
+        int availableLevelNo = 20;
 
 
         levelsList = new ArrayList<>();
