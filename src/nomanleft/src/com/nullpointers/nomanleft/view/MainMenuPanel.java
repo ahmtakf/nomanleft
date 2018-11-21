@@ -27,7 +27,7 @@ public class MainMenuPanel {
     //Constructor
     public MainMenuPanel(){
         playGame.setActionCommand("PlayGame");
-        playGame.addActionListener(new MenuButtonListener());
+        playGame.addActionListener(new MainMenuPanel.MenuButtonListener());
 
         timeTrial.setActionCommand("TimeTrial");
         timeTrial.addActionListener(new MenuButtonListener());

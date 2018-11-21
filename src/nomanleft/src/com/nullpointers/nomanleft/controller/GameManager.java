@@ -4,7 +4,6 @@ import com.nullpointers.nomanleft.model.MapModel;
 import com.nullpointers.nomanleft.model.Wall;
 import com.nullpointers.nomanleft.view.*;
 
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -19,7 +18,7 @@ public class GameManager {
     private OptionsPanel optionsPanel;
 
     private GameManager(){
-        //System.out.println(FileManager.getInstance().getCustomization());
+        System.out.println(FileManager.getInstance().getCustomization());
         frame = new JFrame("NoManLeft");
         frame.setPreferredSize(new Dimension(1600,800));
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);

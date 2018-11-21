@@ -11,13 +11,21 @@ public class MapModel {
     private MapObject[][] map;
     private MapObjectFactory factory;
     private ArrayList<Wall> walls;
+    private int[][] wallIdMap;
 
     public MapModel(int level){
         factory = new MapObjectFactory();
         map = new MapObject[8][8];
         walls = new ArrayList<>();
-        BufferedReader br = FileManager.getInstance().getLevel(level);
+        wallIdMap = new int[8][8];
 
+        for ( int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                wallIdMap[i][j] = 0;
+            }
+        }
+
+        BufferedReader br = FileManager.getInstance().getLevel(level);
         for ( int i = 0; i < 8; i++){
             try {
                 String nodes = br.readLine();
@@ -41,9 +49,14 @@ public class MapModel {
         }
 
 
-       /* printMap();
-        putWall(walls.get(0), 4,5 );*/
         printMap();
+        putWall(walls.get(0), 4,5 );
+        printMap();
+        printWallIDMap();
+
+        takeWall(4,5);
+        printMap();
+        printWallIDMap();
 
     }
 
@@ -51,11 +64,20 @@ public class MapModel {
         return map;
     }
 
+    public void printWallIDMap(){
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                System.out.print(wallIdMap[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public void printMap(){
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                System.out.print((map[i][j].getClass().hashCode() - 2005169944) + " ");
+                System.out.print((map[i][j].getClass().hashCode()) + " ");
             }
             System.out.println();
         }
@@ -63,6 +85,23 @@ public class MapModel {
 
     public ArrayList<Wall> getWalls(){
         return walls;
+    }
+
+    public MapObject[][] takeWall(int x, int y){
+
+        if (map[x][y] instanceof WallTile){
+            int id = wallIdMap[x][y];
+            for (int i = 0; i < 8; i++){
+                for (int j = 0; j < 8; j++) {
+                    if ((map[i][j] instanceof WallTile) && (id == wallIdMap[i][j])){
+                        wallIdMap[i][j] = 0;
+                        map[i][j] = factory.getMapObject("Ground");
+                    }
+                }
+            }
+        }
+
+        return getMap();
     }
 
     public MapObject[][] putWall(Wall wall, int x, int y){
@@ -96,6 +135,7 @@ public class MapModel {
             for (int j = 0; j < 8; j++) {
                 if (wallShape[i][j] > 0 && (universe[i+8+x-pivotX][j+8+y-pivotY] instanceof Ground)){
                     universe[i+8+x-pivotX][j+8+y-pivotY] = factory.getMapObject("WallTile");
+                    wallIdMap[i+x-pivotX][j+y-pivotY] = wall.getId();
                 }
             }
         }

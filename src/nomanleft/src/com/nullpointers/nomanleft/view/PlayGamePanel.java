@@ -40,7 +40,7 @@ public class PlayGamePanel {
 
         for (int i = 0; i < availableLevelNo ; i++  ) {
             JButton tmp = new JButton("level: " + (i+1) );
-            tmp.addActionListener(new PButtonListener());
+            tmp.addActionListener(new PlayGamePanel.PButtonListener());
             tmp.setActionCommand(Integer.toString(i+1));
             levelsList.add(tmp);
         }

@@ -55,6 +55,7 @@ public class FileManager {
         }
 
         File wallFiles = new File("./resources/walls");
+        int id = 1;
         for (File wallFile: Objects.requireNonNull(wallFiles.listFiles())){
             try {
                 br = new BufferedReader(new FileReader(wallFile));
@@ -64,11 +65,11 @@ public class FileManager {
                         wallShape[i][j] = br.read() - '0';
                     }
                 }
-                walls.add(new Wall(wallShape));
+                walls.add(new Wall(wallShape, id));
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
+            id++;
         }
 
     }
