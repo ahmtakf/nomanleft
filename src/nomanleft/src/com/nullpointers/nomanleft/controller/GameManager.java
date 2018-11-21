@@ -1,6 +1,7 @@
 package com.nullpointers.nomanleft.controller;
 
 import com.nullpointers.nomanleft.model.MapModel;
+import com.nullpointers.nomanleft.model.Wall;
 import com.nullpointers.nomanleft.view.*;
 
 
@@ -79,6 +80,10 @@ public class GameManager {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+    }
+
+    public void PutWall (Wall wall, int x, int y ) {
+        currentLevel.putWall(wall,x,y);
     }
 
 

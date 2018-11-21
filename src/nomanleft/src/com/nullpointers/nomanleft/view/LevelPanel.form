@@ -53,7 +53,7 @@
               <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnLeft"/>
             </properties>
           </component>
           <component id="988d8" class="javax.swing.JButton" binding="left3">
@@ -61,7 +61,7 @@
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnLeft"/>
             </properties>
           </component>
           <component id="5b327" class="javax.swing.JButton" binding="left2">
@@ -69,7 +69,7 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnLeft"/>
             </properties>
           </component>
           <component id="bf6a6" class="javax.swing.JButton" binding="left1">
@@ -77,7 +77,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnLeft"/>
             </properties>
           </component>
           <component id="d67a3" class="javax.swing.JTextField" binding="wallsTextField" default-binding="true">
@@ -101,7 +101,7 @@
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnRight"/>
             </properties>
           </component>
           <component id="4848e" class="javax.swing.JButton" binding="right2">
@@ -109,7 +109,7 @@
               <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnRight"/>
             </properties>
           </component>
           <component id="883a9" class="javax.swing.JButton" binding="right3">
@@ -117,7 +117,7 @@
               <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnRight"/>
             </properties>
           </component>
           <component id="1f477" class="javax.swing.JButton" binding="right4">
@@ -125,7 +125,7 @@
               <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnRight"/>
             </properties>
           </component>
           <vspacer id="c6bec">
@@ -240,15 +240,15 @@
               <grid row="10" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnLeft"/>
             </properties>
           </component>
-          <component id="d47b2" class="javax.swing.JButton">
+          <component id="d47b2" class="javax.swing.JButton" binding="right5">
             <constraints>
               <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <text value="TurnRight"/>
             </properties>
           </component>
           <vspacer id="4b3cc">

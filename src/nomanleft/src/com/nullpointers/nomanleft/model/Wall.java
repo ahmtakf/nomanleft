@@ -50,10 +50,8 @@ public class Wall {
             System.out.println();
         }*/
 
-
         return getShape();
     }
-
 
     public int[][] rotateLeft(){
 
@@ -80,7 +78,6 @@ public class Wall {
             }
             System.out.println();
         }*/
-
 
         return getShape();
     }
