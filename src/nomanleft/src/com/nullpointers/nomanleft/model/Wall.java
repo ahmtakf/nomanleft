@@ -3,9 +3,11 @@ package com.nullpointers.nomanleft.model;
 public class Wall {
 
     private int[][] shape;
+    private int id;
 
-    public Wall(int[][] shape){
+    public Wall(int[][] shape, int id){
         this.shape = shape;
+        this.id = id;
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -34,22 +36,11 @@ public class Wall {
             }
         }
 
-      /*  for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                System.out.print(shape[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println();
-
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 shape[i][j] = rightShape[i][j];
-                System.out.print(shape[i][j]);
             }
-            System.out.println();
-        }*/
-
+        }
 
         return getShape();
     }
@@ -65,24 +56,21 @@ public class Wall {
             }
         }
 
-      /*  for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                System.out.print(shape[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println();
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 shape[i][j] = leftShape[i][j];
-                System.out.print(shape[i][j]);
             }
-            System.out.println();
-        }*/
-
+        }
 
         return getShape();
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

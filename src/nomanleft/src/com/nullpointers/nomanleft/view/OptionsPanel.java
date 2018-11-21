@@ -27,6 +27,7 @@ public class OptionsPanel {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 GameManager.getInstance().openMainMenu();
             }
         });
