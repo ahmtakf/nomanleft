@@ -315,7 +315,7 @@
           <defaultCapable value="true"/>
           <enabled value="true"/>
           <focusPainted value="false"/>
-          <font size="7"/>
+          <font size="10"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="10"/>
           <text value="Back"/>
