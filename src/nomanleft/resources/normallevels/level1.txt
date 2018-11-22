@@ -6,4 +6,4 @@ Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
 Ground,FriendSoldier,Tower,Tower,Ground,EnemySoldier,Ground,Ground
 Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
 Ground,Ground,Ground,Ground,Ground,Ground,Ground,Ground
-1
+1,2

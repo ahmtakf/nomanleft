@@ -13,11 +13,15 @@ public class MapModel {
     private ArrayList<Wall> walls;
     private int[][] wallIdMap;
     private boolean isChanged = false;
+    private int[][] outsideMap;
+    private int numberOfWallsOnMap;
+
     public MapModel(int level){
         factory = new MapObjectFactory();
         map = new MapObject[8][8];
         walls = new ArrayList<>();
         wallIdMap = new int[8][8];
+        numberOfWallsOnMap = 0;
 
         for ( int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -77,7 +81,8 @@ public class MapModel {
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                System.out.print((map[i][j].getClass().hashCode()) + " ");
+                String name = map[i][j].getClass().getName();
+                System.out.print((name.substring("com.nullpointers.nomanleft.model.".length(),name.length())) + " ");
             }
             System.out.println();
         }
@@ -131,11 +136,14 @@ public class MapModel {
             }
         }
 
+        numberOfWallsOnMap++;
+
+
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (wallShape[i][j] > 0 && (universe[i+8+x-pivotX][j+8+y-pivotY] instanceof Ground)){
                     universe[i+8+x-pivotX][j+8+y-pivotY] = factory.getMapObject("WallTile");
-                    wallIdMap[i+x-pivotX][j+y-pivotY] = wall.getId();
+                    wallIdMap[i+x-pivotX][j+y-pivotY] = numberOfWallsOnMap;
                 }
             }
         }
@@ -148,5 +156,21 @@ public class MapModel {
         isChanged = true;
         return getMap();
     }
+
+   /* public boolean check(){
+
+        outsideMap = new int[8][8];
+        for (){
+            for(){
+
+            }
+        }
+
+        return true;
+    }
+
+    private void outsides(){
+
+    }*/
 
 }
