@@ -128,7 +128,7 @@ public class LevelPanel extends JPanel{
                 validate();
             }
         });
-        right4.addActionListener(new ActionListener() {
+        left4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(3));
@@ -137,7 +137,7 @@ public class LevelPanel extends JPanel{
                 validate();
             }
         });
-        right5.addActionListener(new ActionListener() {
+        left5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(4));
