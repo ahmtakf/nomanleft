@@ -16,7 +16,7 @@ public class GameManager {
     private PlayGamePanel playGamePanel;
     private ShopPanel shopPanel;
     private OptionsPanel optionsPanel;
-
+    private boolean isMapModelChanged;
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
         frame = new JFrame("NoManLeft");
@@ -84,7 +84,20 @@ public class GameManager {
     public void PutWall (Wall wall, int x, int y ) {
         currentLevel.putWall(wall,x,y);
     }
+    public void rotateWallOnPanelRight(Wall wall){
+        wall.setShape(wall.rotateRight());
+    }
+    public void rotateWallOnPanelLeft(Wall wall){
+        wall.setShape(wall.rotateLeft());
+    }
+    public boolean isMapModelChanged() {
+        isMapModelChanged = currentLevel.isMapChanged();
+        return isMapModelChanged;
+    }
 
+    public void setMapModelChanged() {
+        currentLevel.setIsMapChanged();
+    }
 
 
 

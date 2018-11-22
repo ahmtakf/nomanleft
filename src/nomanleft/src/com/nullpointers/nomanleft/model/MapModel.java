@@ -12,7 +12,7 @@ public class MapModel {
     private MapObjectFactory factory;
     private ArrayList<Wall> walls;
     private int[][] wallIdMap;
-
+    private boolean isChanged = false;
     public MapModel(int level){
         factory = new MapObjectFactory();
         map = new MapObject[8][8];
@@ -145,8 +145,14 @@ public class MapModel {
                 map[i][j] = universe[i+8][j+8];
             }
         }
-
+        isChanged = true;
         return getMap();
+    }
+    public boolean isMapChanged(){
+        return isChanged;
+    }
+    public void setIsMapChanged(){
+        isChanged = false;
     }
 
 

@@ -50,4 +50,7 @@ public class WallPanel extends JPanel {
     public void setWall(Wall wall) {
         this.wall = wall;
     }
+    public void removeWall(Wall wall){
+
+    }
 }

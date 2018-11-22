@@ -38,12 +38,12 @@ public class LevelPanel extends JPanel{
     private JPanel wallPanel4;
     private JPanel wallPanel5;
     private Wall clickedWall;
+    ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
+    ArrayList<Wall> wallsCopy = new ArrayList<>(walls);
+
 
     public LevelPanel() {
         super();
-
-        System.out.println("sadfghfh");
-
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,6 +52,96 @@ public class LevelPanel extends JPanel{
                     //System.exit(0);
                     GameManager.getInstance().openPlayGamePanel();
                 }
+            }
+        });
+        right1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelRight(walls.get(0));
+                wallPanel1 = new WallPanel(walls.get(0));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        right2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelRight(walls.get(1));
+                wallPanel2 = new WallPanel(walls.get(1));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        right3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelRight(walls.get(2));
+                wallPanel3 = new WallPanel(walls.get(2));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        right4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelRight(walls.get(3));
+                wallPanel4 = new WallPanel(walls.get(3));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        right5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelRight(walls.get(4));
+                wallPanel5 = new WallPanel(walls.get(4));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        left1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(0));
+                wallPanel1 = new WallPanel(walls.get(0));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        left2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(1));
+                wallPanel2 = new WallPanel(walls.get(1));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        left3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(2));
+                wallPanel3 = new WallPanel(walls.get(2));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        right4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(3));
+                wallPanel4 = new WallPanel(walls.get(3));
+                wallPanel.repaint();
+                validate();
+            }
+        });
+        right5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(4));
+                wallPanel5 = new WallPanel(walls.get(4));
+                wallPanel.repaint();
+                validate();
             }
         });
 
@@ -66,21 +156,40 @@ public class LevelPanel extends JPanel{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if (clickedWall != null){
-                Point clickCoordinate = e.getPoint();
+                    Point clickCoordinate = e.getPoint();
 
-                //System.out.println(clickCoordinate);
-                int mapPointX = (int) (clickCoordinate.getX() / 100) ;
-                int mapPointY = (int) (clickCoordinate.getY() / 100) ;
+                    //System.out.println(clickCoordinate);
+                    int mapPointX = (int) (clickCoordinate.getX() / 100) ;
+                    int mapPointY = (int) (clickCoordinate.getY() / 100) ;
 
-                System.out.println("X:" + mapPointX + " Y: " + mapPointY);
-                GameManager.getInstance().PutWall(clickedWall,mapPointY,mapPointX);
-                clickedWall = null;
-                gamePanel.repaint();
+                    System.out.println("X:" + mapPointX + " Y: " + mapPointY);
+                    GameManager.getInstance().PutWall(clickedWall,mapPointY,mapPointX);
+                    if(GameManager.getInstance().isMapModelChanged()){
+                        if(clickedWall.getId() == walls.get(0).getId()){
+                            System.out.println("adfsgfdhjjk");
+                            wallPanel1 = new JPanel();
+                        }
+                        else if(clickedWall.getId() == walls.get(1).getId()){
+                            wallPanel2 = new JPanel();
+                        }
+                        else if(clickedWall.getId() == walls.get(2).getId()){
+                            wallPanel3 = new JPanel();
+                        }
+                        else if(clickedWall.getId() == walls.get(3).getId()){
+                            wallPanel4 = new JPanel();
+                        }
+                        else if(clickedWall.getId() == walls.get(4).getId()){
+                            wallPanel5 = new JPanel();
+                        }
+                    }
+                    clickedWall = null;
+                    gamePanel.repaint();
+                    wallPanel.repaint();
+                    gamePanel.validate();
+                    wallPanel.validate();
                 }
             }
         });
-
-
         ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
         if (walls.size() > 0){
             wallPanel1 = new WallPanel(walls.get(0));
@@ -135,8 +244,7 @@ public class LevelPanel extends JPanel{
            clickedWall = tmp.getWall();
            System.out.println("wall click");
        }
+
    }
-
-
 
 }
