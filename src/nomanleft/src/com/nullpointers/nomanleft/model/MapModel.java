@@ -158,37 +158,38 @@ public class MapModel {
         //1 is outside, 0 is not outside
         outsideMap = new int[8][8];
 
+        for (int m = 0; m < 8; m++){
+            for(int k = 0; k < 8; k++){
+                outsideMap[m][k] = 0;
+            }
+        }
+
         for (int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++) {
                 if (map[i][j] instanceof Soldier && ((Soldier)map[i][j]).isEnemy()){
-                    for (int m = 0; m < 8; m++){
-                        for(int k = 0; k < 8; k++){
-                            outsideMap[m][k] = 0;
-                        }
-                    }
                     outsides(i,j);
-                    printMap(outsideMap);
+                }
+            }
+        }
 
-                    for (int m = 0; m < 8; m++){
-                        for(int k = 0; k < 8; k++) {
-                            if (map[m][k] instanceof Soldier && !((Soldier)map[m][k]).isEnemy()){
-                                if (outsideMap[m][k] == 1){
-                                    return false;
-                                }
-                            }
-                            if (map[m][k] instanceof Tower){
-                                if (outsideMap[m][k] == 1){
-                                    return false;
-                                }
-                            }
-                            if (map[m][k] instanceof Soldier && ((Soldier)map[m][k]).isEnemy()){
-                                if (outsideMap[m][k] == 0){
-                                    return false;
-                                }
-                            }
-                        }
+        printMap(outsideMap);
+
+        for (int m = 0; m < 8; m++){
+            for(int k = 0; k < 8; k++) {
+                if (map[m][k] instanceof Soldier && !((Soldier)map[m][k]).isEnemy()){
+                    if (outsideMap[m][k] == 1){
+                        return false;
                     }
-
+                }
+                if (map[m][k] instanceof Tower){
+                    if (outsideMap[m][k] == 1){
+                        return false;
+                    }
+                }
+                if (map[m][k] instanceof Soldier && ((Soldier)map[m][k]).isEnemy()){
+                    if (outsideMap[m][k] == 0){
+                        return false;
+                    }
                 }
             }
         }
