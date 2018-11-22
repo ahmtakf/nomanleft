@@ -37,7 +37,9 @@ public class LevelPanel extends JPanel{
     private JPanel wallPanel3;
     private JPanel wallPanel4;
     private JPanel wallPanel5;
+    private JButton removeButton;
     private Wall clickedWall;
+    public boolean flag = true;
     ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
     ArrayList<Wall> wallsCopy = new ArrayList<>(walls);
 
@@ -144,10 +146,14 @@ public class LevelPanel extends JPanel{
                 validate();
             }
         });
+        removeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = false;
+            }
+        });
 
     }
-
-
     private void createUIComponents() {
         gamePanel = new GamePanel();
 
@@ -155,18 +161,26 @@ public class LevelPanel extends JPanel{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if (clickedWall != null){
-                    Point clickCoordinate = e.getPoint();
+                if(flag){
+                    if (clickedWall != null){
+                        Point clickCoordinate = e.getPoint();
 
-                    //System.out.println(clickCoordinate);
-                    int mapPointX = (int) (clickCoordinate.getX() / 100) ;
-                    int mapPointY = (int) (clickCoordinate.getY() / 100) ;
+                        //System.out.println(clickCoordinate);
+                        int mapPointX = (int) (clickCoordinate.getX() / 100) ;
+                        int mapPointY = (int) (clickCoordinate.getY() / 100) ;
 
-                    System.out.println("X:" + mapPointX + " Y: " + mapPointY);
-                    GameManager.getInstance().PutWall(clickedWall,mapPointY,mapPointX);
-                    clickedWall = null;
-                    gamePanel.repaint();
+                        System.out.println("X:" + mapPointX + " Y: " + mapPointY);
+                        GameManager.getInstance().PutWall(clickedWall,mapPointY,mapPointX);
+                        clickedWall = null;
+                        gamePanel.repaint();
+                    }
                 }
+                else{
+                    GameManager.getInstance().getMapModel().takeWall(((int)e.getPoint().getY()/100),((int)e.getPoint().getX()/100));
+                    gamePanel.repaint();
+                    flag = true;
+                }
+
             }
         });
         ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
@@ -215,15 +229,14 @@ public class LevelPanel extends JPanel{
         return levelPanel;
     }
 
-   private class WallClickAdapter extends MouseAdapter {
-       @Override
-       public void mouseClicked(MouseEvent e) {
-           super.mouseClicked(e);
-           WallPanel tmp = (WallPanel)e.getSource();
-           clickedWall = tmp.getWall();
-           System.out.println("wall click");
-       }
+    private class WallClickAdapter extends MouseAdapter {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            super.mouseClicked(e);
+            WallPanel tmp = (WallPanel)e.getSource();
+            clickedWall = tmp.getWall();
+            System.out.println("wall click");
+        }
 
-   }
-
+    }
 }
