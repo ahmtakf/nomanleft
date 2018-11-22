@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52cb5433-eafc-4947-9abc-850c93e373b8" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/resources/walls/wall3.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/walls/wall4.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/walls/wall5.txt" afterDir="false" />
@@ -13,11 +12,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/normallevels/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/normallevels/level1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/walls/wall1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" afterDir="false" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
+      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,16 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-=======
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="195" column="48" lean-forward="true" selection-start-line="195" selection-start-column="48" selection-end-line="195" selection-end-column="48" />
+            <state relative-caret-position="448">
+              <caret line="195" column="20" lean-forward="true" selection-start-line="195" selection-start-column="20" selection-end-line="195" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1847#1848#0" expanded="true" />
@@ -51,15 +42,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
+            <state relative-caret-position="287">
+              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1487#1488#0" expanded="true" />
                 <element signature="e#1518#1519#0" expanded="true" />
-                <element signature="e#2746#2747#0" expanded="true" />
-                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2812#2813#0" expanded="true" />
+                <element signature="e#2840#2841#0" expanded="true" />
+                <element signature="e#2738#2739#0" expanded="true" />
+                <element signature="e#2784#2785#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="175" column="57" lean-forward="true" selection-start-line="175" selection-start-column="57" selection-end-line="175" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,38 +72,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="264">
-              <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5622#5623#0" expanded="true" />
-                <element signature="e#5666#5667#0" expanded="true" />
-                <element signature="e#5800#6867#0" expanded="true" />
-                <element signature="e#6866#6867#0" expanded="true" />
-                <element signature="e#8211#8212#0" expanded="true" />
-                <element signature="e#8244#8245#0" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="128">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
+            <state relative-caret-position="64">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="128" column="37" lean-forward="true" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
-=======
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/BattleRam.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
               <folding>
                 <element signature="e#406#407#0" expanded="true" />
                 <element signature="e#464#465#0" expanded="true" />
@@ -135,8 +118,6 @@
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/MainMenuPanel.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -155,7 +136,6 @@
           </provider>
         </entry>
       </file>
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -212,23 +192,20 @@
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/WallTile.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Bush.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/BattleRam.java" />
         <option value="$PROJECT_DIR$/resources/walls/wall2.txt" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
         <option value="$PROJECT_DIR$/resources/walls/wall3.txt" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
         <option value="$PROJECT_DIR$/resources/normallevels/level1.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall4.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall5.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall1.txt" />
-=======
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" />
       </list>
     </option>
   </component>
@@ -289,6 +266,14 @@
               <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="LevelPanel" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -300,12 +285,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542907203810" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542906826065" />
-    <property name="extract.method.default.visibility" value="private" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -450,17 +430,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="59380000" />
-=======
-    <option name="totallyTimeSpent" value="59759000" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
+    <option name="totallyTimeSpent" value="59670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30597016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30597016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -469,7 +445,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39822024" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -478,9 +454,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.39933258" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32777777" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32777777" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -491,6 +466,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="SciView" order="9" />
+      <window_info anchor="right" id="Maven" order="10" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29820052" />
@@ -526,6 +502,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -644,8 +624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="-7">
+          <caret line="848" column="165" selection-start-line="848" selection-start-column="165" selection-end-line="848" selection-end-column="165" />
         </state>
       </provider>
     </entry>
@@ -708,20 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -732,21 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2039">
-          <caret line="165" column="87" selection-start-line="165" selection-start-column="87" selection-end-line="165" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8689#8690#0" expanded="true" />
-            <element signature="e#8722#8723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -754,24 +705,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/WallTile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -791,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -828,16 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -852,7 +779,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -884,27 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
-            <element signature="e#2746#2747#0" expanded="true" />
-            <element signature="e#2778#2779#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/walls/wall1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -926,33 +831,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="128" column="37" lean-forward="true" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
+        <state relative-caret-position="944">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="195" column="48" lean-forward="true" selection-start-line="195" selection-start-column="48" selection-end-line="195" selection-end-column="48" />
->>>>>>> fdd9c38b6fca454bd0df4d7b2c7b446e7bca2df1
+        <state relative-caret-position="296">
+          <caret line="175" column="57" lean-forward="true" selection-start-line="175" selection-start-column="57" selection-end-line="175" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1847#1848#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="287">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
           <folding>
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#2812#2813#0" expanded="true" />
+            <element signature="e#2840#2841#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="195" column="20" lean-forward="true" selection-start-line="195" selection-start-column="20" selection-end-line="195" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1847#1848#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
           </folding>
         </state>
       </provider>

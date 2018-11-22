@@ -170,9 +170,12 @@ public class LevelPanel extends JPanel{
                         int mapPointY = (int) (clickCoordinate.getY() / 100) ;
 
                         System.out.println("X:" + mapPointX + " Y: " + mapPointY);
-                        GameManager.getInstance().PutWall(clickedWall,mapPointY,mapPointX);
+                        GameManager.getInstance().putWall(clickedWall,mapPointY,mapPointX);
                         clickedWall = null;
                         gamePanel.repaint();
+                        if (GameManager.getInstance().check()){
+                            finishLevel();
+                        }
                     }
                 }
                 else{

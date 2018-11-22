@@ -149,7 +149,6 @@ public class MapModel {
             }
         }
 
-        check();
         return getMap();
     }
 
@@ -194,7 +193,6 @@ public class MapModel {
             }
         }
 
-        GameManager.getInstance().finishLevel();
         return true;
     }
 

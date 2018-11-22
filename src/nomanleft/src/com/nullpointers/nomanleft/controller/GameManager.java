@@ -83,11 +83,11 @@ public class GameManager {
 
     }
 
-    public void finishLevel(){
-        levelPanel.finishLevel();
+    public boolean check(){
+        return getMapModel().check();
     }
 
-    public void PutWall (Wall wall, int x, int y ) {
+    public void putWall (Wall wall, int x, int y ) {
         currentLevel.putWall(wall,x,y);
     }
     public void rotateWallOnPanelRight(Wall wall){
