@@ -90,15 +90,5 @@ public class GameManager {
     public void rotateWallOnPanelLeft(Wall wall){
         wall.setShape(wall.rotateLeft());
     }
-    public boolean isMapModelChanged() {
-        isMapModelChanged = currentLevel.isMapChanged();
-        return isMapModelChanged;
-    }
-
-    public void setMapModelChanged() {
-        currentLevel.setIsMapChanged();
-    }
-
-
 
 }

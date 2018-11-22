@@ -148,12 +148,5 @@ public class MapModel {
         isChanged = true;
         return getMap();
     }
-    public boolean isMapChanged(){
-        return isChanged;
-    }
-    public void setIsMapChanged(){
-        isChanged = false;
-    }
-
 
 }

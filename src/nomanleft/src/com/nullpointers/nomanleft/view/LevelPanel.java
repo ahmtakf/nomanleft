@@ -164,29 +164,8 @@ public class LevelPanel extends JPanel{
 
                     System.out.println("X:" + mapPointX + " Y: " + mapPointY);
                     GameManager.getInstance().PutWall(clickedWall,mapPointY,mapPointX);
-                    if(GameManager.getInstance().isMapModelChanged()){
-                        if(clickedWall.getId() == walls.get(0).getId()){
-                            System.out.println("adfsgfdhjjk");
-                            wallPanel1 = new JPanel();
-                        }
-                        else if(clickedWall.getId() == walls.get(1).getId()){
-                            wallPanel2 = new JPanel();
-                        }
-                        else if(clickedWall.getId() == walls.get(2).getId()){
-                            wallPanel3 = new JPanel();
-                        }
-                        else if(clickedWall.getId() == walls.get(3).getId()){
-                            wallPanel4 = new JPanel();
-                        }
-                        else if(clickedWall.getId() == walls.get(4).getId()){
-                            wallPanel5 = new JPanel();
-                        }
-                    }
                     clickedWall = null;
                     gamePanel.repaint();
-                    wallPanel.repaint();
-                    gamePanel.validate();
-                    wallPanel.validate();
                 }
             }
         });
