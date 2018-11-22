@@ -229,6 +229,10 @@ public class LevelPanel extends JPanel{
         return levelPanel;
     }
 
+    public void finishLevel() {
+        JOptionPane.showInputDialog("Congragulations");
+    }
+
     private class WallClickAdapter extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {

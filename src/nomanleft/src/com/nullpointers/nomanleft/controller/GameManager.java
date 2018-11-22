@@ -16,7 +16,8 @@ public class GameManager {
     private PlayGamePanel playGamePanel;
     private ShopPanel shopPanel;
     private OptionsPanel optionsPanel;
-    private boolean isMapModelChanged;
+    private LevelPanel levelPanel;
+
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
         frame = new JFrame("NoManLeft");
@@ -33,7 +34,8 @@ public class GameManager {
 
     public void startLevel(int levelNumber){
         currentLevel = new MapModel(levelNumber);
-        frame.setContentPane(new LevelPanel().getLevelPanel());
+        levelPanel = new LevelPanel();
+        frame.setContentPane(levelPanel.getLevelPanel());
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -79,6 +81,10 @@ public class GameManager {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+    }
+
+    public void finishLevel(){
+        levelPanel.finishLevel();
     }
 
     public void PutWall (Wall wall, int x, int y ) {
