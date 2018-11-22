@@ -6,24 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="52cb5433-eafc-4947-9abc-850c93e373b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/controller/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/controller/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/MapModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/MapModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/MapObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/MapObjectFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/CustomizationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/CustomizationPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$12.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$WallClickAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$WallClickAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/MainMenuPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/MainMenuPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/OptionsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/OptionsPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/PlayGamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/PlayGamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/ShopPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/WallPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/WallPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/normallevels/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/normallevels/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="145" column="74" selection-start-line="145" selection-start-column="74" selection-end-line="145" selection-end-column="74" />
+            <state relative-caret-position="376">
+              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,68 +45,88 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/BattleRam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="376">
+              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
               <folding>
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#426#427#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Bush.java">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="440">
+              <caret line="210" column="22" selection-start-line="210" selection-start-column="12" selection-end-line="210" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5622#5623#0" expanded="true" />
+                <element signature="e#5666#5667#0" expanded="true" />
+                <element signature="e#5800#6867#0" expanded="true" />
+                <element signature="e#6866#6867#0" expanded="true" />
+                <element signature="e#8211#8212#0" expanded="true" />
+                <element signature="e#8244#8245#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-128">
+              <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/WallTile.java">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1161#1162#0" expanded="true" />
+                <element signature="e#1188#1189#0" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#1258#1259#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="64">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/MainMenuPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/PlayGamePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,14 +188,14 @@
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/WallTile.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Bush.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/BattleRam.java" />
         <option value="$PROJECT_DIR$/resources/normallevels/level1.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall2.txt" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" />
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
       </list>
     </option>
   </component>
@@ -205,6 +223,12 @@
               <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
               <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="walls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
@@ -237,6 +261,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="LevelPanel" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -394,13 +430,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57209000" />
+    <option name="totallyTimeSpent" value="58089000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30597016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18830334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -409,7 +445,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3988889" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38627186" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39822024" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,7 +456,6 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.39933258" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32839838" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -431,6 +466,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="SciView" order="9" />
+      <window_info anchor="right" id="Maven" order="10" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29820052" />
@@ -658,20 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -682,31 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2039">
-          <caret line="165" column="87" selection-start-line="165" selection-start-column="87" selection-end-line="165" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8689#8690#0" expanded="true" />
-            <element signature="e#8722#8723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -714,24 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/WallTile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -802,10 +785,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="210" column="22" selection-start-line="210" selection-start-column="12" selection-end-line="210" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5622#5623#0" expanded="true" />
+            <element signature="e#5666#5667#0" expanded="true" />
+            <element signature="e#5800#6867#0" expanded="true" />
+            <element signature="e#6866#6867#0" expanded="true" />
+            <element signature="e#8211#8212#0" expanded="true" />
+            <element signature="e#8244#8245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1161#1162#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="145" column="74" selection-start-line="145" selection-start-column="74" selection-end-line="145" selection-end-column="74" />
+        <state relative-caret-position="-128">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
