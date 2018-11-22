@@ -233,7 +233,9 @@ public class LevelPanel extends JPanel{
     }
 
     public void finishLevel() {
-        JOptionPane.showInputDialog("Congragulations");
+        JOptionPane.showMessageDialog(this,"Congragulations");
+        GameManager.getInstance().openPlayGamePanel();
+
     }
 
     private class WallClickAdapter extends MouseAdapter {

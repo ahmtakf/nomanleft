@@ -21,7 +21,9 @@ public class GameManager {
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
         frame = new JFrame("NoManLeft");
-        frame.setPreferredSize(new Dimension(1600,800));
+        frame.setMinimumSize(new Dimension(1600,900));
+        frame.setMaximumSize(new Dimension(1600,900));
+        frame.setPreferredSize(new Dimension(1600,900));
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -39,7 +41,6 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static GameManager getInstance(){
@@ -55,7 +56,6 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void openPlayGamePanel () {
@@ -63,7 +63,6 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void openShop () {
@@ -71,7 +70,6 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void openOptions() {
@@ -79,7 +77,6 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
