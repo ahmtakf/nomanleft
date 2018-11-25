@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52cb5433-eafc-4947-9abc-850c93e373b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wallable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/controller/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/controller/FileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/MapModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/MapModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/model/Wall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$WallClickAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$WallClickAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/WallPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/WallPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/normallevels/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/normallevels/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="184" column="76" lean-forward="true" selection-start-line="184" selection-start-column="76" selection-end-line="184" selection-end-column="76" />
+            <state relative-caret-position="154">
+              <caret line="229" column="34" lean-forward="true" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3169#3170#0" expanded="true" />
@@ -55,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="256">
+              <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -207,8 +184,8 @@
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wallable.java" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" />
       </list>
     </option>
   </component>
@@ -288,7 +265,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543104972626" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543106440662" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -431,12 +408,12 @@
       <workItem from="1542902373236" duration="4373000" />
       <workItem from="1542913249071" duration="1252000" />
       <workItem from="1543078046813" duration="310000" />
-      <workItem from="1543093373465" duration="11557000" />
+      <workItem from="1543093373465" duration="12515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74102000" />
+    <option name="totallyTimeSpent" value="75060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,7 +428,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31556502" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31556502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -460,7 +437,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26666668" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5277778" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39777777" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -911,10 +888,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="19" column="61" lean-forward="true" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="184" column="76" lean-forward="true" selection-start-line="184" selection-start-column="76" selection-end-line="184" selection-end-column="76" />
+        <state relative-caret-position="154">
+          <caret line="229" column="34" lean-forward="true" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3169#3170#0" expanded="true" />
@@ -922,13 +906,6 @@
             <element signature="e#3839#3840#0" expanded="true" />
             <element signature="e#3867#3868#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapObjectFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>

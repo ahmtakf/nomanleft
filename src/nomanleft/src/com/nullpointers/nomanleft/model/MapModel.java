@@ -216,10 +216,10 @@ public class MapModel {
     public boolean check(){
 
         //1 is outside, 0 is not outside
-        outsideMap = new int[8][8];
+        outsideMap = new int[MAP_SIZE][MAP_SIZE];
 
-        for (int m = 0; m < 8; m++){
-            for(int k = 0; k < 8; k++){
+        for (int m = 0; m < MAP_SIZE; m++){
+            for(int k = 0; k < MAP_SIZE; k++){
                 outsideMap[m][k] = 0;
             }
         }
@@ -234,8 +234,8 @@ public class MapModel {
 
         printMap(outsideMap);
 
-        for (int m = 0; m < 8; m++){
-            for(int k = 0; k < 8; k++) {
+        for (int m = 0; m < MAP_SIZE; m++){
+            for(int k = 0; k < MAP_SIZE; k++) {
                 if (map[m][k] instanceof Soldier && !((Soldier)map[m][k]).isEnemy()){
                     if (outsideMap[m][k] == 1){
                         return false;
@@ -267,7 +267,7 @@ public class MapModel {
     }
 
     private void outsides(int x, int y){
-        if ( x > 7 || x < 0 || y > 7 || y < 0){
+        if ( x > MAP_SIZE-1 || x < 0 || y > MAP_SIZE-1 || y < 0){
             return;
         }
         if (map[x][y] instanceof  WallTile){
