@@ -85,13 +85,13 @@ public class MapModel {
             e.printStackTrace();
         }
 
-
+ /*
         printMap();
         putWall(walls.get(1), 6,7 );
         printMap();
         printWallIDMap();
 
-       /* takeWall(4,5);
+       takeWall(4,5);
         printMap();
         printWallIDMap();*/
 
