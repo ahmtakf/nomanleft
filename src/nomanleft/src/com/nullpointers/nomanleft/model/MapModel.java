@@ -125,7 +125,7 @@ public class MapModel {
         return walls;
     }
 
-    /*public MapObject[][] takeWall(int x, int y){
+    public MapObject[][] takeWall(int x, int y){
 
         if (map[x][y] instanceof WallTile){
             int id = wallIdMap[x][y];
@@ -133,14 +133,14 @@ public class MapModel {
                 for (int j = 0; j < MAP_SIZE; j++) {
                     if ((map[i][j] instanceof WallTile) && (id == wallIdMap[i][j])){
                         wallIdMap[i][j] = 0;
-                        map[i][j] = factory.getMapObject("Ground");
+                        map[i][j] = factory.getMapObject("Wallable");
                     }
                 }
             }
         }
 
         return getMap();
-    }*/
+    }
 
     public MapObject[][] putWall(Wall wall, int x, int y){
 
@@ -204,8 +204,9 @@ public class MapModel {
                 if(j-1 >= 0 && (map[i][j-1] instanceof WallTile)){
                     count++;
                 }
-                if (count >= 2){
+                if (count >= 2 && wallIdMap[i][j] == 0){
                     map[i][j] = factory.getMapObject("WallTile");
+                    wallIdMap[i][j] = numberOfWallsOnMap;
                 }
             }
         }
@@ -224,8 +225,8 @@ public class MapModel {
             }
         }
 
-        for (int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++) {
+        for (int i = 0; i < MAP_SIZE; i++){
+            for(int j = 0; j < MAP_SIZE; j++) {
                 if (map[i][j] instanceof Soldier && ((Soldier)map[i][j]).isEnemy()){
                     outsides(i,j);
                 }
