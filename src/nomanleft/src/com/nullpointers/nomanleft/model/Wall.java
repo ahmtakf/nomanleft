@@ -4,13 +4,14 @@ public class Wall {
 
     private int[][] shape;
     private int id;
+    private final int MAP_SIZE = 13;
 
     public Wall(int[][] shape, int id){
         this.shape = shape;
         this.id = id;
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < MAP_SIZE; i++) {
+            for (int j = 0; j < MAP_SIZE; j++) {
                 System.out.print(shape[i][j]);
             }
             System.out.println();
@@ -28,16 +29,16 @@ public class Wall {
 
     public int[][] rotateRight(){
 
-        int[][] rightShape = new int[8][8];
+        int[][] rightShape = new int[MAP_SIZE][MAP_SIZE];
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                rightShape[j][(7-i)] = shape[i][j];
+        for (int i = 0; i < MAP_SIZE; i++) {
+            for (int j = 0; j < MAP_SIZE; j++) {
+                rightShape[j][(MAP_SIZE-1-i)] = shape[i][j];
             }
         }
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < MAP_SIZE; i++) {
+            for (int j = 0; j < MAP_SIZE; j++) {
                 shape[i][j] = rightShape[i][j];
             }
         }
@@ -48,17 +49,17 @@ public class Wall {
 
     public int[][] rotateLeft(){
 
-        int[][] leftShape = new int[8][8];
+        int[][] leftShape = new int[MAP_SIZE][MAP_SIZE];
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                leftShape[7-j][i] = shape[i][j];
+        for (int i = 0; i < MAP_SIZE; i++) {
+            for (int j = 0; j < MAP_SIZE; j++) {
+                leftShape[MAP_SIZE-1-j][i] = shape[i][j];
             }
         }
 
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < MAP_SIZE; i++) {
+            for (int j = 0; j < MAP_SIZE; j++) {
                 shape[i][j] = leftShape[i][j];
             }
         }

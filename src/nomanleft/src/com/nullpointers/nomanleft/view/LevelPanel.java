@@ -166,8 +166,14 @@ public class LevelPanel extends JPanel{
                         Point clickCoordinate = e.getPoint();
 
                         //System.out.println(clickCoordinate);
-                        int mapPointX = (int) (clickCoordinate.getX() / 100) ;
-                        int mapPointY = (int) (clickCoordinate.getY() / 100) ;
+                        int mapPointX = (int) (clickCoordinate.getX() / 120);
+                        int mapPointY = (int) (clickCoordinate.getY() / 120);
+                        mapPointX = mapPointX * 2;
+                        mapPointY = mapPointY * 2;
+                        if (clickCoordinate.getX() % 120 > 20)
+                            mapPointX++;
+                        if (clickCoordinate.getY() % 120 > 20)
+                            mapPointY++;
 
                         System.out.println("X:" + mapPointX + " Y: " + mapPointY);
                         GameManager.getInstance().putWall(clickedWall,mapPointY,mapPointX);
@@ -179,7 +185,7 @@ public class LevelPanel extends JPanel{
                     }
                 }
                 else{
-                    GameManager.getInstance().getMapModel().takeWall(((int)e.getPoint().getY()/100),((int)e.getPoint().getX()/100));
+                    //GameManager.getInstance().getMapModel().takeWall(((int)e.getPoint().getY()/100),((int)e.getPoint().getX()/100));
                     gamePanel.repaint();
                     flag = true;
                 }

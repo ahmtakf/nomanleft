@@ -25,6 +25,7 @@ public class FileManager {
     private Image enemySoldier;
     private final static int WIDTH = 100;
     private final static int HEIGHT = 100;
+    private final int MAP_SIZE = 13;
     private ArrayList<Wall> walls = new ArrayList<>();
 
     private FileManager(){
@@ -59,9 +60,9 @@ public class FileManager {
         for (File wallFile: Objects.requireNonNull(wallFiles.listFiles())){
             try {
                 br = new BufferedReader(new FileReader(wallFile));
-                int[][] wallShape = new int[8][8];
-                for (int i = 0; i < 8; i++) {
-                    for (int j = 0; j < 8; j++) {
+                int[][] wallShape = new int[MAP_SIZE][MAP_SIZE];
+                for (int i = 0; i < MAP_SIZE; i++) {
+                    for (int j = 0; j < MAP_SIZE; j++) {
                         wallShape[i][j] = br.read() - '0';
                     }
                 }

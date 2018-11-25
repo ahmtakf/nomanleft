@@ -1,7 +1,5 @@
 package com.nullpointers.nomanleft.view;
 
-import com.nullpointers.nomanleft.model.MapModel;
-import com.nullpointers.nomanleft.model.MapObject;
 import com.nullpointers.nomanleft.model.Wall;
 
 import javax.swing.*;
@@ -11,6 +9,7 @@ public class WallPanel extends JPanel {
 
     private Wall wall;
     private int[][] wallShape;
+    private final int MAP_SIZE = 13;
 
     public WallPanel(Wall wall){
         super();
@@ -26,8 +25,8 @@ public class WallPanel extends JPanel {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        for (int i = 0; i < 8; i++){
-            for(int j = 0; j < 8; j++){
+        for (int i = 0; i < MAP_SIZE; i++){
+            for(int j = 0; j < MAP_SIZE; j++){
                 if (wallShape[i][j] == 1){
                     g.setColor(Color.WHITE);
                 }
@@ -37,7 +36,7 @@ public class WallPanel extends JPanel {
                 else{
                     g.setColor(Color.DARK_GRAY);
                 }
-                g.fillRect(68 + j * 8,8 + i * 8,8,8);
+                g.fillRect(68 + j * 5,8 + i * 5,5,5);
             }
         }
 

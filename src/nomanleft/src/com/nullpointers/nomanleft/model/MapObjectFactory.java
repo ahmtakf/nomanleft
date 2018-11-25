@@ -19,6 +19,10 @@ public class MapObjectFactory {
                     object = new Tower();
                     System.out.println("Tower is created\n");
                     break;
+                case "Wallable":
+                    object = new Wallable();
+                    System.out.println("Wallable is created\n");
+                    break;
                 case "Bush":
                     object = new Bush();
                     System.out.println("Bush is created\n");
