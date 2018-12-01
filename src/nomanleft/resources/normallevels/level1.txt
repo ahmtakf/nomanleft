@@ -4,4 +4,4 @@ EnemySoldier,Ground,Ground,Ground,FriendSoldier,Ground
 FriendSoldier,Tower,Tower,Ground,EnemySoldier,Ground
 Ground,Ground,Ground,Ground,Ground,Ground
 Ground,Ground,Ground,Ground,Ground,Ground
-1,2,3,4,5
+1,3,4,5

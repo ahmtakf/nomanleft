@@ -62,8 +62,9 @@ public class FileManager {
                 br = new BufferedReader(new FileReader(wallFile));
                 int[][] wallShape = new int[MAP_SIZE][MAP_SIZE];
                 for (int i = 0; i < MAP_SIZE; i++) {
+                    String currentLine = br.readLine();
                     for (int j = 0; j < MAP_SIZE; j++) {
-                        wallShape[i][j] = br.read() - '0';
+                        wallShape[i][j] = currentLine.charAt(j) - '0';
                     }
                 }
                 walls.add(new Wall(wallShape, id));
