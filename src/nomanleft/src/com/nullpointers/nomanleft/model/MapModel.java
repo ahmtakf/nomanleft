@@ -132,6 +132,76 @@ public class MapModel {
             for (int i = 0; i < MAP_SIZE; i++){
                 for (int j = 0; j < MAP_SIZE; j++) {
                     if ((map[i][j] instanceof WallTile) && (id == wallIdMap[i][j])){
+
+                        //Sağındaysa
+                        if (j < MAP_SIZE - 1 && wallIdMap[i][j + 1] == -1) {
+                            int countCorner = 0;
+                            if (i > 0 && wallIdMap[i - 1][j + 1] > 0) {
+                                countCorner++;
+                            }
+                            if (i < MAP_SIZE - 1 && wallIdMap[i + 1][j + 1] > 0) {
+                                countCorner++;
+                            }
+                            if (j < MAP_SIZE - 2 && wallIdMap[i][j + 2] > 0) {
+                                countCorner++;
+                            }
+                            if (countCorner <= 1) {
+                                wallIdMap[i][j + 1] = 0;
+                                map[i][j + 1] = factory.getMapObject("Wallable");
+                            }
+                        }
+                        //Solundaysa
+                        if (j > 0 && wallIdMap[i][j - 1] == -1) {
+                            int countCorner = 0;
+                            if (i > 0 && wallIdMap[i - 1][j - 1] > 0) {
+                                countCorner++;
+                            }
+                            if (i < MAP_SIZE - 1 && wallIdMap[i + 1][j - 1] > 0) {
+                                countCorner++;
+                            }
+                            if (j > 1 && wallIdMap[i][j - 2] > 0) {
+                                countCorner++;
+                            }
+                            if (countCorner <= 1) {
+                                wallIdMap[i][j - 1] = 0;
+                                map[i][j - 1] = factory.getMapObject("Wallable");
+                            }
+                        }
+                        //Altındaysa
+                        if (i < MAP_SIZE - 1 && wallIdMap[i + 1][j] == -1) {
+                            int countCorner = 0;
+                            if (j > 0 && wallIdMap[i + 1][j - 1] > 0) {
+                                countCorner++;
+                            }
+                            if (j < MAP_SIZE - 1 && wallIdMap[i + 1][j + 1] > 0) {
+                                countCorner++;
+                            }
+                            if (i < MAP_SIZE - 2 && wallIdMap[i + 2][j] > 0) {
+                                countCorner++;
+                            }
+                            if (countCorner <= 1) {
+                                wallIdMap[i + 1][j] = 0;
+                                map[i + 1][j] = factory.getMapObject("Wallable");
+                            }
+                        }
+                        //Üstündeyse
+                        if (i > 0 && wallIdMap[i - 1][j] == -1) {
+                            int countCorner = 0;
+                            if (j > 0 && wallIdMap[i - 1][j - 1] > 0) {
+                                countCorner++;
+                            }
+                            if (j < MAP_SIZE - 1 && wallIdMap[i - 1][j + 1] > 0) {
+                                countCorner++;
+                            }
+                            if (i > 1 && wallIdMap[i - 2][j] > 0) {
+                                countCorner++;
+                            }
+                            if (countCorner <= 1) {
+                                wallIdMap[i - 1][j] = 0;
+                                map[i - 1][j] = factory.getMapObject("Wallable");
+                            }
+                        }
+
                         wallIdMap[i][j] = 0;
                         map[i][j] = factory.getMapObject("Wallable");
                     }
@@ -206,7 +276,7 @@ public class MapModel {
                 }
                 if (count >= 2 && wallIdMap[i][j] == 0){
                     map[i][j] = factory.getMapObject("WallTile");
-                    wallIdMap[i][j] = numberOfWallsOnMap;
+                    wallIdMap[i][j] = -1;
                 }
             }
         }
