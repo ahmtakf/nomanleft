@@ -61,7 +61,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelRight(walls.get(0));
                 wallPanel1 = new WallPanel(walls.get(0));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -70,7 +70,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelRight(walls.get(1));
                 wallPanel2 = new WallPanel(walls.get(1));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -79,7 +79,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelRight(walls.get(2));
                 wallPanel3 = new WallPanel(walls.get(2));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -88,7 +88,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelRight(walls.get(3));
                 wallPanel4 = new WallPanel(walls.get(3));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -97,7 +97,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelRight(walls.get(4));
                 wallPanel5 = new WallPanel(walls.get(4));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -106,7 +106,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(0));
                 wallPanel1 = new WallPanel(walls.get(0));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -115,7 +115,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(1));
                 wallPanel2 = new WallPanel(walls.get(1));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -124,7 +124,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(2));
                 wallPanel3 = new WallPanel(walls.get(2));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -133,7 +133,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(3));
                 wallPanel4 = new WallPanel(walls.get(3));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
@@ -142,7 +142,7 @@ public class LevelPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 GameManager.getInstance().rotateWallOnPanelLeft(walls.get(4));
                 wallPanel5 = new WallPanel(walls.get(4));
-                wallPanel.repaint();
+                gamePanel.repaint();
                 validate();
             }
         });
