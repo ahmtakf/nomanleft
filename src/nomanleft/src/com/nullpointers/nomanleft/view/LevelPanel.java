@@ -11,9 +11,6 @@ import java.util.ArrayList;
 public class LevelPanel extends JPanel{
     private JPanel levelPanel;
     private JPanel gamePanel;
-    private JPanel boosterPanel;
-    private JPanel wallPanel;
-    private JTextField boostersTextField;
     private JTextField wallsTextField;
     private JButton back;
     private JButton left4;
@@ -25,8 +22,10 @@ public class LevelPanel extends JPanel{
     private JButton right2;
     private JButton right1;
     private JButton removeButton;
+    private JPanel boosterPanel;
+    private JTextField boostersTextField;
     private Wall clickedWall;
-    public boolean flag = true;
+    public int flag = 0;
     private ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
 
     public LevelPanel() {
@@ -41,82 +40,29 @@ public class LevelPanel extends JPanel{
                 }
             }
         });
-        right1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelRight(walls.get(0));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        right2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelRight(walls.get(1));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        right3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelRight(walls.get(2));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        right4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelRight(walls.get(3));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        left1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(0));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        left2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(1));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        left3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(2));
-                gamePanel.repaint();
-                validate();
-            }
-        });
-        left4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GameManager.getInstance().rotateWallOnPanelLeft(walls.get(3));
-                gamePanel.repaint();
-                validate();
-            }
-        });
         removeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                flag = false;
+                flag = 1;
             }
         });
 
     }
     private void createUIComponents() {
         gamePanel = new GamePanel();
-
         gamePanel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                int xOfWall = e.getX();
+                int yOfWall = e.getY();
+                int i = 0;
+                while(i < walls.size()){
+
+                }
+
+            }
+
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
@@ -132,7 +78,7 @@ public class LevelPanel extends JPanel{
                 if (clickCoordinate.getY() % 120 > 20)
                     mapPointY++;
 
-                if(flag){
+                if(flag == 2){ // if pressed
                     if (clickedWall != null){
 
                         System.out.println("X:" + mapPointX + " Y: " + mapPointY);
@@ -144,10 +90,10 @@ public class LevelPanel extends JPanel{
                         }
                     }
                 }
-                else{
+                else if(flag == 1){ // remove
                     GameManager.getInstance().getMapModel().takeWall(mapPointY,mapPointX);
                     gamePanel.repaint();
-                    flag = true;
+                    flag = 2;
                 }
 
             }

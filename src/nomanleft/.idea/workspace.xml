@@ -2,36 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52cb5433-eafc-4947-9abc-850c93e373b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/controller/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/controller/FileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$WallClickAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/WallPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/normallevels/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/normallevels/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/walls/wall5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/walls/wall5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/nomanleft/com/nullpointers/nomanleft/view/LevelPanel$9.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="233" column="31" lean-forward="true" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
+            <state>
+              <caret line="270" column="41" selection-start-line="270" selection-start-column="41" selection-end-line="270" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,12 +36,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/walls/wall3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-560">
-              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="272">
+              <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4016#4017#0" expanded="true" />
+                <element signature="e#4060#4061#0" expanded="true" />
+                <element signature="e#5664#5665#0" expanded="true" />
+                <element signature="e#5697#5698#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,18 +68,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="187">
               <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#8025#8026#0" expanded="true" />
+                <element signature="e#8058#8059#0" expanded="true" />
+                <element signature="e#8075#8076#0" expanded="true" />
+                <element signature="e#8108#8109#0" expanded="true" />
+                <element signature="e#8119#8120#0" expanded="true" />
+                <element signature="e#8140#8141#0" expanded="true" />
+                <element signature="e#8163#8164#0" expanded="true" />
+                <element signature="e#8198#8199#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
     </leaf>
@@ -155,8 +157,6 @@
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
         <option value="$PROJECT_DIR$/resources/walls/wall3.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall2.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall5.txt" />
@@ -164,6 +164,8 @@
         <option value="$PROJECT_DIR$/resources/walls/wall4.txt" />
         <option value="$PROJECT_DIR$/resources/walls/wall1.txt" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java" />
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
+        <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
         <option value="$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form" />
       </list>
@@ -194,12 +196,6 @@
               <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
               <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nomanleft" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="normallevels" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nomanleft" type="b2602c69:ProjectViewProjectNode" />
@@ -255,10 +251,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543675261281" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543679124520" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -410,7 +407,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89900000" />
+    <option name="totallyTimeSpent" value="93575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,30 +419,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30703625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1940874" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Duplicate detector" weight="0.30333334" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35333332" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5154778" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.40555555" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3288889" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.39933258" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32777777" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3270525" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Duplicate detector" order="13" weight="0.30333334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -800,44 +797,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/CustomizationPanel.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2797#2798#0" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2894#2895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="233" column="31" lean-forward="true" selection-start-line="233" selection-start-column="31" selection-end-line="233" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/WallPanel.java" />
     <entry file="file://$PROJECT_DIR$/resources/walls/wall3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -876,16 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-560">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/controller/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -893,10 +850,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        <state relative-caret-position="292">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/model/MapModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="270" column="41" selection-start-line="270" selection-start-column="41" selection-end-line="270" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -905,6 +869,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.form">
       <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8025#8026#0" expanded="true" />
+            <element signature="e#8058#8059#0" expanded="true" />
+            <element signature="e#8075#8076#0" expanded="true" />
+            <element signature="e#8108#8109#0" expanded="true" />
+            <element signature="e#8119#8120#0" expanded="true" />
+            <element signature="e#8140#8141#0" expanded="true" />
+            <element signature="e#8163#8164#0" expanded="true" />
+            <element signature="e#8198#8199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nullpointers/nomanleft/view/LevelPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4060#4061#0" expanded="true" />
+            <element signature="e#5664#5665#0" expanded="true" />
+            <element signature="e#5697#5698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

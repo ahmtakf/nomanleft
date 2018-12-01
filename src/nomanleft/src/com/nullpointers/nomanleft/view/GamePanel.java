@@ -209,4 +209,16 @@ public class GamePanel extends JPanel {
 
     }
 
+    public void setWallPositionX(int x[]){
+        wallPositionX = x;
+    }
+    public void setWallPositionY(int y[]){
+        wallPositionY = y;
+    }
+    public int[] getWallPositionX(){
+        return wallPositionX;
+    }
+    public int[] getWallPositionY(){
+        return wallPositionY;
+    }
 }
