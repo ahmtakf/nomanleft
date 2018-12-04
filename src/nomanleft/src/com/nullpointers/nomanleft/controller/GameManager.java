@@ -84,14 +84,16 @@ public class GameManager {
         return getMapModel().check();
     }
 
-    public void putWall (Wall wall, int x, int y ) {
-        currentLevel.putWall(wall,x,y);
+    public boolean putWall (int wallId, int x, int y, int wallX, int wallY ) {
+        return currentLevel.putWall(currentLevel.getWalls().get(wallId), x, y, wallX, wallY);
     }
-    public void rotateWallOnPanelRight(Wall wall){
-        wall.setShape(wall.rotateRight());
+
+    public void rotateWallOnPanelRight(int wallId){
+        currentLevel.getWalls().get(wallId).rotateRight();
     }
-    public void rotateWallOnPanelLeft(Wall wall){
-        wall.setShape(wall.rotateLeft());
+
+    public void rotateWallOnPanelLeft(int wallId){
+        currentLevel.getWalls().get(wallId).rotateLeft();
     }
 
 }

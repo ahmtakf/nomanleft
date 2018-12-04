@@ -15,6 +15,7 @@ public class GamePanel extends JPanel {
     private int[] wallPositionX;
     private int[] wallPositionY;
     private ArrayList<Wall> walls = GameManager.getInstance().getMapModel().getWalls();
+    private int[][][] blackMap;
 
     public GamePanel() {
         super();
@@ -25,6 +26,7 @@ public class GamePanel extends JPanel {
             wallPositionY[i] = 50 + (i % 2) * 300;
         }
 
+        blackMap = new int[4][300][300];
         map = GameManager.getInstance().getMapModel().getMap();
         repaint();
         validate();
@@ -96,6 +98,12 @@ public class GamePanel extends JPanel {
         int realEndX = MAP_SIZE;
         int realEndY = MAP_SIZE;
 
+        for (int i = 0; i < 300; i++){
+            for (int j = 0; j < 300; j++) {
+                blackMap[k][i][j] = 0;
+            }
+        }
+
         for (int i = 0; i < MAP_SIZE; i++){
             int j = 0;
             for(; j < MAP_SIZE; j++) {
@@ -152,64 +160,176 @@ public class GamePanel extends JPanel {
         for (int m = realStartX; m < realEndX; m++){
             int j = 0;
             for(int n = realStartY; n < realEndY; n++){
-                g.setColor(Color.WHITE);
+                g.setColor(new Color(255,255,255,0));
                 if (wallShape[m][n] > 0){
                     g.setColor(Color.BLACK);
                 }
                 if ( realStartX % 2 == 0 && realStartY % 2 == 0) {
                     if (m % 2 == 0 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 1 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + 20 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 0 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + 20 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 1 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + 20 + t][(i / 2) * 120 + 20 + h] = 1;
+                                }
+                            }
+                        }
                     }
                 }
                 if ( realStartX % 2 == 0 && realStartY % 2 == 1) {
                     if (m % 2 == 0 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 0 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + 100 +  t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 1 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + 100 + t][(i / 2) * 120 + 20 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 1 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + 20 + h] = 1;
+                                }
+                            }
+                        }
                     }
                 }
                 if ( realStartX % 2 == 1 && realStartY % 2 == 0) {
                     if (m % 2 == 1 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 0 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + 20 + t][(i / 2) * 120 + 100 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 0 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + 100 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 1 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + 20 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                 }
                 if ( realStartX % 2 == 1 && realStartY % 2 == 1) {
                     if (m % 2 == 1 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 1 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 100);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 100; h++) {
+                                    blackMap[k][(j / 2) * 120 + 100 + t][(i / 2) * 120 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 0 && n % 2 == 1) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 100; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + t][(i / 2) * 120 + 100 + h] = 1;
+                                }
+                            }
+                        }
                     }
                     if (m % 2 == 0 && n % 2 == 0) {
                         g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20);
+                        if ( g.getColor().equals(Color.BLACK)){
+                            for (int t = 0; t < 20; t++){
+                                for (int h = 0; h < 20; h++) {
+                                    blackMap[k][(j / 2) * 120 + 100 + t][(i / 2) * 120 + 100 + h] = 1;
+                                }
+                            }
+                        }
                     }
                 }
                 j++;
@@ -217,6 +337,11 @@ public class GamePanel extends JPanel {
             i++;
         }
 
+    }
+
+    public boolean isBlack(int wallIndex, int x, int y){
+
+        return blackMap[wallIndex][x][y] == 1;
     }
 
     public void setWallPositionX(int x[]){
@@ -230,5 +355,17 @@ public class GamePanel extends JPanel {
     }
     public int[] getWallPositionY(){
         return wallPositionY;
+    }
+
+    public void changeWallPosition(int wallId, int x, int y, int innerX, int innerY) {
+
+        wallPositionX[wallId] = x - innerX;
+        wallPositionY[wallId] = y - innerY;
+
+    }
+
+    public void resetWallPosition(int i) {
+        wallPositionX[i] = 800 + 300 * (i/2);
+        wallPositionY[i] = 50 + (i % 2) * 300;
     }
 }

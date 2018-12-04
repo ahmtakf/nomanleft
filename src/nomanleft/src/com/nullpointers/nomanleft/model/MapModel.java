@@ -202,28 +202,16 @@ public class MapModel {
         return getMap();
     }
 
-    public MapObject[][] putWall(Wall wall, int x, int y){
+    public boolean putWall(Wall wall, int x, int y, int wallX, int wallY){
+
+        int pivotX = wall.getRealX(wallX, wallY);
+        int pivotY = wall.getRealY(wallX, wallY);
+        System.out.println( "Pivots " + pivotX + " " + pivotY);
 
         int[][] wallShape = wall.getShape();
-        int pivotX = 0;
-        int pivotY = 0;
-        if ( x % 2 == 0 && y % 2 == 0) {
-            System.out.println("Cannot put this wall there!clicked other tiles");
-            return getMap();
-        }
         if ( x % 2 == 1 && y % 2 == 1){
-            System.out.println("Cannot put this wall there!clicked other tiles");
-            return getMap();
-        }
-
-
-        for (int i = 0; i < MAP_SIZE; i++) {
-            for (int j = 0; j < MAP_SIZE; j++) {
-                if (wallShape[i][j] == 2){
-                    pivotX = i;
-                    pivotY = j;
-                }
-            }
+            System.out.println("Cannot put this wall there!clicked square tiles");
+            return false;
         }
 
         for (int i = 0; i < MAP_SIZE; i++) {
@@ -232,7 +220,7 @@ public class MapModel {
                         !(map[i+x-pivotX][j+y-pivotY] instanceof Wallable))){
                     //raise error
                     System.out.println("Cannot put this wall there!");
-                    return getMap();
+                    return false;
                 }
             }
         }
@@ -271,7 +259,7 @@ public class MapModel {
             }
         }
 
-        return getMap();
+        return true;
     }
 
     public boolean check(){

@@ -11,7 +11,7 @@ public class MapObjectFactory {
 
         if(hm.containsKey(type)){
             object = hm.get(type);
-            System.out.println(type + " spoted!\n");
+          //  System.out.println(type + " spoted!\n");
         }
         else {
             switch (type) {
