@@ -32,30 +32,20 @@ public class MapModel {
 
         BufferedReader br = FileManager.getInstance().getLevel(level);
         for ( int i = 0; i < MAP_SIZE; i++){
-            if (i % 2 == 1){
-                try {
-                    String nodes = br.readLine();
-                    int j = 0;
-                    for (String nodeName: nodes.split(",")) {
-                        map[i][j] = factory.getMapObject("Wallable");
-                        j++;
-                        map[i][j] = factory.getMapObject(nodeName);
-                        j++;
-                    }
-                    map[i][j] = factory.getMapObject("Wallable");
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try {
+                String nodes = br.readLine();
+                int j = 0;
+                for (String nodeName: nodes.split(",")) {
+                    map[i][j] = factory.getMapObject(nodeName);
+                    j++;
                 }
-            }
-            else{
-                for (int j = 0; j < MAP_SIZE; j++) {
-                    map[i][j] = factory.getMapObject("Wallable");
-                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
 
         //Tower düzeltme
-
+/*
         for (int i = 0; i < MAP_SIZE; i++) {
             for (int j = 0; j < MAP_SIZE; j++) {
                 if (map[i][j] instanceof Tower) {
@@ -74,7 +64,7 @@ public class MapModel {
                     break;
                 }
             }
-        }
+        }*/
 
         try {
             String wallIds = br.readLine();
