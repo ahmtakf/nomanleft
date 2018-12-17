@@ -14,6 +14,7 @@ public class FileManager {
     private final static String USER_INFORMATION = "./resources/userinformation";
     private int customization = 1;
     private int gold = 0;
+    private int highScore;
     private int sound = 1;
     private Image bush;
     private Image wallTile;
@@ -40,6 +41,8 @@ public class FileManager {
             gold = Integer.parseInt(st.split(":")[1]);
             st = br.readLine();
             sound = Integer.parseInt(st.split(":")[1]);
+            st = br.readLine();
+            highScore = Integer.parseInt(st.split(":")[1]);
 
             //Getting Tile Images
             bush = ImageIO.read(new File("./resources/img/bush" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
@@ -157,5 +160,13 @@ public class FileManager {
 
     public void setEnemySoldier(Image enemySoldier) {
         this.enemySoldier = enemySoldier;
+    }
+
+    public int getHighScore () {
+       return highScore;
+    }
+
+    public void setHighScore (int highScore) {
+        this.highScore = highScore;
     }
 }

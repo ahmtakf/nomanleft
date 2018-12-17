@@ -58,7 +58,8 @@ public class MainMenuPanel {
     }
 
     public void openTimeTrial() {
-        System.out.println("openTimeTrial not yet");
+        System.out.println("openTimeTrial ");
+        GameManager.getInstance().openTimeTrial();
     }
 
     public void openSandBox() {

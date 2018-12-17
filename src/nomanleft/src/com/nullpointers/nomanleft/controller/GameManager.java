@@ -17,7 +17,7 @@ public class GameManager {
     private ShopPanel shopPanel;
     private OptionsPanel optionsPanel;
     private LevelPanel levelPanel;
-
+    private TimeTrial timeTrial;
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
         frame = new JFrame("NoManLeft");
@@ -41,6 +41,32 @@ public class GameManager {
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }
+
+    public void openTimeTrial () {
+        timeTrial = new TimeTrial();
+        timeTrial.startTimeTrial();
+    }
+
+    public void loadNextLevel () {
+        LevelPanel nextLevel = timeTrial.changeLevel();
+
+        if(nextLevel != null) {
+            frame.setContentPane(nextLevel.getLevelPanel());
+            frame.pack();
+            frame.setVisible(true);
+            frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        }
+        else {
+            JOptionPane.showMessageDialog(frame, "Congratulations, all levels are solved.");
+            openMainMenu();
+        }
+    }
+
+
+    public void changeCurrentLevel(int levelNumber) {
+        System.out.println("level loaded: " + levelNumber);
+        currentLevel = new MapModel(levelNumber);
     }
 
     public static GameManager getInstance(){

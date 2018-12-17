@@ -24,11 +24,16 @@ public class LevelPanel extends JPanel{
     private JButton removeButton;
     private JPanel boosterPanel;
     private JTextField boostersTextField;
+    private JLabel timeLeftLabel;
+    private JLabel levelsSolvedLabel;
+    private JLabel highScoreLabel;
     public int flag;
     public boolean candrag;
     public int wallId;
     public int wallX;
     public int wallY;
+    public boolean timeTrial = false;
+
 
     public LevelPanel() {
         super();
@@ -49,7 +54,42 @@ public class LevelPanel extends JPanel{
             }
         });
 
+        this.timeTrial = timeTrial;
+
+        timeLeftLabel.setVisible(this.timeTrial);
+        levelsSolvedLabel.setVisible(this.timeTrial);
+        highScoreLabel.setVisible(this.timeTrial);
     }
+
+    public LevelPanel(boolean timeTrial, int highScore, int levelCount) {
+        super();
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int yesNoOption = JOptionPane.showConfirmDialog(null,"Are you sure to Exit ? ", "Close",JOptionPane.YES_NO_OPTION);
+                if(yesNoOption == JOptionPane.YES_NO_OPTION){
+                    //System.exit(0);
+                    GameManager.getInstance().openPlayGamePanel();
+                }
+            }
+        });
+        removeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 1;
+            }
+        });
+
+        this.timeTrial = timeTrial;
+
+        timeLeftLabel.setVisible(this.timeTrial);
+        levelsSolvedLabel.setVisible(this.timeTrial);
+        highScoreLabel.setVisible(this.timeTrial);
+
+        highScoreLabel.setText("High Score: " + highScore);
+        levelsSolvedLabel.setText("Levels Solved: " + levelCount);
+    }
+
     private void createUIComponents() {
         gamePanel = new GamePanel();
         candrag = false;
@@ -167,8 +207,16 @@ public class LevelPanel extends JPanel{
     }
 
     public void finishLevel() {
-        JOptionPane.showMessageDialog(this,"Congragulations");
-        GameManager.getInstance().openPlayGamePanel();
+        if (!timeTrial) {
+            JOptionPane.showMessageDialog(this, "Congragulations");
+            GameManager.getInstance().openPlayGamePanel();
+        }
+        if (timeTrial) {
+            GameManager.getInstance().loadNextLevel();
+        }
     }
 
+    public void updateTimeLabel(String time){
+        timeLeftLabel.setText(time);
+    }
 }
