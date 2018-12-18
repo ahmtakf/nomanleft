@@ -60,7 +60,12 @@ public class LevelPanel extends JPanel{
                 }
             }
         });
-
+        removeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 1;
+            }
+        });
         this.timeTrial = timeTrial;
 
         timeLeftLabel.setVisible(this.timeTrial);
@@ -139,7 +144,7 @@ public class LevelPanel extends JPanel{
                         if (flag == 1) { // remove
                             GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
                             gamePanel.repaint();
-                            flag = 0;
+                            flag = 2;
                         }
                     }
                 }
@@ -149,8 +154,22 @@ public class LevelPanel extends JPanel{
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 Point clickCoordinate = e.getPoint();
-                int x = (int) (clickCoordinate.getX() - 800)/300;
-                int y = (int) (clickCoordinate.getY() - 50)/300;
+                double a = (clickCoordinate.getX() - 800)/300;
+                double b = (clickCoordinate.getY() - 50)/300;
+                int x;
+                int y;
+                if ( a < 0){
+                    x = -1;
+                }
+                else {
+                    x = (int)a;
+                }
+                if ( b < 0){
+                    y = -1;
+                }
+                else{
+                    y = (int)b;
+                }
 
                 if ( e.getButton() == MouseEvent.BUTTON1 && !(x < 0 || x > 1 || y < 0 || y > 1) ){
                     if (((GamePanel) gamePanel).isBlack(x * 2 + y, (int) (clickCoordinate.getX() - 800) % 300, (int) (clickCoordinate.getY() - 50) % 300)) {
