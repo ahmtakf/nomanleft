@@ -1,12 +1,12 @@
 package com.nullpointers.nomanleft.view;
 
 
+import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
-import com.nullpointers.nomanleft.model.Wall;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 public class LevelPanel extends JPanel{
     private JPanel levelPanel;
@@ -27,16 +27,31 @@ public class LevelPanel extends JPanel{
     private JLabel timeLeftLabel;
     private JLabel levelsSolvedLabel;
     private JLabel highScoreLabel;
+    private JButton FillButton;
+    private JButton MoveButton;
+    private JButton DigButton;
+    private JButton HideButton;
+    private JTextField Bush;
+    private JTextField numberOfHide;
+    private JTextField numberOfDig;
+    private JTextField numberOfMove;
+    private JTextField numberOfFill;
     public int flag;
     public boolean candrag;
+    public boolean changeDirection;
     public int wallId;
     public int wallX;
     public int wallY;
     public boolean timeTrial = false;
-
+    public int initialSoliderX;
+    public int initialSoliderY;
 
     public LevelPanel() {
         super();
+        HideButton.setIcon(new ImageIcon(FileManager.getInstance().getBush()));
+        DigButton.setIcon(new ImageIcon(FileManager.getInstance().getDigImage()));
+        MoveButton.setIcon(new ImageIcon(FileManager.getInstance().getMoveImage()));
+        FillButton.setIcon(new ImageIcon(FileManager.getInstance().getFillImage()));
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,7 +68,30 @@ public class LevelPanel extends JPanel{
                 flag = 1;
             }
         });
-
+        HideButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 2;
+            }
+        });
+        DigButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 4;
+            }
+        });
+        MoveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 5;
+            }
+        });
+        FillButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 3;
+            }
+        });
         this.timeTrial = timeTrial;
 
         timeLeftLabel.setVisible(this.timeTrial);
@@ -91,41 +129,71 @@ public class LevelPanel extends JPanel{
     }
 
     private void createUIComponents() {
+
+
         gamePanel = new GamePanel();
         candrag = false;
+        changeDirection = false;
         flag = 0;
         gamePanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 Point clickCoordinate = e.getPoint();
-
-                if ( e.getButton() == MouseEvent.BUTTON3){
+                if ( candrag){
+                    ((GamePanel)gamePanel).resetWallPosition(wallId);
+                    candrag = false;
+                    gamePanel.repaint();
+                    gamePanel.validate();
+                    System.out.println("Do not Click while dragging!");
+                }
+                else{
                     int x = (int) (clickCoordinate.getX() - 800)/300;
                     int y = (int) (clickCoordinate.getY() - 50)/300;
-                    System.out.println(x + " " + y + " Color: " + ((GamePanel)gamePanel).isBlack(x*2+y, (int)(clickCoordinate.getX() - 800)%300, (int)(clickCoordinate.getY() - 50)%300));
-                    if ( !(x < 0 || x > 1 || y < 0 || y > 1) ){
+                    if ( x >= 0 && y >= 0 && x < 2 && y < 2 && e.getButton() == MouseEvent.BUTTON3){
+                        System.out.println(x + " " + y + " Color: " + ((GamePanel)gamePanel).isBlack(x*2+y, (int)(clickCoordinate.getX() - 800)%300, (int)(clickCoordinate.getY() - 50)%300));
                         if(((GamePanel)gamePanel).isBlack(x*2+y, (int)(clickCoordinate.getX() - 800)%300, (int)(clickCoordinate.getY() - 50)%300) ) {
                             GameManager.getInstance().rotateWallOnPanelRight(x * 2 + y);
                             gamePanel.repaint();
                             gamePanel.validate();
                         }
                     }
-                }
-                else {
-                    int mapPointX = (int) (clickCoordinate.getX() / 120);
-                    int mapPointY = (int) (clickCoordinate.getY() / 120);
-                    mapPointX = mapPointX * 2;
-                    mapPointY = mapPointY * 2;
-                    if (clickCoordinate.getX() % 120 > 20)
-                        mapPointX++;
-                    if (clickCoordinate.getY() % 120 > 20)
-                        mapPointY++;
-
-                    if (flag == 1) { // remove
-                        GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
-                        gamePanel.repaint();
-                        flag = 2;
+                    else {
+                        int mapPointX = (int) (clickCoordinate.getX() / 120);
+                        int mapPointY = (int) (clickCoordinate.getY() / 120);
+                        mapPointX = mapPointX * 2;
+                        mapPointY = mapPointY * 2;
+                        if (clickCoordinate.getX() % 120 > 20)
+                            mapPointX++;
+                        if (clickCoordinate.getY() % 120 > 20)
+                            mapPointY++;
+                        if(flag == 2){ // hide booster
+                            GameManager.getInstance().hide(mapPointY,mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if(flag == 3){ // fill booster
+                            GameManager.getInstance().fill(mapPointY,mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if(flag == 4){ // dig booster
+                            GameManager.getInstance().dig(mapPointY,mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if(flag == 5){ // move booster
+                            changeDirection = true;
+                            initialSoliderX = mapPointX;
+                            initialSoliderY = mapPointY;
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if (flag == 1) { // remove
+                            GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
                     }
                 }
             }
@@ -134,8 +202,22 @@ public class LevelPanel extends JPanel{
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 Point clickCoordinate = e.getPoint();
-                int x = (int) (clickCoordinate.getX() - 800)/300;
-                int y = (int) (clickCoordinate.getY() - 50)/300;
+                double a = (clickCoordinate.getX() - 800)/300;
+                double b = (clickCoordinate.getY() - 50)/300;
+                int x;
+                int y;
+                if ( a < 0){
+                    x = -1;
+                }
+                else {
+                    x = (int)a;
+                }
+                if ( b < 0){
+                    y = -1;
+                }
+                else{
+                    y = (int)b;
+                }
 
                 if ( e.getButton() == MouseEvent.BUTTON1 && !(x < 0 || x > 1 || y < 0 || y > 1) ){
                     if (((GamePanel) gamePanel).isBlack(x * 2 + y, (int) (clickCoordinate.getX() - 800) % 300, (int) (clickCoordinate.getY() - 50) % 300)) {
@@ -152,24 +234,21 @@ public class LevelPanel extends JPanel{
                 else{
                     candrag = false;
                 }
-
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-
-                if (candrag){
-                    Point clickCoordinate = e.getPoint();
-                    int mapPointX = (int) (clickCoordinate.getX() / 120);
-                    int mapPointY = (int) (clickCoordinate.getY() / 120);
-                    mapPointX = mapPointX * 2;
-                    mapPointY = mapPointY * 2;
-                    if (clickCoordinate.getX() % 120 > 20)
-                        mapPointX++;
-                    if (clickCoordinate.getY() % 120 > 20)
-                        mapPointY++;
-
+                Point clickCoordinate = e.getPoint();
+                int mapPointX = (int) (clickCoordinate.getX() / 120);
+                int mapPointY = (int) (clickCoordinate.getY() / 120);
+                mapPointX = mapPointX * 2;
+                mapPointY = mapPointY * 2;
+                if (clickCoordinate.getX() % 120 > 20)
+                    mapPointX++;
+                if (clickCoordinate.getY() % 120 > 20)
+                    mapPointY++;
+                if (candrag && e.getButton() == MouseEvent.BUTTON1){
                     System.out.println("X:" + mapPointX + " Y: " + mapPointY);
                     GameManager.getInstance().putWall(wallId, mapPointY, mapPointX, wallX, wallY);
                     ((GamePanel)gamePanel).resetWallPosition(wallId);
@@ -180,6 +259,29 @@ public class LevelPanel extends JPanel{
                         finishLevel();
                     }
 
+                }
+                else if(changeDirection){
+                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == 1)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,1);
+                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == -1)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,0);
+                    else if(mapPointX - initialSoliderX == 1 && mapPointY - initialSoliderY == 0)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,2);
+                    else if(mapPointX - initialSoliderX == -1 && mapPointY - initialSoliderY == 0)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,3);
+                    gamePanel.repaint();
+                    gamePanel.validate();
+                    if (GameManager.getInstance().check()) {
+                        finishLevel();
+                    }
+                    changeDirection = false;
+
+                }
+                else{
+                    ((GamePanel)gamePanel).resetWallPosition(wallId);
+                    gamePanel.repaint();
+                    gamePanel.validate();
+                    candrag = false;
                 }
 
             }
@@ -208,7 +310,7 @@ public class LevelPanel extends JPanel{
 
     public void finishLevel() {
         if (!timeTrial) {
-            JOptionPane.showMessageDialog(this, "Congragulations");
+            JOptionPane.showMessageDialog(this, "Congratulations");
             GameManager.getInstance().openPlayGamePanel();
         }
         if (timeTrial) {

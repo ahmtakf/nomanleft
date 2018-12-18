@@ -6,6 +6,16 @@ public class MapObjectFactory {
 
     private static HashMap<String, MapObject> hm = new HashMap<>();
 
+    private final static MapObjectFactory instance = new MapObjectFactory();
+
+    private MapObjectFactory(){
+
+    }
+
+    public static MapObjectFactory getInstance(){
+        return instance;
+    }
+
     public MapObject getMapObject(String type){
         MapObject object = null;
 

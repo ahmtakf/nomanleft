@@ -7,6 +7,7 @@ import java.awt.*;
 public class Soldier extends Human {
 
     public Soldier(boolean enemy) {
+
         super(enemy);
     }
 
@@ -17,7 +18,7 @@ public class Soldier extends Human {
 
     @Override
     public boolean isHidable() {
-        return false;
+        return !isEnemy();
     }
 
     @Override

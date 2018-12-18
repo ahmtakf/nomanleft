@@ -16,8 +16,8 @@ public class Wallable extends Tile{
     }
 
     @Override
-    public boolean isFilable() {
-        return true;
+    public boolean isFillable() {
+        return false;
     }
 
     @Override

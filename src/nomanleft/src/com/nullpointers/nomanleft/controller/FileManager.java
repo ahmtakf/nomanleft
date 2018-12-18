@@ -24,6 +24,9 @@ public class FileManager {
     private Image tower;
     private Image friendSoldier;
     private Image enemySoldier;
+    private Image pickaxe;
+    private Image fill;
+    private Image move;
     private final static int WIDTH = 100;
     private final static int HEIGHT = 100;
     private final int MAP_SIZE = 13;
@@ -53,7 +56,9 @@ public class FileManager {
             tower = ImageIO.read(new File("./resources/img/tower" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             friendSoldier = ImageIO.read(new File("./resources/img/friendsoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             enemySoldier = ImageIO.read(new File("./resources/img/enemysoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-
+            pickaxe = ImageIO.read(new File("./resources/img/pickaxe" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            fill = ImageIO.read(new File("./resources/img/fill" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            move = ImageIO.read(new File("./resources/img/move" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -130,6 +135,12 @@ public class FileManager {
     public Image getTower() {
         return tower;
     }
+
+    public Image getDigImage(){ return pickaxe; }
+
+    public Image getMoveImage(){ return move; }
+
+    public Image getFillImage(){ return fill; }
 
     public BufferedReader getLevel(int level){
         File levelFile = new File("./resources/normallevels/level" + level + ".txt");

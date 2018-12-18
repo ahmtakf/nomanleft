@@ -16,7 +16,7 @@ public class Tower extends Tile{
     }
 
     @Override
-    public boolean isFilable() {
+    public boolean isFillable() {
         return false;
     }
 

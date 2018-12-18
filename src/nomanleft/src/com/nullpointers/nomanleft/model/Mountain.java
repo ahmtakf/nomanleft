@@ -11,11 +11,11 @@ public class Mountain extends Tile {
 
     @Override
     public boolean isDiggable() {
-        return false;
+        return true;
     }
 
     @Override
-    public boolean isFilable() {
+    public boolean isFillable() {
         return false;
     }
 
