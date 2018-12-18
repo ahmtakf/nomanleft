@@ -1,12 +1,12 @@
 package com.nullpointers.nomanleft.view;
 
 
+import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
-import com.nullpointers.nomanleft.model.Wall;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 public class LevelPanel extends JPanel{
     private JPanel levelPanel;
@@ -27,6 +27,15 @@ public class LevelPanel extends JPanel{
     private JLabel timeLeftLabel;
     private JLabel levelsSolvedLabel;
     private JLabel highScoreLabel;
+    private JButton FillButton;
+    private JButton MoveButton;
+    private JButton DigButton;
+    private JButton HideButton;
+    private JTextField Bush;
+    private JTextField numberOfHide;
+    private JTextField numberOfDig;
+    private JTextField numberOfMove;
+    private JTextField numberOfFill;
     public int flag;
     public boolean candrag;
     public int wallId;
@@ -37,6 +46,10 @@ public class LevelPanel extends JPanel{
 
     public LevelPanel() {
         super();
+        HideButton.setIcon(new ImageIcon(FileManager.getInstance().getBush()));
+        DigButton.setIcon(new ImageIcon(FileManager.getInstance().getDigImage()));
+        MoveButton.setIcon(new ImageIcon(FileManager.getInstance().getMoveImage()));
+        FillButton.setIcon(new ImageIcon(FileManager.getInstance().getFillImage()));
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -85,6 +98,8 @@ public class LevelPanel extends JPanel{
     }
 
     private void createUIComponents() {
+
+
         gamePanel = new GamePanel();
         candrag = false;
         flag = 0;
