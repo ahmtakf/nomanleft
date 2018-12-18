@@ -1,7 +1,6 @@
 package com.nullpointers.nomanleft.model;
 
 import com.nullpointers.nomanleft.controller.FileManager;
-import com.nullpointers.nomanleft.view.LevelPanel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +9,6 @@ import java.util.ArrayList;
 public class MapModel {
 
     private MapObject[][] map;
-    private MapObjectFactory factory;
     private ArrayList<Wall> walls;
     private int[][] wallIdMap;
     private int[][] outsideMap;
@@ -18,7 +16,6 @@ public class MapModel {
     private final int MAP_SIZE = 13;
 
     public MapModel(int level){
-        factory = new MapObjectFactory();
         map = new MapObject[MAP_SIZE][MAP_SIZE];
         walls = new ArrayList<>();
         wallIdMap = new int[MAP_SIZE][MAP_SIZE];
@@ -36,7 +33,7 @@ public class MapModel {
                 String nodes = br.readLine();
                 int j = 0;
                 for (String nodeName: nodes.split(",")) {
-                    map[i][j] = factory.getMapObject(nodeName);
+                    map[i][j] = MapObjectFactory.getInstance().getMapObject(nodeName);
                     j++;
                 }
             } catch (IOException e) {
@@ -137,7 +134,7 @@ public class MapModel {
                             }
                             if (countCorner <= 1) {
                                 wallIdMap[i][j + 1] = 0;
-                                map[i][j + 1] = factory.getMapObject("Wallable");
+                                map[i][j + 1] = MapObjectFactory.getInstance().getMapObject("Wallable");
                             }
                         }
                         //Solundaysa
@@ -154,7 +151,7 @@ public class MapModel {
                             }
                             if (countCorner <= 1) {
                                 wallIdMap[i][j - 1] = 0;
-                                map[i][j - 1] = factory.getMapObject("Wallable");
+                                map[i][j - 1] = MapObjectFactory.getInstance().getMapObject("Wallable");
                             }
                         }
                         //Altındaysa
@@ -171,7 +168,7 @@ public class MapModel {
                             }
                             if (countCorner <= 1) {
                                 wallIdMap[i + 1][j] = 0;
-                                map[i + 1][j] = factory.getMapObject("Wallable");
+                                map[i + 1][j] = MapObjectFactory.getInstance().getMapObject("Wallable");
                             }
                         }
                         //Üstündeyse
@@ -188,12 +185,12 @@ public class MapModel {
                             }
                             if (countCorner <= 1) {
                                 wallIdMap[i - 1][j] = 0;
-                                map[i - 1][j] = factory.getMapObject("Wallable");
+                                map[i - 1][j] = MapObjectFactory.getInstance().getMapObject("Wallable");
                             }
                         }
 
                         wallIdMap[i][j] = 0;
-                        map[i][j] = factory.getMapObject("Wallable");
+                        map[i][j] = MapObjectFactory.getInstance().getMapObject("Wallable");
                     }
                 }
             }
@@ -231,7 +228,7 @@ public class MapModel {
             for (int j = 0; j < MAP_SIZE; j++) {
                 if (wallShape[i][j] > 0 && (i+x-pivotX >= 0 && i+x-pivotX < MAP_SIZE && j+y-pivotY >= 0 && j+y-pivotY < MAP_SIZE &&
                         (map[i+x-pivotX][j+y-pivotY] instanceof Wallable))){
-                    map[i+x-pivotX][j+y-pivotY] = factory.getMapObject("WallTile");
+                    map[i+x-pivotX][j+y-pivotY] = MapObjectFactory.getInstance().getMapObject("WallTile");
                     wallIdMap[i+x-pivotX][j+y-pivotY] = numberOfWallsOnMap;
                 }
             }
@@ -253,7 +250,7 @@ public class MapModel {
                     count++;
                 }
                 if (count >= 2 && wallIdMap[i][j] == 0){
-                    map[i][j] = factory.getMapObject("WallTile");
+                    map[i][j] = MapObjectFactory.getInstance().getMapObject("WallTile");
                     wallIdMap[i][j] = -1;
                 }
             }
@@ -265,39 +262,38 @@ public class MapModel {
     public boolean check(){
 
         //1 is outside, 0 is not outside
-        outsideMap = new int[MAP_SIZE][MAP_SIZE];
-
-        for (int m = 0; m < MAP_SIZE; m++){
-            for(int k = 0; k < MAP_SIZE; k++){
-                outsideMap[m][k] = 0;
-            }
-        }
+        outsideMap = new int[MAP_SIZE+2][MAP_SIZE+2];
 
         for (int i = 0; i < MAP_SIZE; i++){
-            for(int j = 0; j < MAP_SIZE; j++) {
+            for( int j = 0; j < MAP_SIZE; j++) {
                 if (map[i][j] instanceof Soldier && ((Soldier)map[i][j]).isEnemy()){
-                    outsides(i,j);
-                }
-            }
-        }
-
-        printMap(outsideMap);
-
-        for (int m = 0; m < MAP_SIZE; m++){
-            for(int k = 0; k < MAP_SIZE; k++) {
-                if (map[m][k] instanceof Soldier && !((Soldier)map[m][k]).isEnemy()){
-                    if (outsideMap[m][k] == 1){
-                        return false;
+                    for (int m = 0; m < MAP_SIZE+2; m++){
+                        for(int k = 0; k < MAP_SIZE+2; k++){
+                            outsideMap[m][k] = 0;
+                        }
                     }
-                }
-                if (map[m][k] instanceof Tower){
-                    if (outsideMap[m][k] == 1){
-                        return false;
-                    }
-                }
-                if (map[m][k] instanceof Soldier && ((Soldier)map[m][k]).isEnemy()){
-                    if (outsideMap[m][k] == 0){
-                        return false;
+
+                    outsides(i+1, j+1);
+                    printMap(outsideMap);
+
+                    for (int m = 0; m < MAP_SIZE; m++){
+                        for(int k = 0; k < MAP_SIZE; k++) {
+                            if (map[m][k] instanceof Soldier && !((Soldier)map[m][k]).isEnemy()){
+                                if (outsideMap[m+1][k+1] == 1){
+                                    return false;
+                                }
+                            }
+                            if (map[m][k] instanceof Tower){
+                                if (outsideMap[m+1][k+1] == 1){
+                                    return false;
+                                }
+                            }
+                            if (map[m][k] instanceof Soldier && ((Soldier)map[m][k]).isEnemy()){
+                                if (outsideMap[m+1][k+1] == 0){
+                                    return false;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -307,8 +303,8 @@ public class MapModel {
     }
 
     private void printMap(int[][] outsideMap) {
-        for (int m = 0; m < MAP_SIZE; m++){
-            for(int k = 0; k < MAP_SIZE; k++){
+        for (int m = 0; m < MAP_SIZE+2; m++){
+            for(int k = 0; k < MAP_SIZE+2; k++){
                 System.out.print(outsideMap[m][k] + " ");
             }
             System.out.println();
@@ -316,10 +312,10 @@ public class MapModel {
     }
 
     private void outsides(int x, int y){
-        if ( x > MAP_SIZE-1 || x < 0 || y > MAP_SIZE-1 || y < 0){
+        if ( x > MAP_SIZE+1 || x < 0 || y > MAP_SIZE+1 || y < 0){
             return;
         }
-        if (map[x][y] instanceof  WallTile){
+        if (!(x > MAP_SIZE || x < 1 || y > MAP_SIZE || y < 1) && map[x-1][y-1] instanceof  WallTile){
             return;
         }
         if (outsideMap[x][y] == 1){

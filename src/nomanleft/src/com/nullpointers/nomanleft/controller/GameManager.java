@@ -1,7 +1,7 @@
 package com.nullpointers.nomanleft.controller;
 
 import com.nullpointers.nomanleft.model.MapModel;
-import com.nullpointers.nomanleft.model.Wall;
+import com.nullpointers.nomanleft.model.MapObjectFactory;
 import com.nullpointers.nomanleft.view.*;
 
 import javax.swing.*;
@@ -20,6 +20,7 @@ public class GameManager {
     private TimeTrial timeTrial;
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
+        System.out.println(MapObjectFactory.getInstance());
         frame = new JFrame("NoManLeft");
         frame.setMinimumSize(new Dimension(1600,900));
         frame.setMaximumSize(new Dimension(1600,900));

@@ -17,8 +17,8 @@ public class Lava extends Tile {
     }
 
     @Override
-    public boolean isFilable() {
-        return false;
+    public boolean isFillable() {
+        return true;
     }
 
     @Override

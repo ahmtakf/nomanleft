@@ -15,7 +15,7 @@ public class Bush extends Tile{
     }
 
     @Override
-    public boolean isFilable() {
+    public boolean isFillable() {
         return false;
     }
 

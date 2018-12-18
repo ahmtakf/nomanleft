@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class TimeTrial {
 
-    private static final int MAX_TIME = 12 ;
+    private static final int MAX_TIME = 50 ;
     private static final int MAX_LEVEL_NO = 3;
     private int[] levelNumbers = new int[MAX_LEVEL_NO];
     private int highScore = 0 ;
@@ -34,7 +34,7 @@ public class TimeTrial {
                 finished();
             }
         };
-        timer1 = new Timer(12000, taskPerformer);
+        timer1 = new Timer(MAX_TIME * 1000, taskPerformer);
 
         //set timer2 for guı update
          startTime = Instant.now();

@@ -47,12 +47,6 @@ public class LevelPanel extends JPanel{
                 }
             }
         });
-        removeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                flag = 1;
-            }
-        });
 
         this.timeTrial = timeTrial;
 
@@ -99,33 +93,39 @@ public class LevelPanel extends JPanel{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 Point clickCoordinate = e.getPoint();
-
-                if ( e.getButton() == MouseEvent.BUTTON3){
+                if ( candrag){
+                    ((GamePanel)gamePanel).resetWallPosition(wallId);
+                    candrag = false;
+                    gamePanel.repaint();
+                    gamePanel.validate();
+                    System.out.println("Do not Click while dragging!");
+                }
+                else{
                     int x = (int) (clickCoordinate.getX() - 800)/300;
                     int y = (int) (clickCoordinate.getY() - 50)/300;
-                    System.out.println(x + " " + y + " Color: " + ((GamePanel)gamePanel).isBlack(x*2+y, (int)(clickCoordinate.getX() - 800)%300, (int)(clickCoordinate.getY() - 50)%300));
-                    if ( !(x < 0 || x > 1 || y < 0 || y > 1) ){
+                    if ( x >= 0 && y >= 0 && x < 2 && y < 2 && e.getButton() == MouseEvent.BUTTON3){
+                        System.out.println(x + " " + y + " Color: " + ((GamePanel)gamePanel).isBlack(x*2+y, (int)(clickCoordinate.getX() - 800)%300, (int)(clickCoordinate.getY() - 50)%300));
                         if(((GamePanel)gamePanel).isBlack(x*2+y, (int)(clickCoordinate.getX() - 800)%300, (int)(clickCoordinate.getY() - 50)%300) ) {
                             GameManager.getInstance().rotateWallOnPanelRight(x * 2 + y);
                             gamePanel.repaint();
                             gamePanel.validate();
                         }
                     }
-                }
-                else {
-                    int mapPointX = (int) (clickCoordinate.getX() / 120);
-                    int mapPointY = (int) (clickCoordinate.getY() / 120);
-                    mapPointX = mapPointX * 2;
-                    mapPointY = mapPointY * 2;
-                    if (clickCoordinate.getX() % 120 > 20)
-                        mapPointX++;
-                    if (clickCoordinate.getY() % 120 > 20)
-                        mapPointY++;
+                    else {
+                        int mapPointX = (int) (clickCoordinate.getX() / 120);
+                        int mapPointY = (int) (clickCoordinate.getY() / 120);
+                        mapPointX = mapPointX * 2;
+                        mapPointY = mapPointY * 2;
+                        if (clickCoordinate.getX() % 120 > 20)
+                            mapPointX++;
+                        if (clickCoordinate.getY() % 120 > 20)
+                            mapPointY++;
 
-                    if (flag == 1) { // remove
-                        GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
-                        gamePanel.repaint();
-                        flag = 2;
+                        if (flag == 1) { // remove
+                            GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
                     }
                 }
             }
@@ -159,7 +159,7 @@ public class LevelPanel extends JPanel{
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
 
-                if (candrag){
+                if (candrag && e.getButton() == MouseEvent.BUTTON1){
                     Point clickCoordinate = e.getPoint();
                     int mapPointX = (int) (clickCoordinate.getX() / 120);
                     int mapPointY = (int) (clickCoordinate.getY() / 120);
@@ -180,6 +180,12 @@ public class LevelPanel extends JPanel{
                         finishLevel();
                     }
 
+                }
+                else{
+                    ((GamePanel)gamePanel).resetWallPosition(wallId);
+                    gamePanel.repaint();
+                    gamePanel.validate();
+                    candrag = false;
                 }
 
             }
@@ -208,7 +214,7 @@ public class LevelPanel extends JPanel{
 
     public void finishLevel() {
         if (!timeTrial) {
-            JOptionPane.showMessageDialog(this, "Congragulations");
+            JOptionPane.showMessageDialog(this, "Congratulations");
             GameManager.getInstance().openPlayGamePanel();
         }
         if (timeTrial) {

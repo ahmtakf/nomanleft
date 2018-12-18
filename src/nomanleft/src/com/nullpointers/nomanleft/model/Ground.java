@@ -15,7 +15,7 @@ public class Ground extends Tile {
     }
 
     @Override
-    public boolean isFilable() {
+    public boolean isFillable() {
         return false;
     }
 

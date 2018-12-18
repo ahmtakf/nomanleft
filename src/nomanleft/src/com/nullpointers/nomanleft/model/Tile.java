@@ -8,7 +8,7 @@ public abstract class Tile implements MapObject {
 
     public Tile(){ }
     public abstract boolean isDiggable();
-    public abstract boolean isFilable();
+    public abstract boolean isFillable();
 
     @Override
     public void setPosition(Point obj) {
