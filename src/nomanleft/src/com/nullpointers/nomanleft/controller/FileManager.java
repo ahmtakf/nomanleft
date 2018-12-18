@@ -101,6 +101,7 @@ public class FileManager {
     }
 
     public void setGold(int gold) {
+        System.out.println("Set Gold");
         this.gold = gold;
     }
 

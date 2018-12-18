@@ -11,6 +11,7 @@ import java.awt.*;
 public class GameManager {
 
     private final static GameManager instance = new GameManager();
+    private final static int GOLD_REWARD = 10;
     private JFrame frame;
     private MapModel currentLevel;
     private MainMenuPanel mainMenuPanel;
@@ -63,9 +64,12 @@ public class GameManager {
             frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         }
         else {
-            JOptionPane.showMessageDialog(frame, "Congratulations, all levels are solved.");
-            openMainMenu();
+            timeTrial.finished(false);
         }
+    }
+
+    public void finishTimeTrial () {
+        timeTrial.finished(true);
     }
 
 
@@ -97,6 +101,7 @@ public class GameManager {
     }
 
     public void openShop () {
+        shopPanel.updateGold();
         frame.setContentPane(shopPanel.getShopPanel());
         frame.pack();
         frame.setVisible(true);
@@ -109,6 +114,12 @@ public class GameManager {
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
+    }
+
+    public void rewardGold (int levelsCompleted) {
+        int goldGained = levelsCompleted*GOLD_REWARD;
+        FileManager.getInstance().setGold(FileManager.getInstance().getGold()+ goldGained);
+        JOptionPane.showMessageDialog(frame, "You have gained: " + goldGained + " gold!!");
     }
 
     public boolean check(){

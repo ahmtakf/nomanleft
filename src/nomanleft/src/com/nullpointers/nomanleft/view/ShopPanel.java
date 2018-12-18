@@ -7,6 +7,10 @@ import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
 
 public class ShopPanel {
+    private final static int HIDE_PRICE = 50;
+    private final static int DIG_PRICE = 50;
+    private final static int FILL_PRICE = 50;
+    private final static int MOVE_PRICE = 50;
     private JLabel gold;
     private JButton back;
     private JButton hideBButton;
@@ -19,6 +23,10 @@ public class ShopPanel {
     private JLabel fillBLabel;
     private JPanel itemPanel;
     private JPanel shopPanel;
+    private JLabel hideBoosterPrice;
+    private JLabel digBoosterPrice;
+    private JLabel fillBoosterPrice;
+    private JLabel MoveBoosterPrice;
 
     public JPanel getShopPanel() {
         return shopPanel;
@@ -28,9 +36,17 @@ public class ShopPanel {
 
     public ShopPanel () {
         // set gold
-        gold.setText("Gold: " + Integer.toString(FileManager.getInstance().getGold()));
+        updateGold();
 
         hideBButton.setIcon(new ImageIcon(FileManager.getInstance().getBush()));
+        digBButton.setIcon(new ImageIcon(FileManager.getInstance().getDigImage()));
+        fillBButton.setIcon(new ImageIcon(FileManager.getInstance().getFillImage()));
+        moveBButton.setIcon(new ImageIcon(FileManager.getInstance().getMoveImage()));
+
+        hideBoosterPrice.setText(HIDE_PRICE+ "g");
+        digBoosterPrice.setText(DIG_PRICE+ "g");
+        fillBoosterPrice.setText(FILL_PRICE+ "g");
+        MoveBoosterPrice.setText(MOVE_PRICE+ "g");
 
         back.setActionCommand("back");
         hideBButton.setActionCommand("hideBButton");
@@ -49,6 +65,10 @@ public class ShopPanel {
 
     }
 
+    public void updateGold(){
+        System.out.println("Update Gold");
+        gold.setText("Gold: " + Integer.toString(FileManager.getInstance().getGold()));
+    }
 
 
 

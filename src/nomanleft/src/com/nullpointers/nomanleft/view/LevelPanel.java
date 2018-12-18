@@ -58,6 +58,9 @@ public class LevelPanel extends JPanel{
                 int yesNoOption = JOptionPane.showConfirmDialog(null,"Are you sure to Exit ? ", "Close",JOptionPane.YES_NO_OPTION);
                 if(yesNoOption == JOptionPane.YES_NO_OPTION){
                     //System.exit(0);
+                    if(timeTrial)
+                    GameManager.getInstance().finishTimeTrial();
+                    else
                     GameManager.getInstance().openPlayGamePanel();
                 }
             }
@@ -92,7 +95,6 @@ public class LevelPanel extends JPanel{
                 flag = 3;
             }
         });
-        this.timeTrial = timeTrial;
 
         timeLeftLabel.setVisible(this.timeTrial);
         levelsSolvedLabel.setVisible(this.timeTrial);
@@ -100,24 +102,7 @@ public class LevelPanel extends JPanel{
     }
 
     public LevelPanel(boolean timeTrial, int highScore, int levelCount) {
-        super();
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int yesNoOption = JOptionPane.showConfirmDialog(null,"Are you sure to Exit ? ", "Close",JOptionPane.YES_NO_OPTION);
-                if(yesNoOption == JOptionPane.YES_NO_OPTION){
-                    //System.exit(0);
-                    GameManager.getInstance().openPlayGamePanel();
-                }
-            }
-        });
-        removeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                flag = 1;
-            }
-        });
-
+        this();
         this.timeTrial = timeTrial;
 
         timeLeftLabel.setVisible(this.timeTrial);
@@ -311,9 +296,11 @@ public class LevelPanel extends JPanel{
     public void finishLevel() {
         if (!timeTrial) {
             JOptionPane.showMessageDialog(this, "Congratulations");
+            GameManager.getInstance().rewardGold(1);
             GameManager.getInstance().openPlayGamePanel();
         }
         if (timeTrial) {
+            //reward when whole timeTrial thing finishes
             GameManager.getInstance().loadNextLevel();
         }
     }

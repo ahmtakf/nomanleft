@@ -31,7 +31,7 @@ public class TimeTrial {
         //set timer1
         ActionListener taskPerformer = new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                finished();
+                finished(false);
             }
         };
         timer1 = new Timer(MAX_TIME * 1000, taskPerformer);
@@ -86,15 +86,22 @@ public class TimeTrial {
         System.out.println("Time Trial Starts");
     }
 
-    public void finished () {
+    public void finished (boolean forceQuit) {
         timer1.stop();
         timer2.stop();
         System.out.println("Time Trial Finished");
-        if (levelCount > highScore) {
+        if (levelCount > highScore && !forceQuit) {
             highScore = levelCount;
             FileManager.getInstance().setHighScore(highScore);
         }
-        JOptionPane.showMessageDialog(currentLevel.getLevelPanel(), "Time is over.");
+        if (!forceQuit) {
+            if(levelCount<MAX_LEVEL_NO)
+                JOptionPane.showMessageDialog(currentLevel.getLevelPanel(), "Time is over.");
+            else
+                JOptionPane.showMessageDialog(currentLevel.getLevelPanel(), "Congratulations, " +
+                        "all levels are solved");
+            GameManager.getInstance().rewardGold(levelCount);
+        }
         GameManager.getInstance().openMainMenu();
     }
 
