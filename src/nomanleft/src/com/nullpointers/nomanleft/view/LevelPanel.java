@@ -75,6 +75,10 @@ public class LevelPanel extends JPanel{
 
     public LevelPanel(boolean timeTrial, int highScore, int levelCount) {
         super();
+        HideButton.setIcon(new ImageIcon(FileManager.getInstance().getBush()));
+        DigButton.setIcon(new ImageIcon(FileManager.getInstance().getDigImage()));
+        MoveButton.setIcon(new ImageIcon(FileManager.getInstance().getMoveImage()));
+        FillButton.setIcon(new ImageIcon(FileManager.getInstance().getFillImage()));
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

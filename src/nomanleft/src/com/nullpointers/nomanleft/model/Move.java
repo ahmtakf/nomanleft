@@ -4,9 +4,29 @@ public class Move implements Booster {
 
 
 
-    public void use(MapObject[][] map, int x, int y, int newX, int newY){
-        if (((Soldier)map[x][y]).isMovable() && map[newX][newY].isGround()) {
-            map[newX][newY] = map[x][y];
+    public void use(MapObject[][] map, int x, int y, int direction){
+        int a = 0;
+        int b = 0;
+        switch (direction){
+            case 0://left
+                a = 0;
+                b = -1;
+                break;
+            case 1://right
+                a = 0;
+                b = 1;
+                break;
+            case 2://up
+                a = -1;
+                b = 0;
+                break;
+            case 3://down
+                a = 1;
+                b = 0;
+                break;
+        }
+        if (((Soldier)map[x][y]).isMovable() && map[x+a][y+b].isGround()) {
+            map[x+a][y+b] = map[x][y];
             map[x][y] = MapObjectFactory.getInstance().getMapObject("Ground");
         }
         else
