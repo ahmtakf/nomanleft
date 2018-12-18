@@ -20,8 +20,8 @@ public class BoosterMaker {
         hide.use( map, x, y);
     }
 
-    public void move(MapObject[][] map, int x, int y, int newX, int newY){
-        move.use( map, x, y, newX, newY);
+    public void move(MapObject[][] map, int x, int y, int direction){
+        move.use( map, x, y, direction);
     }
 
     public void dig(MapObject[][] map, int x, int y){

@@ -1,5 +1,6 @@
 package com.nullpointers.nomanleft.controller;
 
+import com.nullpointers.nomanleft.model.BoosterMaker;
 import com.nullpointers.nomanleft.model.MapModel;
 import com.nullpointers.nomanleft.model.MapObjectFactory;
 import com.nullpointers.nomanleft.view.*;
@@ -18,6 +19,8 @@ public class GameManager {
     private OptionsPanel optionsPanel;
     private LevelPanel levelPanel;
     private TimeTrial timeTrial;
+    private BoosterMaker boosterMaker;
+
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
         System.out.println(MapObjectFactory.getInstance());
@@ -33,6 +36,7 @@ public class GameManager {
         playGamePanel = new PlayGamePanel();
         shopPanel = new ShopPanel();
         optionsPanel = new OptionsPanel();
+        boosterMaker = new BoosterMaker();
     }
 
     public void startLevel(int levelNumber){
@@ -123,4 +127,16 @@ public class GameManager {
         currentLevel.getWalls().get(wallId).rotateLeft();
     }
 
+    public void dig(int x, int y){
+        boosterMaker.dig(currentLevel.getMap(),x,y);
+    }
+    public void fill(int x, int y){
+        boosterMaker.fill(currentLevel.getMap(),x,y);
+    }
+    public void move(int x, int y, int direction){
+        boosterMaker.move(currentLevel.getMap(),x,y,direction);
+    }
+    public void hide(int x, int y){
+        boosterMaker.hide(currentLevel.getMap(),x,y);
+    }
 }

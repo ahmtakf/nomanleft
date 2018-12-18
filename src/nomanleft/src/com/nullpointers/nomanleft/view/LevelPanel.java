@@ -38,11 +38,13 @@ public class LevelPanel extends JPanel{
     private JTextField numberOfFill;
     public int flag;
     public boolean candrag;
+    public boolean changeDirection;
     public int wallId;
     public int wallX;
     public int wallY;
     public boolean timeTrial = false;
-
+    public int initialSoliderX;
+    public int initialSoliderY;
 
     public LevelPanel() {
         super();
@@ -64,6 +66,30 @@ public class LevelPanel extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 flag = 1;
+            }
+        });
+        HideButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 2;
+            }
+        });
+        DigButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 4;
+            }
+        });
+        MoveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 5;
+            }
+        });
+        FillButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                flag = 3;
             }
         });
         this.timeTrial = timeTrial;
@@ -107,6 +133,7 @@ public class LevelPanel extends JPanel{
 
         gamePanel = new GamePanel();
         candrag = false;
+        changeDirection = false;
         flag = 0;
         gamePanel.addMouseListener(new MouseAdapter() {
             @Override
@@ -140,11 +167,32 @@ public class LevelPanel extends JPanel{
                             mapPointX++;
                         if (clickCoordinate.getY() % 120 > 20)
                             mapPointY++;
-
-                        if (flag == 1) { // remove
+                        if(flag == 2){ // hide booster
+                            GameManager.getInstance().hide(mapPointY,mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if(flag == 3){ // fill booster
+                            GameManager.getInstance().fill(mapPointY,mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if(flag == 4){ // dig booster
+                            GameManager.getInstance().dig(mapPointY,mapPointX);
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if(flag == 5){ // move booster
+                            changeDirection = true;
+                            initialSoliderX = mapPointX;
+                            initialSoliderY = mapPointY;
+                            gamePanel.repaint();
+                            flag = 0;
+                        }
+                        else if (flag == 1) { // remove
                             GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
                             gamePanel.repaint();
-                            flag = 2;
+                            flag = 0;
                         }
                     }
                 }
@@ -186,24 +234,21 @@ public class LevelPanel extends JPanel{
                 else{
                     candrag = false;
                 }
-
             }
 
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-
+                Point clickCoordinate = e.getPoint();
+                int mapPointX = (int) (clickCoordinate.getX() / 120);
+                int mapPointY = (int) (clickCoordinate.getY() / 120);
+                mapPointX = mapPointX * 2;
+                mapPointY = mapPointY * 2;
+                if (clickCoordinate.getX() % 120 > 20)
+                    mapPointX++;
+                if (clickCoordinate.getY() % 120 > 20)
+                    mapPointY++;
                 if (candrag && e.getButton() == MouseEvent.BUTTON1){
-                    Point clickCoordinate = e.getPoint();
-                    int mapPointX = (int) (clickCoordinate.getX() / 120);
-                    int mapPointY = (int) (clickCoordinate.getY() / 120);
-                    mapPointX = mapPointX * 2;
-                    mapPointY = mapPointY * 2;
-                    if (clickCoordinate.getX() % 120 > 20)
-                        mapPointX++;
-                    if (clickCoordinate.getY() % 120 > 20)
-                        mapPointY++;
-
                     System.out.println("X:" + mapPointX + " Y: " + mapPointY);
                     GameManager.getInstance().putWall(wallId, mapPointY, mapPointX, wallX, wallY);
                     ((GamePanel)gamePanel).resetWallPosition(wallId);
@@ -213,6 +258,23 @@ public class LevelPanel extends JPanel{
                     if (GameManager.getInstance().check()) {
                         finishLevel();
                     }
+
+                }
+                else if(changeDirection){
+                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == 1)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,1);
+                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == -1)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,0);
+                    else if(mapPointX - initialSoliderX == 1 && mapPointY - initialSoliderY == 0)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,2);
+                    else if(mapPointX - initialSoliderX == -1 && mapPointY - initialSoliderY == 0)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,3);
+                    gamePanel.repaint();
+                    gamePanel.validate();
+                    if (GameManager.getInstance().check()) {
+                        finishLevel();
+                    }
+                    changeDirection = false;
 
                 }
                 else{
