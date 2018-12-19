@@ -108,8 +108,20 @@ public class OptionsPanel {
     }
 
     private void adjustVolume () {
-        volumeControl.setValue(max-min *(volumeBar.getValue()/(volumeBar.getMaximum()-volumeBar.getMinimum())));
-        System.out.println("value: " + (max-min *(volumeBar.getValue()/(volumeBar.getMaximum()-volumeBar.getMinimum()))));
+        System.out.println("max: " + max + " min: " + min);
+        float range = max-(min/2f);
+        float sliderValue = (float)volumeBar.getValue();
+        float sliderRange =  (float)(volumeBar.getMaximum() - volumeBar.getMinimum());
+        float gainValue = ((sliderValue/sliderRange)*range)-40f;
+        System.out.println("range: " + range);
+        System.out.println("sliderValue: " + sliderValue);
+        System.out.println("sliderRange: "+ sliderRange);
+        System.out.println("gainValue: " + gainValue);
+        if(!((int)sliderValue< 5))
+            volumeControl.setValue(gainValue);
+        else
+            volumeControl.setValue(-80f);
+
     }
 
 }
