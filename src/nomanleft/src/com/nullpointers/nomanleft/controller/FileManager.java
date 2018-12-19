@@ -17,6 +17,7 @@ public class FileManager {
     private int highScore;
     private int sound = 1;
     private int soundLevel = 50;
+    private int hideBooster = 0, digBooster = 0, fillBooster = 0, moveBooster = 0;
     private Image bush;
     private Image wallTile;
     private Image ground;
@@ -50,6 +51,14 @@ public class FileManager {
             soundLevel = Integer.parseInt(st.split(":")[1]);
             st = br.readLine();
             highScore = Integer.parseInt(st.split(":")[1]);
+            st = br.readLine();
+            hideBooster = Integer.parseInt(st.split(":")[1]);
+            st = br.readLine();
+            digBooster = Integer.parseInt(st.split(":")[1]);
+            st = br.readLine();
+            fillBooster = Integer.parseInt(st.split(":")[1]);
+            st = br.readLine();
+            moveBooster = Integer.parseInt(st.split(":")[1]);
 
             //Getting Game Images
             bush = ImageIO.read(new File("./resources/img/bush" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
@@ -93,8 +102,6 @@ public class FileManager {
             }
             id++;
         }
-
-        setGold(10);
 
     }
 
@@ -154,7 +161,11 @@ public class FileManager {
                     "gold:" + gold + "\n" +
                     "sound:" + sound + "\n" +
                     "soundlevel:" + soundLevel + "\n" +
-                    "highScore:" + highScore);
+                    "highScore:" + highScore +"\n" +
+                    "hide:" + hideBooster + "\n" +
+                    "dig:" + digBooster + "\n" +
+                    "fill:" + fillBooster + "\n" +
+                    "move:" + moveBooster + "\n" );
         }
         catch (Exception e){
             System.out.println(e.getMessage());
@@ -247,4 +258,38 @@ public class FileManager {
         this.soundLevel = soundLevel;
         writeToUserFile();
     }
+
+    public int getHideBooster() {
+        return hideBooster;
+    }
+
+    public void setHideBooster(int boosterCount) {
+        hideBooster = boosterCount;
+    }
+
+    public int getDigBooster() {
+        return digBooster;
+    }
+
+    public void setDigBooster(int boosterCount) {
+        digBooster = boosterCount;
+    }
+
+    public int getFillBooster() {
+        return fillBooster;
+    }
+
+    public void setFillBooster(int boosterCount) {
+        fillBooster = boosterCount;
+    }
+
+    public int getMoveBooster() {
+        return moveBooster;
+    }
+
+    public void setMoveBooster(int boosterCount) {
+        moveBooster = boosterCount;
+    }
+
+
 }

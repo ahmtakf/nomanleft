@@ -3,14 +3,17 @@ package com.nullpointers.nomanleft.view;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+
 import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
 
 public class ShopPanel {
-    private final static int HIDE_PRICE = 50;
-    private final static int DIG_PRICE = 50;
-    private final static int FILL_PRICE = 50;
-    private final static int MOVE_PRICE = 50;
+    private final static int HIDE_PRICE = 10;
+    private final static int DIG_PRICE = 10;
+    private final static int FILL_PRICE = 10;
+    private final static int MOVE_PRICE = 10;
+    private int goldAmount;
     private JLabel gold;
     private JButton back;
     private JButton hideBButton;
@@ -27,6 +30,10 @@ public class ShopPanel {
     private JLabel digBoosterPrice;
     private JLabel fillBoosterPrice;
     private JLabel MoveBoosterPrice;
+    private JLabel ownedHide;
+    private JLabel ownedDig;
+    private JLabel ownedFill;
+    private JLabel ownedMove;
 
     public JPanel getShopPanel() {
         return shopPanel;
@@ -36,7 +43,7 @@ public class ShopPanel {
 
     public ShopPanel () {
         // set gold
-        updateGold();
+        updateLabels();
 
         hideBButton.setIcon(new ImageIcon(FileManager.getInstance().getBush()));
         digBButton.setIcon(new ImageIcon(FileManager.getInstance().getDigImage()));
@@ -47,6 +54,11 @@ public class ShopPanel {
         digBoosterPrice.setText(DIG_PRICE+ "g");
         fillBoosterPrice.setText(FILL_PRICE+ "g");
         MoveBoosterPrice.setText(MOVE_PRICE+ "g");
+
+        ownedHide.setText(Integer.toString(FileManager.getInstance().getHideBooster()));
+        ownedDig.setText(Integer.toString(FileManager.getInstance().getDigBooster()));
+        ownedFill.setText(Integer.toString(FileManager.getInstance().getFillBooster()));
+        ownedMove.setText(Integer.toString(FileManager.getInstance().getMoveBooster()));
 
         back.setActionCommand("back");
         hideBButton.setActionCommand("hideBButton");
@@ -65,9 +77,13 @@ public class ShopPanel {
 
     }
 
-    public void updateGold(){
-        System.out.println("Update Gold");
-        gold.setText("Gold: " + Integer.toString(FileManager.getInstance().getGold()));
+    public void updateLabels(){
+        goldAmount = FileManager.getInstance().getGold();
+        gold.setText("Gold: " + goldAmount);
+        ownedHide.setText("Owned: " + FileManager.getInstance().getHideBooster());
+        ownedDig.setText ("Owned: " + FileManager.getInstance().getDigBooster());
+        ownedFill.setText("Owned: " + FileManager.getInstance().getFillBooster());
+        ownedMove.setText("Owned: " + FileManager.getInstance().getMoveBooster());
     }
 
 
@@ -80,14 +96,57 @@ public class ShopPanel {
             switch (actionCommand){
                 case "back": {GameManager.getInstance().openMainMenu();} break ;
 
-                case "hideBButton": {System.out.println("buy hide");}  break;
+                case "hideBButton": {
 
-                case "digBButton": {System.out.println("buy dig");} break;
+                    if (goldAmount >= HIDE_PRICE){
+                        FileManager.getInstance().setHideBooster(FileManager.getInstance().getHideBooster()+1);
+                        goldAmount = goldAmount -HIDE_PRICE;
+                        FileManager.getInstance().setGold(goldAmount);
+                        updateLabels();
+                    }
+                    else
+                        JOptionPane.showMessageDialog(shopPanel, "Not enough gold!");
 
-                case "fillBButton": {System.out.println("buy fill");} break;
+                }  break;
 
-                case "moveBButton": {System.out.println("buy move");} break;
+                case "digBButton": {
 
+                    if (goldAmount >= DIG_PRICE){
+                    FileManager.getInstance().setDigBooster(FileManager.getInstance().getDigBooster()+1);
+                    goldAmount = goldAmount -DIG_PRICE;
+                    FileManager.getInstance().setGold(goldAmount);
+                    updateLabels();
+                }
+                else
+                    JOptionPane.showMessageDialog(shopPanel, "Not enough gold!");
+
+                } break;
+
+                case "fillBButton": {
+
+                    if (goldAmount >= FILL_PRICE){
+                    FileManager.getInstance().setFillBooster(FileManager.getInstance().getFillBooster()+1);
+                    goldAmount = goldAmount -FILL_PRICE;
+                    FileManager.getInstance().setGold(goldAmount);
+                    updateLabels();
+                }
+                else
+                    JOptionPane.showMessageDialog(shopPanel, "Not enough gold!");
+
+                } break;
+
+                case "moveBButton": {
+
+                    if (goldAmount >= MOVE_PRICE){
+                    FileManager.getInstance().setMoveBooster(FileManager.getInstance().getMoveBooster()+1);
+                    goldAmount = goldAmount - MOVE_PRICE;
+                    FileManager.getInstance().setGold(goldAmount);
+                    updateLabels();
+                }
+                else
+                    JOptionPane.showMessageDialog(shopPanel, "Not enough gold!");
+
+                } break;
 
             }
 

@@ -101,7 +101,7 @@ public class GameManager {
     }
 
     public void openShop () {
-        shopPanel.updateGold();
+        shopPanel.updateLabels();
         frame.setContentPane(shopPanel.getShopPanel());
         frame.pack();
         frame.setVisible(true);
