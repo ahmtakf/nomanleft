@@ -7,6 +7,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Objects;
+import javax.sound.sampled.*;
 
 public class FileManager {
 
@@ -29,6 +30,7 @@ public class FileManager {
     private Image pickaxe;
     private Image fill;
     private Image move;
+    private AudioInputStream aiStream;
     private final static int WIDTH = 100;
     private final static int HEIGHT = 100;
     private final int MAP_SIZE = 13;
@@ -103,6 +105,9 @@ public class FileManager {
             id++;
         }
 
+        try {aiStream = AudioSystem.getAudioInputStream(new File("./resources/music/music.wav"));}
+        catch(UnsupportedAudioFileException uafe){uafe.printStackTrace();}
+        catch(IOException ioe){ioe.printStackTrace();}
     }
 
     public static FileManager getInstance(){
@@ -291,5 +296,8 @@ public class FileManager {
         moveBooster = boosterCount;
     }
 
+    public AudioInputStream getAudioInputStream () {
+        return aiStream;
+    }
 
 }
