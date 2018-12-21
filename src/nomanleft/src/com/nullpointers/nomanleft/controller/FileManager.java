@@ -269,7 +269,10 @@ public class FileManager {
     }
 
     public void setHideBooster(int boosterCount) {
+
         hideBooster = boosterCount;
+        writeToUserFile();
+
     }
 
     public int getDigBooster() {
@@ -277,7 +280,10 @@ public class FileManager {
     }
 
     public void setDigBooster(int boosterCount) {
+
         digBooster = boosterCount;
+        writeToUserFile();
+
     }
 
     public int getFillBooster() {
@@ -286,6 +292,9 @@ public class FileManager {
 
     public void setFillBooster(int boosterCount) {
         fillBooster = boosterCount;
+        writeToUserFile();
+
+
     }
 
     public int getMoveBooster() {
@@ -294,6 +303,8 @@ public class FileManager {
 
     public void setMoveBooster(int boosterCount) {
         moveBooster = boosterCount;
+        writeToUserFile();
+
     }
 
     public AudioInputStream getAudioInputStream () {

@@ -4,6 +4,6 @@ sound:1
 soundlevel:36
 highScore:0
 hide:1
-dig:2
+dig:3
 fill:0
-move:1
+move:0

@@ -1,5 +1,7 @@
 package com.nullpointers.nomanleft.model;
 
+import com.nullpointers.nomanleft.controller.FileManager;
+
 public class Move implements Booster {
 
 
@@ -28,6 +30,7 @@ public class Move implements Booster {
         if (((Soldier)map[x][y]).isMovable() && map[x+a][y+b].isGround()) {
             map[x+a][y+b] = map[x][y];
             map[x][y] = MapObjectFactory.getInstance().getMapObject("Ground");
+            FileManager.getInstance().setMoveBooster(FileManager.getInstance().getMoveBooster()-1);
         }
         else
             System.out.println("Cannot Move there!");

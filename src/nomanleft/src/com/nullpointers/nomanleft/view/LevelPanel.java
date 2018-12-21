@@ -257,13 +257,13 @@ public class LevelPanel extends JPanel{
 
                 }
                 else if(changeDirection){
-                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == 2)
+                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY > 0)
                         GameManager.getInstance().move(initialSoliderY,initialSoliderX,3);
-                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == -2)
+                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY < 0)
                         GameManager.getInstance().move(initialSoliderY,initialSoliderX,2);
-                    else if(mapPointX - initialSoliderX == 2 && mapPointY - initialSoliderY == 0)
+                    else if(mapPointX - initialSoliderX > 0 && mapPointY - initialSoliderY == 0)
                         GameManager.getInstance().move(initialSoliderY,initialSoliderX,1);
-                    else if(mapPointX - initialSoliderX == -2 && mapPointY - initialSoliderY == 0)
+                    else if(mapPointX - initialSoliderX < 0 && mapPointY - initialSoliderY == 0)
                         GameManager.getInstance().move(initialSoliderY,initialSoliderX,0);
                     gamePanel.repaint();
                     gamePanel.validate();
