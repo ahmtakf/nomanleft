@@ -20,6 +20,11 @@ public class Ground extends Tile {
     }
 
     @Override
+    public boolean isGround() {
+        return true;
+    }
+
+    @Override
     public Image getImage(){
         return FileManager.getInstance().getGround();
     }

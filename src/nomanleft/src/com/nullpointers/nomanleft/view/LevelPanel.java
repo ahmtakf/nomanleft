@@ -167,13 +167,6 @@ public class LevelPanel extends JPanel{
                             gamePanel.repaint();
                             flag = 0;
                         }
-                        else if(flag == 5){ // move booster
-                            changeDirection = true;
-                            initialSoliderX = mapPointX;
-                            initialSoliderY = mapPointY;
-                            gamePanel.repaint();
-                            flag = 0;
-                        }
                         else if (flag == 1) { // remove
                             GameManager.getInstance().getMapModel().takeWall(mapPointY, mapPointX);
                             gamePanel.repaint();
@@ -219,6 +212,24 @@ public class LevelPanel extends JPanel{
                 else{
                     candrag = false;
                 }
+
+                int mapPointX = (int) (clickCoordinate.getX() / 120);
+                int mapPointY = (int) (clickCoordinate.getY() / 120);
+                mapPointX = mapPointX * 2;
+                mapPointY = mapPointY * 2;
+                if (clickCoordinate.getX() % 120 > 20)
+                    mapPointX++;
+                if (clickCoordinate.getY() % 120 > 20)
+                    mapPointY++;
+                if(flag == 5){ // move booster
+                    changeDirection = true;
+                    initialSoliderX = mapPointX;
+                    initialSoliderY = mapPointY;
+                    gamePanel.repaint();
+                    flag = 0;
+                }
+
+
             }
 
             @Override
@@ -246,14 +257,14 @@ public class LevelPanel extends JPanel{
 
                 }
                 else if(changeDirection){
-                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == 1)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,1);
-                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == -1)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,0);
-                    else if(mapPointX - initialSoliderX == 1 && mapPointY - initialSoliderY == 0)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,2);
-                    else if(mapPointX - initialSoliderX == -1 && mapPointY - initialSoliderY == 0)
+                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == 2)
                         GameManager.getInstance().move(initialSoliderY,initialSoliderX,3);
+                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY == -2)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,2);
+                    else if(mapPointX - initialSoliderX == 2 && mapPointY - initialSoliderY == 0)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,1);
+                    else if(mapPointX - initialSoliderX == -2 && mapPointY - initialSoliderY == 0)
+                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,0);
                     gamePanel.repaint();
                     gamePanel.validate();
                     if (GameManager.getInstance().check()) {

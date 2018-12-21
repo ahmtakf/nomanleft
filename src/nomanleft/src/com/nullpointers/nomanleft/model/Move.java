@@ -10,18 +10,18 @@ public class Move implements Booster {
         switch (direction){
             case 0://left
                 a = 0;
-                b = -1;
+                b = -2;
                 break;
             case 1://right
                 a = 0;
-                b = 1;
+                b = 2;
                 break;
             case 2://up
-                a = -1;
+                a = -2;
                 b = 0;
                 break;
             case 3://down
-                a = 1;
+                a = 2;
                 b = 0;
                 break;
         }

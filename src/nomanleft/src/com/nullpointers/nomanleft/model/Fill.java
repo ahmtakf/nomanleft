@@ -4,7 +4,7 @@ public class Fill implements Booster {
 
     public void use(MapObject[][] map, int x, int y) {
         if (((Tile) map[x][y]).isFillable())
-            map[x][y] = MapObjectFactory.getInstance().getMapObject("Ground");
+            map[x][y] = MapObjectFactory.getInstance().getMapObject("Wallable");
         else
             System.out.println("Cannot Fill!");
     }
