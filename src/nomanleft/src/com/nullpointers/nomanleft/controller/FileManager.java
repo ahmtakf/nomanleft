@@ -30,6 +30,10 @@ public class FileManager {
     private Image pickaxe;
     private Image fill;
     private Image move;
+    private Image WallPic1;
+    private Image WallPic2;
+    private Image WallPic3;
+    private Image WallPic4;
     private AudioInputStream aiStream;
     private final static int WIDTH = 100;
     private final static int HEIGHT = 100;
@@ -74,6 +78,10 @@ public class FileManager {
             pickaxe = ImageIO.read(new File("./resources/img/pickaxe" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             fill = ImageIO.read(new File("./resources/img/fill" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             move = ImageIO.read(new File("./resources/img/move" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic1 = ImageIO.read(new File("./resources/img/WallResim1" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic2 = ImageIO.read(new File("./resources/img/WallResim2" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic3 = ImageIO.read(new File("./resources/img/WallResim3" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic4 = ImageIO.read(new File("./resources/img/WallResim4" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
@@ -214,6 +222,11 @@ public class FileManager {
     public Image getMoveImage(){ return move; }
 
     public Image getFillImage(){ return fill; }
+
+    public Image getWallPic1(){return WallPic1;}
+    public Image getWallPic2(){return WallPic2;}
+    public Image getWallPic3(){return WallPic3;}
+    public Image getWallPic4(){return WallPic4;}
 
     public BufferedReader getLevel(int level){
         File levelFile = new File("./resources/normallevels/level" + level + ".txt");

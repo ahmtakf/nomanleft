@@ -30,6 +30,10 @@ public class SandBoxPanel extends JPanel{
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
     private JRadioButton radioButton4;
+    private JLabel label1;
+    private JLabel label2;
+    private JLabel label3;
+    private JLabel label4;
     private JRadioButton radioButton5;
 
 
@@ -67,6 +71,14 @@ public class SandBoxPanel extends JPanel{
         button4.setIcon(new ImageIcon(FileManager.getInstance().getMountain()));
         button5 = new JButton();
         button5.setIcon(new ImageIcon(FileManager.getInstance().getLava()));
+        label1 =new JLabel();
+        label1.setIcon(new ImageIcon(FileManager.getInstance().getWallPic1()));
+        label2 =new JLabel();
+        label2.setIcon(new ImageIcon(FileManager.getInstance().getWallPic2()));
+        label3 =new JLabel();
+        label3.setIcon(new ImageIcon(FileManager.getInstance().getWallPic3()));
+        label4 =new JLabel();
+        label4.setIcon(new ImageIcon(FileManager.getInstance().getWallPic4()));
         radioButton1 = new JRadioButton();
         radioButton2 = new JRadioButton();
         radioButton3 = new JRadioButton();
