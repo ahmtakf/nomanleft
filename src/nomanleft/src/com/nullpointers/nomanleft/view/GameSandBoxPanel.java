@@ -1,5 +1,6 @@
 package com.nullpointers.nomanleft.view;
 
+import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
 import com.nullpointers.nomanleft.model.MapObject;
 import com.nullpointers.nomanleft.model.WallTile;
@@ -10,9 +11,18 @@ import java.awt.*;
 
 public class GameSandBoxPanel extends JPanel {
     private MapObject[][] map;
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private JRadioButton radioButton3;
+    private JRadioButton radioButton4;
+    private JRadioButton radioButton5;
     public GameSandBoxPanel(){
         super();
         map = GameManager.getInstance().getMapModel().getMap();
+        //internalComponent();
         repaint();
         validate();
     }
