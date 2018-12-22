@@ -84,6 +84,7 @@ public class MainMenuPanel {
 
     public void quitGame(){
         System.out.println("quitGame");
+        System.exit(0);
     }
 
 

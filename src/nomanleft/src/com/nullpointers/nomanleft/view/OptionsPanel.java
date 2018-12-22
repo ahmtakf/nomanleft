@@ -24,7 +24,9 @@ public class OptionsPanel {
     private JButton backButton;
     private JPanel topPanel;
     private JPanel optionsPanel;
+    private JPanel customPanel;
     private float max,min;
+    private CustomizationPanel customizationPanel;
 
     private int volume;
     private int oldVolume;
@@ -49,6 +51,8 @@ public class OptionsPanel {
             public void actionPerformed(ActionEvent e) {
                 FileManager.getInstance().changeSound();
                 muteControl.setValue(FileManager.getInstance().getSound()== 0);
+                if (FileManager.getInstance().getSound()== 1)
+                    playMusic();
             }
         });
 
@@ -124,4 +128,8 @@ public class OptionsPanel {
 
     }
 
+    private void createUIComponents() {
+        customizationPanel = new CustomizationPanel();
+        customPanel = customizationPanel.getCustomizationPanel();
+    }
 }
