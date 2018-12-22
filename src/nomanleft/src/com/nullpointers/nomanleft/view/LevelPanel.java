@@ -49,9 +49,13 @@ public class LevelPanel extends JPanel{
     public LevelPanel() {
         super();
         HideButton.setIcon(new ImageIcon(FileManager.getInstance().getBush()));
+        numberOfHide.setText(Integer.toString(FileManager.getInstance().getHideBooster()));
         DigButton.setIcon(new ImageIcon(FileManager.getInstance().getDigImage()));
+        numberOfDig.setText(Integer.toString(FileManager.getInstance().getDigBooster()));
         MoveButton.setIcon(new ImageIcon(FileManager.getInstance().getMoveImage()));
+        numberOfMove.setText(Integer.toString(FileManager.getInstance().getMoveBooster()));
         FillButton.setIcon(new ImageIcon(FileManager.getInstance().getFillImage()));
+        numberOfFill.setText(Integer.toString(FileManager.getInstance().getFillBooster()));
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -153,18 +157,37 @@ public class LevelPanel extends JPanel{
                         if (clickCoordinate.getY() % 120 > 20)
                             mapPointY++;
                         if(flag == 2){ // hide booster
-                            GameManager.getInstance().hide(mapPointY,mapPointX);
-                            gamePanel.repaint();
+                            if(Integer.parseInt(numberOfHide.getText()) > 0){
+                                GameManager.getInstance().hide(mapPointY,mapPointX);
+                                gamePanel.repaint();
+                                numberOfHide.setText(Integer.toString(FileManager.getInstance().getHideBooster()));
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(gamePanel, "You don't have enough Hide booster.");
+                            }
                             flag = 0;
                         }
                         else if(flag == 3){ // fill booster
-                            GameManager.getInstance().fill(mapPointY,mapPointX);
-                            gamePanel.repaint();
+                            if(Integer.parseInt(numberOfFill.getText()) > 0){
+                                GameManager.getInstance().fill(mapPointY,mapPointX);
+                                gamePanel.repaint();
+                                numberOfFill.setText(Integer.toString(FileManager.getInstance().getFillBooster()));
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(gamePanel, "You don't have enough Fill booster.");
+                            }
                             flag = 0;
                         }
-                        else if(flag == 4){ // dig booster
-                            GameManager.getInstance().dig(mapPointY,mapPointX);
-                            gamePanel.repaint();
+                        else if(flag == 4) { // dig booster
+                            if(Integer.parseInt(numberOfDig.getText()) > 0){
+                                GameManager.getInstance().dig(mapPointY, mapPointX);
+                                gamePanel.repaint();
+
+                                numberOfDig.setText(Integer.toString(FileManager.getInstance().getDigBooster()));
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(gamePanel, "You don't have enough Dig booster.");
+                            }
                             flag = 0;
                         }
                         else if (flag == 1) { // remove
@@ -257,21 +280,26 @@ public class LevelPanel extends JPanel{
 
                 }
                 else if(changeDirection){
-                    if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY > 0)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,3);
-                    else if(mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY < 0)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,2);
-                    else if(mapPointX - initialSoliderX > 0 && mapPointY - initialSoliderY == 0)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,1);
-                    else if(mapPointX - initialSoliderX < 0 && mapPointY - initialSoliderY == 0)
-                        GameManager.getInstance().move(initialSoliderY,initialSoliderX,0);
-                    gamePanel.repaint();
-                    gamePanel.validate();
-                    if (GameManager.getInstance().check()) {
-                        finishLevel();
+                    if(Integer.parseInt(numberOfMove.getText()) > 0) {
+                        if (mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY > 0)
+                            GameManager.getInstance().move(initialSoliderY, initialSoliderX, 3);
+                        else if (mapPointX - initialSoliderX == 0 && mapPointY - initialSoliderY < 0)
+                            GameManager.getInstance().move(initialSoliderY, initialSoliderX, 2);
+                        else if (mapPointX - initialSoliderX > 0 && mapPointY - initialSoliderY == 0)
+                            GameManager.getInstance().move(initialSoliderY, initialSoliderX, 1);
+                        else if (mapPointX - initialSoliderX < 0 && mapPointY - initialSoliderY == 0)
+                            GameManager.getInstance().move(initialSoliderY, initialSoliderX, 0);
+                        gamePanel.repaint();
+                        gamePanel.validate();
+                        if (GameManager.getInstance().check()) {
+                            finishLevel();
+                        }
+                        numberOfMove.setText(Integer.toString(FileManager.getInstance().getMoveBooster()));
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(gamePanel, "You don't have enough Move booster.");
                     }
                     changeDirection = false;
-
                 }
                 else{
                     ((GamePanel)gamePanel).resetWallPosition(wallId);
