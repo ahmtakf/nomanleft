@@ -78,10 +78,10 @@ public class FileManager {
             pickaxe = ImageIO.read(new File("./resources/img/pickaxe" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             fill = ImageIO.read(new File("./resources/img/fill" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             move = ImageIO.read(new File("./resources/img/move" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            WallPic1 = ImageIO.read(new File("./resources/img/WallResim1" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            WallPic2 = ImageIO.read(new File("./resources/img/WallResim2" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            WallPic3 = ImageIO.read(new File("./resources/img/WallResim3" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            WallPic4 = ImageIO.read(new File("./resources/img/WallResim4" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic1 = ImageIO.read(new File("./resources/img/WallResim1.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic2 = ImageIO.read(new File("./resources/img/WallResim2.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic3 = ImageIO.read(new File("./resources/img/WallResim3.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic4 = ImageIO.read(new File("./resources/img/WallResim4.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
