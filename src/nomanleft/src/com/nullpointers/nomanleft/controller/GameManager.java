@@ -21,7 +21,7 @@ public class GameManager {
     private LevelPanel levelPanel;
     private TimeTrial timeTrial;
     private BoosterMaker boosterMaker;
-
+    private SandBoxPanel sandbox;
     private GameManager(){
         System.out.println(FileManager.getInstance().getCustomization());
         System.out.println(MapObjectFactory.getInstance());
@@ -36,7 +36,7 @@ public class GameManager {
         mainMenuPanel = new MainMenuPanel();
         playGamePanel = new PlayGamePanel();
         shopPanel = new ShopPanel();
-        optionsPanel = new OptionsPanel();
+//        optionsPanel = new OptionsPanel();
         boosterMaker = new BoosterMaker();
     }
 
@@ -109,11 +109,21 @@ public class GameManager {
     }
 
     public void openOptions() {
+        /*
         frame.setContentPane(optionsPanel.getOptionsPanel());
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+*/
+    }
 
+    public void openSandBox(){
+        currentLevel = new MapModel(0);
+        sandbox = new SandBoxPanel();
+        frame.setContentPane(sandbox.getSandBoxPanel());
+        frame.pack();
+        frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     public void rewardGold (int levelsCompleted) {

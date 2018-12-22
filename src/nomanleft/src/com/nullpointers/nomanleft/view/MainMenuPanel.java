@@ -63,7 +63,7 @@ public class MainMenuPanel {
     }
 
     public void openSandBox() {
-        System.out.println("openSandBox not yet");
+        GameManager.getInstance().openSandBox();
     }
 
     public void openShop() {
