@@ -22,6 +22,27 @@ Teymur Bakhishli 21503466
   A set of boosters will be available player's aid to complete the challenge rather easily. Each level completion will include some gold reward so that player can refill boosters from the shop ones they finish. Beside the gold, depending on the number of steps taken towards the completion, a level can be completed with up to three stars, which shows player's puzzle solving skills.
   Many other minor diffirences which will be explained in requirement elicitation report, will be included as well.  
   
+ 4.1.1 How to set-up
+ 	4.1.1.1 Playing via a JAR file 
+Requirements:
+ Java Runtime Environment (JRE)
+	Anyone that wants to play the game can enter our GitHub repository and download the jar file alone and run it directly to play it. The only requirement is player should have installed at his/her computer.
+	4.1.1.2 Build&Play via sourceCode
+	Requirements: 
+A version control tool (optional)
+An Integrated Development Environment (optional but for compatibility, IntelliJ Recommended )
+Java Runtime Environment (JRE)
+Java Development Kit (JDK)
+An adequate understanding of software
+	Alternatively, a player can download the source code or clone it via a version control tool. 
+To do that step by step with version control: 
+Clone the project from the project repository.
+Open the project folder via IntelliJ or create a new project on the IDE you use. The project folder is src/nomanleft in the repository. If you use a different ide copy the files to your project excluding project related files.
+Compile the project with Java 8 JDK.
+Run it and have fun.
+Doing it via downloading is pretty much the same. Instead of cloning download the project file and continue from step 2.
+
+  
 References:
 
 https://www.smartgames.eu/uk/one-player-games/walls-warriors
