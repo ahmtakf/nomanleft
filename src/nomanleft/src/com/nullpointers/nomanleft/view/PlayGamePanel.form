@@ -16,18 +16,9 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="6c01c" class="javax.swing.JButton" binding="backButton" default-binding="true">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <horizontalAlignment value="0"/>
-              <text value="Back"/>
-            </properties>
-          </component>
           <component id="99025" class="javax.swing.JLabel" binding="title">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Courier New" size="22" style="3"/>
@@ -35,6 +26,15 @@
               <horizontalTextPosition value="10"/>
               <text value="Choose Level"/>
               <verticalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="6c01c" class="javax.swing.JButton" binding="backButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="0"/>
+              <text value="Back"/>
             </properties>
           </component>
         </children>
