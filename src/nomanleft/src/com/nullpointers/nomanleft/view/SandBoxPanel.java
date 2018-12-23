@@ -101,7 +101,7 @@ public class SandBoxPanel extends JPanel{
                     || map[searchResult[0]][searchResult[1]].isGround()) {
                 if (flag == 1) {//Peasent
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Soldier(false)).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    ((GameSandBoxPanel)internalPanel).setMap(map);
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -109,7 +109,7 @@ public class SandBoxPanel extends JPanel{
                 }
                 if (flag == 2) {
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Lava()).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    ((GameSandBoxPanel)internalPanel).setMap(map);
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -117,7 +117,7 @@ public class SandBoxPanel extends JPanel{
                 }
                 if (flag == 3) {
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Mountain()).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    ((GameSandBoxPanel)internalPanel).setMap(map);
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -125,7 +125,7 @@ public class SandBoxPanel extends JPanel{
                 }
                 if (flag == 4) {
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Tower()).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    ((GameSandBoxPanel)internalPanel).setMap(map);
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -133,7 +133,7 @@ public class SandBoxPanel extends JPanel{
                 }
                 if (flag == 5) {
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Soldier(true)).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    ((GameSandBoxPanel)internalPanel).setMap(map);
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();

@@ -26,7 +26,9 @@ public class GameSandBoxPanel extends JPanel {
         repaint();
         validate();
     }
-
+    public void setMap(MapObject[][] map){
+        this.map = map;
+    }
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
