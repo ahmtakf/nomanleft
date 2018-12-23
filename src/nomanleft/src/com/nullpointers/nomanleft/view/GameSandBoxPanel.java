@@ -81,4 +81,7 @@ public class GameSandBoxPanel extends JPanel {
 
 
     }
+    public void drawShapes(int x, int y){
+
+    }
 }
