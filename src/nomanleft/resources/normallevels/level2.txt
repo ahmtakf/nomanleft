@@ -5,7 +5,7 @@ Wallable,Ground,Wallable,Ground,Wallable,FriendSoldier,Wallable,Ground,Wallable,
 Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,LargeMountain,Mountain,LargeMountain,Wallable,Wallable,Wallable
 Wallable,Ground,Wallable,FriendSoldier,Wallable,Ground,Wallable,Ground,Wallable,FriendSoldier,Wallable,Ground,Wallable
 Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
-Wallable,Tower,Tower,Tower,Ground,Wallable,Wallable,EnemySoldier,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Tower,Tower,Tower,Wallable,Wallable,Wallable,EnemySoldier,Wallable,Ground,Wallable,Ground,Wallable
 Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
 Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
 Wallable,Wallable,Wallable,Lava,Lava,Lava,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
