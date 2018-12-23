@@ -223,7 +223,7 @@ public class GamePanel extends JPanel {
                             }
                         }
                     }
-                    if (m % 2 == 0 && n % 2 == 0) {
+                    if (m % 2 == 0 && n % 2 == 0)  {
                         g.drawImage(FileManager.getInstance().getWallTile(),wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 20,null);
                         //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 20);
                         if ( g.getColor().equals(Color.BLACK)){
