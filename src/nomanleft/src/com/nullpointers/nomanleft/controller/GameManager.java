@@ -23,7 +23,7 @@ public class GameManager {
     private BoosterMaker boosterMaker;
     private SandBoxPanel sandbox;
     private GameManager(){
-        System.out.println(FileManager.getInstance().getCustomization());
+        System.out.println("Gold test " + FileManager.getInstance().getGold());
         System.out.println(MapObjectFactory.getInstance());
         frame = new JFrame("NoManLeft");
         frame.setMinimumSize(new Dimension(1600,900));
@@ -40,8 +40,17 @@ public class GameManager {
         boosterMaker = new BoosterMaker();
     }
 
-    public void startLevel(int levelNumber){
-        currentLevel = new MapModel(levelNumber);
+    public void startNormalLevel(int levelNumber){
+        currentLevel = new MapModel( FileManager.getInstance().getNormalLevel(levelNumber));
+        levelPanel = new LevelPanel();
+        frame.setContentPane(levelPanel.getLevelPanel());
+        frame.pack();
+        frame.setVisible(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }
+
+    public void startSandBoxLevel(int levelNumber){
+        currentLevel = new MapModel( FileManager.getInstance().getSandboxLevel(levelNumber));
         levelPanel = new LevelPanel();
         frame.setContentPane(levelPanel.getLevelPanel());
         frame.pack();
@@ -75,7 +84,7 @@ public class GameManager {
 
     public void changeCurrentLevel(int levelNumber) {
         System.out.println("level loaded: " + levelNumber);
-        currentLevel = new MapModel(levelNumber);
+        currentLevel = new MapModel(FileManager.getInstance().getNormalLevel(levelNumber));
     }
 
     public static GameManager getInstance(){
@@ -118,7 +127,7 @@ public class GameManager {
     }
 
     public void openSandBox(){
-        currentLevel = new MapModel(0);
+        currentLevel = new MapModel(FileManager.getInstance().getNormalLevel(0));
         sandbox = new SandBoxPanel();
         frame.setContentPane(sandbox.getSandBoxPanel());
         frame.pack();

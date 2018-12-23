@@ -30,4 +30,14 @@ public class Soldier extends Human {
             return FileManager.getInstance().getFriendSoldier();
     }
 
+    public String getName(){
+
+        if (isEnemy()){
+            return "EnemySoldier";
+        }
+        else{
+            return "FriendSoldier";
+        }
+    }
+
 }

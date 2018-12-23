@@ -43,7 +43,7 @@ public class GamePanel extends JPanel {
             for(int k = 0; k < 13; k++){
                 if ( i % 2 == 0 && k % 2 == 0){
                     if (map[i][k] instanceof Wallable){
-                        g.setColor(Color.PINK);
+                        g.setColor(Color.LIGHT_GRAY);
                     }
                     else if (map[i][k] instanceof WallTile){
                         g.drawImage(FileManager.getInstance().getWallTile(),(k/2)*120,(i/2)*120,20,20,null);
@@ -57,7 +57,7 @@ public class GamePanel extends JPanel {
                 }
                 if ( i % 2 == 1 && k % 2 == 0){
                     if (map[i][k] instanceof Wallable){
-                        g.setColor(Color.PINK);
+                        g.setColor(Color.LIGHT_GRAY);
                     }
                     else if (map[i][k] instanceof WallTile){
                         g.drawImage(FileManager.getInstance().getRotateLargeWallTile(),(k/2)*120,(i/2)*120 + 20,20,100,null);
@@ -71,7 +71,7 @@ public class GamePanel extends JPanel {
                 }
                 if ( i % 2 == 0 && k % 2 == 1){
                     if (map[i][k] instanceof Wallable){
-                        g.setColor(Color.PINK);
+                        g.setColor(Color.LIGHT_GRAY);
                     }
                     else if (map[i][k] instanceof WallTile){
                         g.drawImage(FileManager.getInstance().getLargeWallTile(),(k/2)*120 + 20,(i/2)*120,100,20,null);
