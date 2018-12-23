@@ -34,6 +34,10 @@ public class FileManager {
     private Image WallPic2;
     private Image WallPic3;
     private Image WallPic4;
+
+
+
+    private Image backgroundImage1;
     private AudioInputStream aiStream;
     private final static int WIDTH = 100;
     private final static int HEIGHT = 100;
@@ -82,6 +86,7 @@ public class FileManager {
             WallPic2 = ImageIO.read(new File("./resources/img/WallResim2.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             WallPic3 = ImageIO.read(new File("./resources/img/WallResim3.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             WallPic4 = ImageIO.read(new File("./resources/img/WallResim4.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            backgroundImage1 = ImageIO.read(new File("./resources/img/backgroundImage1.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
@@ -222,7 +227,9 @@ public class FileManager {
     public Image getMoveImage(){ return move; }
 
     public Image getFillImage(){ return fill; }
-
+    public Image getBackgroundImage1() {
+        return backgroundImage1;
+    }
     public Image getWallPic1(){return WallPic1;}
     public Image getWallPic2(){return WallPic2;}
     public Image getWallPic3(){return WallPic3;}
