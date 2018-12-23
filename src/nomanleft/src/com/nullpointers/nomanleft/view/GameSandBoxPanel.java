@@ -19,9 +19,9 @@ public class GameSandBoxPanel extends JPanel {
     private JRadioButton radioButton3;
     private JRadioButton radioButton4;
     private JRadioButton radioButton5;
-    public GameSandBoxPanel(){
+    public GameSandBoxPanel(MapObject[][] map){
         super();
-        map = GameManager.getInstance().getMapModel().getMap();
+        this.map = map;
         //internalComponent();
         repaint();
         validate();
@@ -81,7 +81,7 @@ public class GameSandBoxPanel extends JPanel {
 
 
     }
-    public void drawShapes(int x, int y){
+    public void drawShapes(Point X){
 
     }
 }

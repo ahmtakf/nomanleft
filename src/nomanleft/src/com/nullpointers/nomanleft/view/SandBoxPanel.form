@@ -71,7 +71,7 @@
               <text value="Peasent"/>
             </properties>
           </component>
-          <component id="e275a" class="javax.swing.JButton" binding="saveButton" default-binding="true">
+          <component id="e275a" class="javax.swing.JButton" binding="saveButton" custom-create="true" default-binding="true">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="19" use-parent-layout="false"/>
             </constraints>
@@ -79,7 +79,7 @@
               <text value="Save"/>
             </properties>
           </component>
-          <component id="cede9" class="javax.swing.JButton" binding="removeButton" default-binding="true">
+          <component id="cede9" class="javax.swing.JButton" binding="removeButton" custom-create="true" default-binding="true">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="19" use-parent-layout="false"/>
             </constraints>

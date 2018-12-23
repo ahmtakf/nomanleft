@@ -3,10 +3,7 @@ package com.nullpointers.nomanleft.view;
 import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
 
-import com.nullpointers.nomanleft.model.MapObject;
-import com.nullpointers.nomanleft.model.Wall;
-import com.nullpointers.nomanleft.model.WallTile;
-import com.nullpointers.nomanleft.model.Wallable;
+import com.nullpointers.nomanleft.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,10 +35,11 @@ public class SandBoxPanel extends JPanel{
     private JButton removeButton;
     private JRadioButton radioButton5;
     private int flag;
-
+    private MapObject[][] map;
     public SandBoxPanel() {
         super();
-        //setBackground(Color.BLUE);
+        setBackground(Color.BLACK);
+        map = GameManager.getInstance().getMapModel().getMap();
         flag = 0;
         back.addActionListener(new SandBoxButtonListener());
         internalPanel.addMouseListener(new SandBoxMouseListener());
@@ -71,29 +69,80 @@ public class SandBoxPanel extends JPanel{
             }
         }
     }
-
+    private int[] searchIndex(Point curr){
+        int []indices = new int[2];
+        int mapPointX = (int) (curr.getX() / 120);
+        int mapPointY = (int) (curr.getY() / 120);
+        mapPointX = mapPointX * 2;
+        mapPointY = mapPointY * 2;
+        if (curr.getX() % 120 > 20)
+            mapPointX++;
+        if (curr.getY() % 120 > 20)
+            mapPointY++;
+        indices[0] = mapPointX;
+        indices[1] = mapPointY;
+        return indices;
+    }
     private class SandBoxMouseListener implements MouseListener{
-
+        Point current;
+        int [] searchResult;
+        MapObjectFactory temp = MapObjectFactory.getInstance();
+        public SandBoxMouseListener(){
+            current = new Point();
+            searchResult = new int[2];
+            searchResult[0] = -1;
+            searchResult[1] = -1;
+        }
         @Override
         public void mouseClicked(MouseEvent e) {
-            if(flag == 1){
-                //internalPanel
-                flag = 0;
-            }
-            if (flag == 2){
-                flag = 0;
-            }
-            if(flag == 3){
-                flag = 0;
-            }
-            if(flag == 4){
-                flag = 0;
-            }
-            if(flag == 5){
-                flag = 0;
-            }
-            if(flag == 6){
-                flag = 0;
+            current = e.getPoint();
+            searchResult = searchIndex(current).clone();
+            if(map[searchResult[0]][searchResult[1]].getClass().getSimpleName().equals ((new Wallable()).getClass().getSimpleName())
+                    || map[searchResult[0]][searchResult[1]].isGround()) {
+                if (flag == 1) {//Peasent
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Soldier(false)).getClass().getSimpleName());
+                    internalPanel = new GameSandBoxPanel(map);
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 2) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Lava()).getClass().getSimpleName());
+                    internalPanel = new GameSandBoxPanel(map);
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 3) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Mountain()).getClass().getSimpleName());
+                    internalPanel = new GameSandBoxPanel(map);
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 4) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Tower()).getClass().getSimpleName());
+                    internalPanel = new GameSandBoxPanel(map);
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 5) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Soldier(true)).getClass().getSimpleName());
+                    internalPanel = new GameSandBoxPanel(map);
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+            }else {//remove
+                if (flag == 6) {
+                    flag = 0;
+                }
             }
         }
 
@@ -149,7 +198,7 @@ public class SandBoxPanel extends JPanel{
         radioButton3 = new JRadioButton();
         radioButton4 = new JRadioButton();
         radioButton5 = new JRadioButton();
-        internalPanel = new GameSandBoxPanel();
+        internalPanel = new GameSandBoxPanel(map);
     }
 
 
