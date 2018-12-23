@@ -38,11 +38,9 @@ public class SandBoxPanel extends JPanel{
     private MapObject[][] map;
     public SandBoxPanel() {
         super();
+
         setBackground(Color.BLACK);
-        map = GameManager.getInstance().getMapModel().getMap();
-        flag = 0;
         back.addActionListener(new SandBoxButtonListener());
-        internalPanel.addMouseListener(new SandBoxMouseListener());
     }
 
     public JPanel getSandBoxPanel() {
@@ -97,43 +95,38 @@ public class SandBoxPanel extends JPanel{
         public void mouseClicked(MouseEvent e) {
             current = e.getPoint();
             searchResult = searchIndex(current).clone();
-            if(map[searchResult[0]][searchResult[1]].getClass().getSimpleName().equals ((new Wallable()).getClass().getSimpleName())
+            if(map[searchResult[0]][searchResult[1]].getClass().getSimpleName().equals((new Wallable()).getClass().getSimpleName())
                     || map[searchResult[0]][searchResult[1]].isGround()) {
                 if (flag == 1) {//Peasent
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Soldier(false)).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("FriendSoldier");
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
                     flag = 0;
                 }
                 if (flag == 2) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Lava()).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Lava");
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
                     flag = 0;
                 }
                 if (flag == 3) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Mountain()).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Mountain");
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
                     flag = 0;
                 }
                 if (flag == 4) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Tower()).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Tower");
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
                     flag = 0;
                 }
                 if (flag == 5) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Soldier(true)).getClass().getSimpleName());
-                    internalPanel = new GameSandBoxPanel(map);
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("EnemySoldier");
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -198,7 +191,10 @@ public class SandBoxPanel extends JPanel{
         radioButton3 = new JRadioButton();
         radioButton4 = new JRadioButton();
         radioButton5 = new JRadioButton();
+        map = GameManager.getInstance().getMapModel().getMap();
+        flag = 0;
         internalPanel = new GameSandBoxPanel(map);
+        internalPanel.addMouseListener(new SandBoxMouseListener());
     }
 
 
