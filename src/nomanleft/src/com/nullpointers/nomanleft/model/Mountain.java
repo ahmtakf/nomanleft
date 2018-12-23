@@ -5,8 +5,10 @@ import com.nullpointers.nomanleft.controller.FileManager;
 import java.awt.*;
 
 public class Mountain extends Tile {
-    public Mountain() {
+    boolean statement = false;
+    public Mountain(boolean statement) {
         super();
+        this.statement = statement;
     }
 
     @Override
@@ -21,7 +23,10 @@ public class Mountain extends Tile {
 
     @Override
     public Image getImage(){
-        return FileManager.getInstance().getMountain();
+        if(statement)
+            return FileManager.getInstance().getMountain();
+        else
+            return FileManager.getInstance().getLargeMountain();
     }
 
 }
