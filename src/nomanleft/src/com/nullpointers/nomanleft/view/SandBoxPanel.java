@@ -34,6 +34,7 @@ public class SandBoxPanel extends JPanel{
     private JButton saveButton;
     private JButton removeButton;
     private JRadioButton radioButton5;
+    private JLabel label5;
     private int flag;
     private MapObject[][] map;
     public SandBoxPanel() {
@@ -65,7 +66,7 @@ public class SandBoxPanel extends JPanel{
                 case "Soldier":{flag = 5;}break;
                 case "Remove":{flag = 6;}break;
                 case "Save":{
-                    FileManager.getInstance().write(map,radioButton1.isSelected(),radioButton2.isSelected(),radioButton3.isSelected(),radioButton4.isSelected());
+                    FileManager.getInstance().write(map,radioButton1.isSelected(),radioButton2.isSelected(),radioButton3.isSelected(),radioButton4.isSelected(),radioButton5.isSelected());
                 }break;
             }
         }
@@ -212,7 +213,8 @@ public class SandBoxPanel extends JPanel{
         label3.setIcon(new ImageIcon(FileManager.getInstance().getWallPic3()));
         label4 =new JLabel();
         label4.setIcon(new ImageIcon(FileManager.getInstance().getWallPic4()));
-
+        label5 = new JLabel();
+        label5.setIcon(new ImageIcon(FileManager.getInstance().getWallPic5()));
         requiredWallsLabel = new JLabel();
         saveButton = new JButton();
         saveButton.addActionListener(new SandBoxButtonListener());

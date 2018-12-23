@@ -39,6 +39,7 @@ public class FileManager {
     private Image WallPic2;
     private Image WallPic3;
     private Image WallPic4;
+    private Image WallPic5;
 
 
 
@@ -94,6 +95,7 @@ public class FileManager {
             WallPic2 = ImageIO.read(new File("./resources/img/WallResim2.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             WallPic3 = ImageIO.read(new File("./resources/img/WallResim3.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             WallPic4 = ImageIO.read(new File("./resources/img/WallResim4.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic5 = ImageIO.read(new File("./resources/img/WallResim5.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             backgroundImage1 = ImageIO.read(new File("./resources/img/backgroundImage1.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
@@ -185,7 +187,7 @@ public class FileManager {
         return "./resources/sandboxlevels/level" + level + ".txt";
     }
 
-    public void write (MapObject[][] map, boolean bool1, boolean bool2, boolean bool3, boolean bool4){
+    public void write (MapObject[][] map, boolean bool1, boolean bool2, boolean bool3, boolean bool4,boolean bool5){
         try {
 
             BufferedWriter outputWriter = null;
@@ -204,15 +206,17 @@ public class FileManager {
                 }
                 outputWriter.newLine();
             }
-            if (bool1)
+            if (bool3)
                 outputWriter.write("1,");
+            if (bool4)
+                outputWriter.write("2,");
             if (bool2)
                 outputWriter.write("3,");
-            if (bool3)
+            if (bool1)
                 outputWriter.write("4,");
-            if (bool4)
+            if (bool5)
                 outputWriter.write("5,");
-            outputWriter.write("2");
+            outputWriter.write("0");
             outputWriter.flush();
             outputWriter.close();
 
@@ -337,6 +341,7 @@ public class FileManager {
     public Image getWallPic2(){return WallPic2;}
     public Image getWallPic3(){return WallPic3;}
     public Image getWallPic4(){return WallPic4;}
+    public Image getWallPic5(){return WallPic5;}
 
     public BufferedReader getNormalLevel(int level){
         File levelFile = new File("./resources/normallevels/level" + level + ".txt");
