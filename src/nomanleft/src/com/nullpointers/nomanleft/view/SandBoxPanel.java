@@ -41,6 +41,7 @@ public class SandBoxPanel extends JPanel{
 
         setBackground(Color.BLACK);
         back.addActionListener(new SandBoxButtonListener());
+
     }
 
     public JPanel getSandBoxPanel() {
@@ -63,7 +64,7 @@ public class SandBoxPanel extends JPanel{
                 case "Tower":{flag = 4;}break;
                 case "Soldier":{flag = 5;}break;
                 case "Remove":{flag = 6;}break;
-                case "Save":{}break;
+                case "Save":{flag = 7;}break;
             }
         }
     }
@@ -95,10 +96,14 @@ public class SandBoxPanel extends JPanel{
         public void mouseClicked(MouseEvent e) {
             current = e.getPoint();
             searchResult = searchIndex(current).clone();
-            if(map[searchResult[0]][searchResult[1]].getClass().getSimpleName().equals((new Wallable()).getClass().getSimpleName())
-                    || map[searchResult[0]][searchResult[1]].isGround()) {
+            int temp2 = searchResult[0];
+            searchResult[0] = searchResult[1];
+            searchResult[1] = temp2;
+            if((! (map[searchResult[1]][searchResult[0]] instanceof Wallable) )
+                    || map[searchResult[1]][searchResult[0]].isGround()) {
                 if (flag == 1) {//Peasent
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject("FriendSoldier");
+                    //map[searchResult[0]][searchResult[1]]
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -131,11 +136,19 @@ public class SandBoxPanel extends JPanel{
                     internalPanel.validate();
                     current = new Point();
                     flag = 0;
+
                 }
-            }else {//remove
                 if (flag == 6) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Ground");
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
                     flag = 0;
                 }
+            }
+
+            if (flag == 7){
+                FileManager.getInstance().write(map,radioButton1.isSelected(),radioButton2.isSelected(),radioButton3.isSelected(),radioButton4.isSelected());
             }
         }
 
@@ -165,14 +178,19 @@ public class SandBoxPanel extends JPanel{
 
         button1 = new JButton();
         button1.setIcon(new ImageIcon(FileManager.getInstance().getFriendSoldier()));
+        button1.addActionListener(new SandBoxButtonListener());
         button2 = new JButton();
         button2.setIcon(new ImageIcon(FileManager.getInstance().getEnemySoldier()));
+        button2.addActionListener(new SandBoxButtonListener());
         button3 = new JButton();
         button3.setIcon(new ImageIcon(FileManager.getInstance().getTower()));
+        button3.addActionListener(new SandBoxButtonListener());
         button4 = new JButton();
         button4.setIcon(new ImageIcon(FileManager.getInstance().getMountain()));
+        button4.addActionListener(new SandBoxButtonListener());
         button5 = new JButton();
         button5.setIcon(new ImageIcon(FileManager.getInstance().getLava()));
+        button5.addActionListener(new SandBoxButtonListener());
         label1 =new JLabel();
         label1.setIcon(new ImageIcon(FileManager.getInstance().getWallPic1()));
         label2 =new JLabel();
@@ -184,7 +202,9 @@ public class SandBoxPanel extends JPanel{
 
         requiredWallsLabel = new JLabel();
         saveButton = new JButton();
+        saveButton.addActionListener(new SandBoxButtonListener());
         removeButton = new JButton();
+        removeButton.addActionListener(new SandBoxButtonListener());
 
         radioButton1 = new JRadioButton();
         radioButton2 = new JRadioButton();
@@ -195,6 +215,7 @@ public class SandBoxPanel extends JPanel{
         flag = 0;
         internalPanel = new GameSandBoxPanel(map);
         internalPanel.addMouseListener(new SandBoxMouseListener());
+        //internalPanel.addAct(new SandBoxButtonListener());
     }
 
 
