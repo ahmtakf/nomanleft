@@ -34,33 +34,39 @@ public class SandBoxPanel extends JPanel{
     private JLabel label2;
     private JLabel label3;
     private JLabel label4;
+    private JLabel requiredWallsLabel;
+    private JButton saveButton;
+    private JButton removeButton;
     private JRadioButton radioButton5;
 
 
     public SandBoxPanel() {
         super();
         //setBackground(Color.BLUE);
-
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                GameManager.getInstance().openMainMenu();
-            }
-        });
-
-
-
+        back.addActionListener(new SandBoxButtonListener());
     }
 
     public JPanel getSandBoxPanel() {
         return sandBoxPanel;
     }
 
+    private class SandBoxButtonListener implements ActionListener{
 
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String actionCommand = e.getActionCommand();
+            switch (actionCommand) {
+                case "Back": {
+                    GameManager.getInstance().openMainMenu();
+                }
+                break;
+            }
+        }
+    }
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        internalPanel = new GameSandBoxPanel();
+
+
         button1 = new JButton();
         button1.setIcon(new ImageIcon(FileManager.getInstance().getFriendSoldier()));
         button2 = new JButton();
@@ -79,11 +85,17 @@ public class SandBoxPanel extends JPanel{
         label3.setIcon(new ImageIcon(FileManager.getInstance().getWallPic3()));
         label4 =new JLabel();
         label4.setIcon(new ImageIcon(FileManager.getInstance().getWallPic4()));
+
+        requiredWallsLabel = new JLabel();
+        saveButton = new JButton();
+        removeButton = new JButton();
+
         radioButton1 = new JRadioButton();
         radioButton2 = new JRadioButton();
         radioButton3 = new JRadioButton();
         radioButton4 = new JRadioButton();
         radioButton5 = new JRadioButton();
+        internalPanel = new GameSandBoxPanel();
     }
 
 
