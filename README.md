@@ -52,15 +52,15 @@ Alternatively, a player can download the source code or clone it via a version c
 
 To do that step by step with version control: 
 
-Clone the project from the project repository.
+1-) Clone the project from the project repository.
 
-Open the project folder via IntelliJ or create a new project on the IDE you use. The project folder is src/nomanleft in the repository.
+2-) Open the project folder via IntelliJ or create a new project on the IDE you use. The project folder is src/nomanleft in the repository.
 
 If you use a different ide copy the files to your project excluding project related files.
 
-Compile the project with Java 8 JDK.
+3-) Compile the project with Java 8 JDK.
 
-Run it and have fun.
+4-) Run it and have fun.
 
 Doing it via downloading is pretty much the same. Instead of cloning download the project file and continue from step 2.
 
