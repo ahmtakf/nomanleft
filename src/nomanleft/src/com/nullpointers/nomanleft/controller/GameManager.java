@@ -36,7 +36,7 @@ public class GameManager {
         mainMenuPanel = new MainMenuPanel();
         playGamePanel = new PlayGamePanel();
         shopPanel = new ShopPanel();
-        //optionsPanel = new OptionsPanel();
+        optionsPanel = new OptionsPanel();
         boosterMaker = new BoosterMaker();
     }
 
@@ -109,12 +109,12 @@ public class GameManager {
     }
 
     public void openOptions() {
-    /*
+
         frame.setContentPane(optionsPanel.getOptionsPanel());
         frame.pack();
         frame.setVisible(true);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        */
+
     }
 
     public void openSandBox(){
