@@ -103,6 +103,7 @@ public class GameManager {
     }
 
     public void openPlayGamePanel () {
+        playGamePanel = new PlayGamePanel();
         frame.setContentPane(playGamePanel.getPlayGamePanel());
         frame.pack();
         frame.setVisible(true);

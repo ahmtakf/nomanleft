@@ -1,0 +1,14 @@
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,FriendSoldier,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Lava,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+2
