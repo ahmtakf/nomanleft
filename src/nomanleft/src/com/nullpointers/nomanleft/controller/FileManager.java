@@ -21,9 +21,12 @@ public class FileManager {
     private int hideBooster = 0, digBooster = 0, fillBooster = 0, moveBooster = 0;
     private Image bush;
     private Image wallTile;
+    private Image largeWallTile;
+    private Image rotateLargeWallTile;
     private Image ground;
     private Image lava;
     private Image mountain;
+    private Image largeMountain;
     private Image tower;
     private Image friendSoldier;
     private Image enemySoldier;
@@ -73,9 +76,12 @@ public class FileManager {
             //Getting Game Images
             bush = ImageIO.read(new File("./resources/img/bush" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             wallTile = ImageIO.read(new File("./resources/img/walltile" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            largeWallTile = ImageIO.read(new File("./resources/img/largeWall" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            rotateLargeWallTile = ImageIO.read(new File("./resources/img/rotateLargeWall" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             ground = ImageIO.read(new File("./resources/img/ground" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             lava = ImageIO.read(new File("./resources/img/lava" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             mountain = ImageIO.read(new File("./resources/img/mountain" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            largeMountain = ImageIO.read(new File("./resources/img/largemountain" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             tower = ImageIO.read(new File("./resources/img/tower" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             friendSoldier = ImageIO.read(new File("./resources/img/friendsoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             enemySoldier = ImageIO.read(new File("./resources/img/enemysoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
@@ -205,7 +211,12 @@ public class FileManager {
     public Image getWallTile() {
         return wallTile;
     }
-
+    public Image getLargeWallTile() {
+        return largeWallTile;
+    }
+    public Image getRotateLargeWallTile() {
+        return rotateLargeWallTile;
+    }
     public Image getGround() {
         return ground;
     }
@@ -214,8 +225,10 @@ public class FileManager {
         return lava;
     }
 
-    public Image getMountain() {
-        return mountain;
+    public Image getMountain() { return mountain; }
+
+    public Image getLargeMountain() {
+        return largeMountain;
     }
 
     public Image getTower() {

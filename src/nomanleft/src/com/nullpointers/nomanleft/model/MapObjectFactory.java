@@ -46,7 +46,7 @@ public class MapObjectFactory {
                     System.out.println("WallTile is created\n");
                     break;
                 case "Mountain":
-                    object = new Mountain();
+                    object = new Mountain(true);
                     System.out.println("Mountain is created\n");
                     break;
                 case "Lava":
@@ -68,6 +68,10 @@ public class MapObjectFactory {
                 case "Peasant":
                     object = new Peasant();
                     System.out.println("Peasant is created\n");
+                    break;
+                case "LargeMountain":
+                    object = new Mountain(false);
+                    System.out.println("LargeMountain is created\n");
                     break;
             }
             hm.put(type, object);

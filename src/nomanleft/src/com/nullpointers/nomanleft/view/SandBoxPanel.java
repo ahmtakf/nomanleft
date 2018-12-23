@@ -116,7 +116,7 @@ public class SandBoxPanel extends JPanel{
                     flag = 0;
                 }
                 if (flag == 3) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Mountain()).getClass().getSimpleName());
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject((new Mountain(true)).getClass().getSimpleName());
                     internalPanel = new GameSandBoxPanel(map);
                     internalPanel.repaint();
                     internalPanel.validate();

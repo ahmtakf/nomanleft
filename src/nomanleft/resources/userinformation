@@ -1,9 +1,9 @@
 customization:1
-gold:10
-sound:1
+gold:20
+sound:0
 soundlevel:28
 highScore:0
 hide:0
-dig:2
+dig:1
 fill:1
-move:2
+move:0

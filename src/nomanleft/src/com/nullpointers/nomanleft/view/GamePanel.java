@@ -1,5 +1,6 @@
 package com.nullpointers.nomanleft.view;
 
+import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
 import com.nullpointers.nomanleft.model.*;
 
@@ -166,7 +167,8 @@ public class GamePanel extends JPanel {
                 }
                 if ( realStartX % 2 == 0 && realStartY % 2 == 0) {
                     if (m % 2 == 0 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 20);
+                        g.drawImage(FileManager.getInstance().getWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -176,7 +178,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 1 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100);
+                        g.drawImage(FileManager.getInstance().getRotateLargeWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -186,7 +189,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 0 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 20);
+                        g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -196,7 +200,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 1 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100);
+                        //g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -208,7 +213,8 @@ public class GamePanel extends JPanel {
                 }
                 if ( realStartX % 2 == 0 && realStartY % 2 == 1) {
                     if (m % 2 == 0 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 20);
+                        g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -218,7 +224,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 0 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 20);
+                        g.drawImage(FileManager.getInstance().getWallTile(),wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -228,7 +235,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 1 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100);
+                        g.drawImage(FileManager.getInstance().getRotateLargeWallTile(),wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 20, 20, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -238,7 +246,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 1 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100);
+                        //g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 20, 100, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -250,7 +259,8 @@ public class GamePanel extends JPanel {
                 }
                 if ( realStartX % 2 == 1 && realStartY % 2 == 0) {
                     if (m % 2 == 1 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 100);
+                        g.drawImage(FileManager.getInstance().getRotateLargeWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 20, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -260,7 +270,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 0 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20);
+                        g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -270,7 +281,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 0 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20);
+                        g.drawImage(FileManager.getInstance().getWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -280,7 +292,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 1 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 100);
+                        //g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 20, wallPositionY[k] + (i / 2) * 120, 100, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -292,7 +305,8 @@ public class GamePanel extends JPanel {
                 }
                 if ( realStartX % 2 == 1 && realStartY % 2 == 1) {
                     if (m % 2 == 1 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 100);
+                        //g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120, 100, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -302,7 +316,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 1 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 100);
+                        g.drawImage(FileManager.getInstance().getRotateLargeWallTile(),wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 100,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120, 20, 100);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 100; h++) {
@@ -312,7 +327,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 0 && n % 2 == 1) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20);
+                        g.drawImage(FileManager.getInstance().getLargeWallTile(),wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120, wallPositionY[k] + (i / 2) * 120 + 100, 100, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 100; t++){
                                 for (int h = 0; h < 20; h++) {
@@ -322,7 +338,8 @@ public class GamePanel extends JPanel {
                         }
                     }
                     if (m % 2 == 0 && n % 2 == 0) {
-                        g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20);
+                        g.drawImage(FileManager.getInstance().getWallTile(),wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20,null);
+                        //g.fillRect(wallPositionX[k] + (j / 2) * 120 + 100, wallPositionY[k] + (i / 2) * 120 + 100, 20, 20);
                         if ( g.getColor().equals(Color.BLACK)){
                             for (int t = 0; t < 20; t++){
                                 for (int h = 0; h < 20; h++) {
