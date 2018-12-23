@@ -2,8 +2,7 @@ package com.nullpointers.nomanleft.model;
 
 import com.nullpointers.nomanleft.controller.FileManager;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class MapModel {
@@ -87,6 +86,7 @@ public class MapModel {
     public MapObject[][] getMap(){
         return map;
     }
+
 
     public void printWallIDMap(){
         for (int i = 0; i < MAP_SIZE; i++) {

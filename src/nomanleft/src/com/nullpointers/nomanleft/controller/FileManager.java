@@ -1,5 +1,6 @@
 package com.nullpointers.nomanleft.controller;
 
+import com.nullpointers.nomanleft.model.MapObject;
 import com.nullpointers.nomanleft.model.Wall;
 
 import javax.imageio.ImageIO;
@@ -131,6 +132,55 @@ public class FileManager {
 
     public static FileManager getInstance(){
         return instance;
+    }
+
+    public String filename(){
+        return "";
+    }
+    private String findNametoFile(){
+        int level = 0;
+        File file;
+        while(true){
+            file = new File("./resources/normallevels/level" + level + ".txt");
+            if(file.exists()){
+                continue;
+            }
+            else {
+                break;
+            }
+        }
+        return "./resources/normallevels/level" + level + ".txt";
+    }
+    public void write (MapObject[][] map, boolean bool1, boolean bool2, boolean bool3, boolean bool4){
+        try {
+
+
+            BufferedWriter outputWriter = null;
+            outputWriter = new BufferedWriter(new FileWriter(findNametoFile()));
+            for (int i = 0; i < MAP_SIZE; i++) {
+                for (int j = 0; j < MAP_SIZE; j++) {
+                    if (j < MAP_SIZE - 1)
+                        outputWriter.write(map[i][j].getClass().getSimpleName() + ",");
+                    else
+                        outputWriter.write(map[i][j].getClass().getSimpleName());
+                }
+                outputWriter.newLine();
+            }
+            if (bool1)
+                outputWriter.write("1,");
+            if (bool2)
+                outputWriter.write("3,");
+            if (bool3)
+                outputWriter.write("4,");
+            if (bool4)
+                outputWriter.write("5,");
+            outputWriter.write("2");
+            outputWriter.flush();
+            outputWriter.close();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public int getCustomization() {
