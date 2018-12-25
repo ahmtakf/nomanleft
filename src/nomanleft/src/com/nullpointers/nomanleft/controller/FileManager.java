@@ -1,6 +1,7 @@
 package com.nullpointers.nomanleft.controller;
 
 import com.nullpointers.nomanleft.model.MapObject;
+import com.nullpointers.nomanleft.model.Soldier;
 import com.nullpointers.nomanleft.model.Wall;
 
 import javax.imageio.ImageIO;
@@ -38,6 +39,7 @@ public class FileManager {
     private Image WallPic2;
     private Image WallPic3;
     private Image WallPic4;
+    private Image WallPic5;
 
 
 
@@ -76,13 +78,13 @@ public class FileManager {
 
             //Getting Game Images
             bush = ImageIO.read(new File("./resources/img/bush" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            wallTile = ImageIO.read(new File("./resources/img/walltile" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            largeWallTile = ImageIO.read(new File("./resources/img/largeWall" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            rotateLargeWallTile = ImageIO.read(new File("./resources/img/rotateLargeWall" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            wallTile = ImageIO.read(new File("./resources/img/walltile" + 1 + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            largeWallTile = ImageIO.read(new File("./resources/img/largeWall" + 1 + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            rotateLargeWallTile = ImageIO.read(new File("./resources/img/rotateLargeWall" + 1 + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             ground = ImageIO.read(new File("./resources/img/ground" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             lava = ImageIO.read(new File("./resources/img/lava" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             mountain = ImageIO.read(new File("./resources/img/mountain" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            largeMountain = ImageIO.read(new File("./resources/img/largemountain" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            largeMountain = ImageIO.read(new File("./resources/img/largemountain" + 1 + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             tower = ImageIO.read(new File("./resources/img/tower" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             friendSoldier = ImageIO.read(new File("./resources/img/friendsoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             enemySoldier = ImageIO.read(new File("./resources/img/enemysoldier" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
@@ -93,6 +95,7 @@ public class FileManager {
             WallPic2 = ImageIO.read(new File("./resources/img/WallResim2.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             WallPic3 = ImageIO.read(new File("./resources/img/WallResim3.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             WallPic4 = ImageIO.read(new File("./resources/img/WallResim4.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            WallPic5 = ImageIO.read(new File("./resources/img/WallResim5.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             backgroundImage1 = ImageIO.read(new File("./resources/img/backgroundImage1.jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
@@ -137,44 +140,83 @@ public class FileManager {
     public String filename(){
         return "";
     }
-    private String findNametoFile(){
-        int level = 0;
+
+    public int getNumberOfNormalLevels(){
+        int level = 1;
         File file;
         while(true){
             file = new File("./resources/normallevels/level" + level + ".txt");
             if(file.exists()){
+                level++;
+                continue;
+            }
+            else {
+                return level - 1;
+            }
+        }
+    }
+
+    public int getNumberOfSandboxLevels(){
+        int level = 1;
+        File file;
+        while(true){
+            file = new File("./resources/sandboxlevels/level" + level + ".txt");
+            if(file.exists()){
+                level++;
+                continue;
+            }
+            else {
+                return level - 1;
+            }
+        }
+    }
+
+    private String findNametoFile(){
+        int level = 1;
+        File file;
+        while(true){
+            file = new File("./resources/sandboxlevels/level" + level + ".txt");
+            if(file.exists()){
+                level++;
                 continue;
             }
             else {
                 break;
             }
         }
-        return "./resources/normallevels/level" + level + ".txt";
+        return "./resources/sandboxlevels/level" + level + ".txt";
     }
-    public void write (MapObject[][] map, boolean bool1, boolean bool2, boolean bool3, boolean bool4){
-        try {
 
+    public void write (MapObject[][] map, boolean bool1, boolean bool2, boolean bool3, boolean bool4,boolean bool5){
+        try {
 
             BufferedWriter outputWriter = null;
             outputWriter = new BufferedWriter(new FileWriter(findNametoFile()));
             for (int i = 0; i < MAP_SIZE; i++) {
                 for (int j = 0; j < MAP_SIZE; j++) {
                     if (j < MAP_SIZE - 1)
-                        outputWriter.write(map[i][j].getClass().getSimpleName() + ",");
+                        if ( map[i][j] instanceof Soldier) {
+                            outputWriter.write(((Soldier)map[i][j]).getName() + ",");
+                        }
+                        else{
+                            outputWriter.write(map[i][j].getClass().getSimpleName() + ",");
+                        }
                     else
                         outputWriter.write(map[i][j].getClass().getSimpleName());
                 }
                 outputWriter.newLine();
             }
-            if (bool1)
+            if (bool3)
                 outputWriter.write("1,");
+            if (bool4)
+                outputWriter.write("2,");
             if (bool2)
                 outputWriter.write("3,");
-            if (bool3)
+            if (bool1)
                 outputWriter.write("4,");
-            if (bool4)
+            if (bool5)
                 outputWriter.write("5,");
-            outputWriter.write("2");
+            outputWriter.write("0");
             outputWriter.flush();
             outputWriter.close();
 
@@ -192,7 +234,7 @@ public class FileManager {
         //Getting Game Images
         try {
             bush = ImageIO.read(new File("./resources/img/bush" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
-            wallTile = ImageIO.read(new File("./resources/img/walltile" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
+            wallTile = ImageIO.read(new File("./resources/img/walltile" + 1 + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             ground = ImageIO.read(new File("./resources/img/ground" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             lava = ImageIO.read(new File("./resources/img/lava" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
             mountain = ImageIO.read(new File("./resources/img/mountain" + customization + ".jpg")).getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT);
@@ -285,7 +327,9 @@ public class FileManager {
         return tower;
     }
 
-    public Image getDigImage(){ return pickaxe; }
+    public Image getDigImage(){
+        return pickaxe;
+    }
 
     public Image getMoveImage(){ return move; }
 
@@ -297,9 +341,21 @@ public class FileManager {
     public Image getWallPic2(){return WallPic2;}
     public Image getWallPic3(){return WallPic3;}
     public Image getWallPic4(){return WallPic4;}
+    public Image getWallPic5(){return WallPic5;}
 
-    public BufferedReader getLevel(int level){
+    public BufferedReader getNormalLevel(int level){
         File levelFile = new File("./resources/normallevels/level" + level + ".txt");
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(levelFile));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return br;
+    }
+
+    public BufferedReader getSandboxLevel(int level){
+        File levelFile = new File("./resources/sandboxlevels/level" + level + ".txt");
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(levelFile));

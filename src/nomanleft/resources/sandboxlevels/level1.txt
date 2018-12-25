@@ -1,0 +1,14 @@
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,EnemySoldier,Wallable,Ground,Lava,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Mountain,Mountain,Mountain,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,FriendSoldier,Wallable,FriendSoldier,Wallable,Tower,Wallable,FriendSoldier,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,EnemySoldier,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,EnemySoldier,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
+Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+2

@@ -37,7 +37,8 @@ public class GameSandBoxPanel extends JPanel {
             for(int k = 0; k < 13; k++){
                 if ( i % 2 == 0 && k % 2 == 0){
                     if (map[i][k] instanceof Wallable){
-                        g.setColor(Color.PINK);
+                        g.setColor(Color.LIGHT_GRAY);
+                        g.setColor(Color.LIGHT_GRAY);
 
                     }
                     else if (map[i][k] instanceof WallTile){
@@ -51,7 +52,7 @@ public class GameSandBoxPanel extends JPanel {
                 }
                 if ( i % 2 == 1 && k % 2 == 0){
                     if (map[i][k] instanceof Wallable){
-                        g.setColor(Color.PINK);
+                        g.setColor(Color.LIGHT_GRAY);
                     }
                     else if (map[i][k] instanceof WallTile){
                         g.setColor(Color.BLACK);
@@ -64,7 +65,7 @@ public class GameSandBoxPanel extends JPanel {
                 }
                 if ( i % 2 == 0 && k % 2 == 1){
                     if (map[i][k] instanceof Wallable){
-                        g.setColor(Color.PINK);
+                        g.setColor(Color.LIGHT_GRAY);
                     }
                     else if (map[i][k] instanceof WallTile){
                         g.setColor(Color.BLACK);

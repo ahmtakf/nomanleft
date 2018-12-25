@@ -14,7 +14,7 @@ public class MapModel {
     private int numberOfWallsOnMap;
     private final int MAP_SIZE = 13;
 
-    public MapModel(int level){
+    public MapModel(BufferedReader br){
         map = new MapObject[MAP_SIZE][MAP_SIZE];
         walls = new ArrayList<>();
         wallIdMap = new int[MAP_SIZE][MAP_SIZE];
@@ -26,7 +26,6 @@ public class MapModel {
             }
         }
 
-        BufferedReader br = FileManager.getInstance().getLevel(level);
         for ( int i = 0; i < MAP_SIZE; i++){
             try {
                 String nodes = br.readLine();

@@ -34,6 +34,7 @@ public class SandBoxPanel extends JPanel{
     private JButton saveButton;
     private JButton removeButton;
     private JRadioButton radioButton5;
+    private JLabel label5;
     private int flag;
     private MapObject[][] map;
     public SandBoxPanel() {
@@ -64,7 +65,9 @@ public class SandBoxPanel extends JPanel{
                 case "Tower":{flag = 4;}break;
                 case "Soldier":{flag = 5;}break;
                 case "Remove":{flag = 6;}break;
-                case "Save":{flag = 7;}break;
+                case "Save":{
+                    FileManager.getInstance().write(map,radioButton1.isSelected(),radioButton2.isSelected(),radioButton3.isSelected(),radioButton4.isSelected(),radioButton5.isSelected());
+                }break;
             }
         }
     }
@@ -99,25 +102,10 @@ public class SandBoxPanel extends JPanel{
             int temp2 = searchResult[0];
             searchResult[0] = searchResult[1];
             searchResult[1] = temp2;
-            if((! (map[searchResult[1]][searchResult[0]] instanceof Wallable) )
-                    || map[searchResult[1]][searchResult[0]].isGround()) {
+            if((!(map[searchResult[1]][searchResult[0]] instanceof Wallable) ) || map[searchResult[1]][searchResult[0]].isGround()) {
                 if (flag == 1) {//Peasent
                     map[searchResult[0]][searchResult[1]] = temp.getMapObject("FriendSoldier");
                     //map[searchResult[0]][searchResult[1]]
-                    internalPanel.repaint();
-                    internalPanel.validate();
-                    current = new Point();
-                    flag = 0;
-                }
-                if (flag == 2) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Lava");
-                    internalPanel.repaint();
-                    internalPanel.validate();
-                    current = new Point();
-                    flag = 0;
-                }
-                if (flag == 3) {
-                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Mountain");
                     internalPanel.repaint();
                     internalPanel.validate();
                     current = new Point();
@@ -146,9 +134,35 @@ public class SandBoxPanel extends JPanel{
                     flag = 0;
                 }
             }
-
-            if (flag == 7){
-                FileManager.getInstance().write(map,radioButton1.isSelected(),radioButton2.isSelected(),radioButton3.isSelected(),radioButton4.isSelected());
+            else{
+                if (flag == 2) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Lava");
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 3) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Mountain");
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 4) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Tower");
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
+                if (flag == 6) {
+                    map[searchResult[0]][searchResult[1]] = temp.getMapObject("Wallable");
+                    internalPanel.repaint();
+                    internalPanel.validate();
+                    current = new Point();
+                    flag = 0;
+                }
             }
         }
 
@@ -199,7 +213,8 @@ public class SandBoxPanel extends JPanel{
         label3.setIcon(new ImageIcon(FileManager.getInstance().getWallPic3()));
         label4 =new JLabel();
         label4.setIcon(new ImageIcon(FileManager.getInstance().getWallPic4()));
-
+        label5 = new JLabel();
+        label5.setIcon(new ImageIcon(FileManager.getInstance().getWallPic5()));
         requiredWallsLabel = new JLabel();
         saveButton = new JButton();
         saveButton.addActionListener(new SandBoxButtonListener());

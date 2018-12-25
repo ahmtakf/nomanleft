@@ -1,5 +1,6 @@
 package com.nullpointers.nomanleft.view;
 
+import com.nullpointers.nomanleft.controller.FileManager;
 import com.nullpointers.nomanleft.controller.GameManager;
 
 import java.util.ArrayList;
@@ -32,14 +33,21 @@ public class PlayGamePanel {
     public PlayGamePanel() {
 
         // get availableLevelNo from file manager when implemented
-        int availableLevelNo = 20;
+        int availableLevelNo = FileManager.getInstance().getNumberOfNormalLevels();
+        int availableLevelSandbox = FileManager.getInstance().getNumberOfSandboxLevels();
 
 
         levelsList = new ArrayList<>();
 
-
         for (int i = 0; i < availableLevelNo ; i++  ) {
-            JButton tmp = new JButton("level: " + (i+1) );
+            JButton tmp = new JButton("Normal level: " + (i+1) );
+            tmp.addActionListener(new PlayGamePanel.PButtonListener());
+            tmp.setActionCommand(Integer.toString(i+1));
+            levelsList.add(tmp);
+        }
+
+        for (int i = 0; i < availableLevelSandbox ; i++  ) {
+            JButton tmp = new JButton("Sandbox level: " + (i+1) );
             tmp.addActionListener(new PlayGamePanel.PButtonListener());
             tmp.setActionCommand(Integer.toString(i+1));
             levelsList.add(tmp);
@@ -80,8 +88,14 @@ public class PlayGamePanel {
 
 
             if ( i >= 0 && i< levelsList.size()){
-                System.out.println("load level" + i);
-                GameManager.getInstance().startLevel(i);
+                if (! ((JButton)event.getSource()).getText().substring(0, 7).equals("Sandbox")) {
+                    System.out.println("load normal level" + i);
+                    GameManager.getInstance().startNormalLevel(i);
+                }
+                else{
+                    System.out.println("load sandbox level" + ((JButton)event.getSource()).getText().charAt(((JButton)event.getSource()).getText().length() - 1));
+                    GameManager.getInstance().startSandBoxLevel(((JButton)event.getSource()).getText().charAt(((JButton)event.getSource()).getText().length() - 1) - '0');
+                }
             }
         }
 
