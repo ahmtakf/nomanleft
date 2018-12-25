@@ -1,4 +1,4 @@
-Wallable,LargeMountain,Mountain,LargeMountain,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
+Wallable,Mountain,Mountain,Mountain,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
 Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable,Ground,Wallable
 Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable,Wallable
 Wallable,Ground,Wallable,Ground,Wallable,FriendSoldier,Wallable,Ground,Wallable,EnemySoldier,Wallable,Ground,Wallable
