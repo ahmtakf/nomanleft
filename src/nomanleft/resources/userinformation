@@ -1,9 +1,9 @@
-customization:1
-gold:40
+customization:2
+gold:100
 sound:0
-soundlevel:28
+soundlevel:42
 highScore:0
 hide:0
-dig:0
-fill:0
-move:2
+dig:2
+fill:1
+move:1

@@ -252,7 +252,6 @@ public class LevelPanel extends JPanel{
                     flag = 0;
                 }
 
-
             }
 
             @Override
